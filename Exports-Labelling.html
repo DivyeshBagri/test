@@ -1,263 +1,403 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com -->
-<!-- Last Published: Wed Dec 18 2024 10:14:43 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6618aa23a99dd84f05706059" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" lang="en" data-wf-locale="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Exports &amp;Labelling</title>
-        <meta content="Exports &amp; Labelling" property="og:title"/>
-        <meta content="Exports &amp; Labelling" property="twitter:title"/>
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Webflow" name="generator"/>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript">
-            !function(o, c) {
-                var n = c.documentElement
-                  , t = " w-mod-";
-                n.className += t + "js",
-                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
-            }(window, document);
-        </script>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66cf5a8c9680930109a22456_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
-    </head>
-    <body>
-        <div class="navbar-logo-center">
-            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
-                <div class="container">
-                    <div class="navbar-wrapper-three">
-                       <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt=""/>
-                            </a>
-                            <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-                                <div class="nav-menu-three">
-                                    <ul role="list" class="nav-menu-block w-list-unstyled">
-                                    <li>
-                                        <a href="About-Us.html" class="nav-link">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="Exports-Labelling.html" aria-current="page" class="nav-link w--current">Labelling &amp;Exports</a>
-                                    </li>
-                                    <li>
-                                        <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-                                            <div class="nav-dropdown-toggle w-dropdown-toggle">
-                                                <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                                                <div class="text-block">Products</div>
-                                            </div>
-                                            <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
-                                                <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
-                                                <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
-                                                <a href="Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
-                                                <a href="Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
-                                            </nav>
+<head>
+    <meta charset="utf-8"/>
+    <title>Exports &amp; Labelling</title>
+    <meta content="Exports &amp; Labelling" property="og:title"/>
+    <meta content="Exports &amp; Labelling" property="twitter:title"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Webflow" name="generator"/>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+    <style>
+        /* Custom responsive styles */
+        .image-zoom-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            border: 1px solid #eee;
+            margin-top: 20px;
+        }
+        
+        #zoomable-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+        
+        .zoom-controls {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .zoom-btn {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .w-layout-grid.layout18_component {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .layout18_component-map {
+                order: -1;
+                margin-bottom: 30px;
+            }
+            
+            .image-zoom-container {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .image-zoom-container {
+                height: 250px;
+            }
+            
+            .logo2_logo-list, .logo3_list {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logo2_wrapper, .logo3_wrapper {
+                margin: 10px;
+            }
+            
+            .layout253_list {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        @media (max-width: 479px) {
+            .image-zoom-container {
+                height: 200px;
+            }
+            
+            .footer3_menu-wrapper {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .gallery4_row {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        !function(o, c) {
+            var n = c.documentElement
+              , t = " w-mod-";
+            n.className += t + "js",
+            ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66cf5a8c9680930109a22456_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
+</head>
+<body>
+    <div class="navbar-logo-center">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+            <div class="container">
+                <div class="navbar-wrapper-three">
+                   <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
+                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt="Kamal Solvents Logo"/>
+                        </a>
+                        <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                            <div class="nav-menu-three">
+                                <ul role="list" class="nav-menu-block w-list-unstyled">
+                                <li>
+                                    <a href="About-Us.html" class="nav-link">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="Exports-Labelling.html" aria-current="page" class="nav-link w--current">Labelling &amp; Exports</a>
+                                </li>
+                                <li>
+                                    <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                        <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                            <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                            <div class="text-block">Products</div>
                                         </div>
-                                    </li>
-                                </ul>
-                                <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
-                                    <li>
-                                        <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
-                                    </li>
-                                    <li>
-                                        <a href="Gallery.html" class="nav-link-accent">Gallery</a>
-                                    </li>
-                                    <li class="mobile-margin-top-10">
-                                        <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <div class="menu-button w-nav-button">
-                            <div class="w-icon-nav-menu"></div>
+                                        <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                            <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
+                                            <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
+                                            <a href="Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
+                                            <a href="Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                        </nav>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
+                                <li>
+                                    <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
+                                </li>
+                                <li>
+                                    <a href="Gallery.html" class="nav-link-accent">Gallery</a>
+                                </li>
+                                <li class="mobile-margin-top-10">
+                                    <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
+                                </li>
+                            </ul>
                         </div>
+                    </nav>
+                    <div class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="page-wrapper">
-            <div class="main-wrapper">
-                <section class="section_layout18">
-                    <div class="padding-global-12">
-                        <div class="container-large">
-                            <div class="padding-section-large-2">
-                                <div class="w-layout-grid layout18_component">
-                                    <div class="layout18_content">
-                                        <div class="margin-bottom margin-small">
-                                            <h3 class="heading-style-h2 left">Exports &amp;Private Labelling</h3>
-                                            <div class="spacer-small"></div>
-                                        </div>
-                                        <div class="margin-bottom margin-small">
-                                            <p class="text-size-small">At Kamal Solvents, we are committed to producing the finest quality refined rice bran oil, catering to diverse packaging requirements for private labels and export markets. With a production capacity of over 100 tonnes per day, our state-of-the-art facilities and dedicated R &amp;D team ensure uncompromised purity and intact properties in every drop of oil.</p>
-                                            <div class="spacer-small"></div>
-                                        </div>
-                                        <div class="layout18_item-list">
-                                            <div id="w-node-e80e155a-cec3-8e5f-edcd-d5a37781d49f-05706059" class="layout18_item">
-                                                <div class="layout18_item-icon-wrapper">
-                                                    <div class="icon-embed-xsmall w-embed">
-                                                        <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="layout18_item-text-wrapper">
-                                                    <p>Variety of packaging formats (PET bottles, pouches, jerry cans, tins)</p>
-                                                </div>
-                                            </div>
-                                            <div id="w-node-e80e155a-cec3-8e5f-edcd-d5a37781d4a5-05706059" class="layout18_item">
-                                                <div class="layout18_item-icon-wrapper">
-                                                    <div class="icon-embed-xsmall w-embed">
-                                                        <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="layout18_item-text-wrapper">
-                                                    <p>Labelling &amp;Exporting for top brands out of India</p>
-                                                </div>
-                                            </div>
-                                            <div id="w-node-c7657341-9139-9905-42b5-fc2e52ac98c6-05706059" class="layout18_item">
-                                                <div class="layout18_item-icon-wrapper">
-                                                    <div class="icon-embed-xsmall w-embed">
-                                                        <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="layout18_item-text-wrapper">
-                                                    <p>365 days operational capability</p>
-                                                </div>
-                                            </div>
-                                            <div id="w-node-_8f7991e1-f5bd-2564-a1cb-46ab19320d14-05706059" class="layout18_item">
-                                                <div class="layout18_item-icon-wrapper">
-                                                    <div class="icon-embed-xsmall w-embed">
-                                                        <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="layout18_item-text-wrapper">
-                                                    <p>Fully integrated plant &amp;machinery</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="layout18_image-wrapper">
-                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6650f5114c7483863aba7790_DSC1714%20Large.jpeg" loading="lazy" width="756" sizes="(max-width: 767px) 90vw, (max-width: 991px) 43vw, (max-width: 1919px) 42vw, 600px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6650f5114c7483863aba7790_DSC1714%20Large-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6650f5114c7483863aba7790_DSC1714%20Large-p-800.jpeg 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6650f5114c7483863aba7790_DSC1714%20Large-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6650f5114c7483863aba7790_DSC1714%20Large.jpeg 1280w" class="image-3"/>
-                                    </div>
-                                </div>
-                                <section class="section_logo2">
-                                    <div class="padding-global-11">
-                                        <div class="container-large">
-                                            <div class="padding-section-medium-2">
-                                                <div class="logo2_component">
-                                                    <div class="logo2_content-left">
-                                                        <h3 class="heading-style-h5">Backed by prestigeous certifications:</h3>
-                                                    </div>
-                                                    <div class="logo2_logo-list">
-                                                        <div class="logo2_wrapper">
-                                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" loading="lazy" width="44" alt="" class="logo2_logo"/>
-                                                        </div>
-                                                        <div class="logo2_wrapper">
-                                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" loading="lazy" width="71" sizes="(max-width: 479px) 17vw, (max-width: 767px) 12vw, (max-width: 991px) 9vw, 71px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png 527w" class="logo2_logo"/>
-                                                        </div>
-                                                        <div id="w-node-_11e0467e-f9c5-2d96-7d41-6ac1901b7323-05706059" class="logo2_wrapper">
-                                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" loading="lazy" width="127" sizes="(max-width: 479px) 18vw, (max-width: 767px) 15vw, (max-width: 991px) 10vw, (max-width: 1919px) 11vw, 127px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png 520w" class="logo2_logo"/>
-                                                        </div>
-                                                        <div id="w-node-_11e0467e-f9c5-2d96-7d41-6ac1901b7325-05706059" class="logo2_wrapper">
-                                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" loading="lazy" width="121" sizes="(max-width: 479px) 18vw, (max-width: 767px) 15vw, (max-width: 991px) 10vw, (max-width: 1919px) 11vw, 121px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png 666w" class="logo2_logo"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section data-w-id="a05d0b44-6393-fb4f-7ec5-2f8eaf307a15" class="section_logo3">
-                    <div class="padding-section-medium">
-                        <div class="padding-global-3">
-                            <div class="container-large">
-                                <div class="margin-bottom margin-large">
-                                    <div class="text-align-center">
-                                        <div class="max-width-large align-center">
-                                            <h3 class="heading-style-h4">Our retail presence in 15+ states in India: </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="logo3_component">
-                            <div class="logo3_list">
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a20-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" loading="lazy" width="46" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a22-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8fa_reliance-smart-logo-kamal-solvents.svg" loading="lazy" width="102" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a24-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" loading="lazy" width="97" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a26-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" loading="lazy" width="97" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a28-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a4f5ff8df59b0869a9203_PNG.webp" loading="lazy" width="88" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2a-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2c-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2e-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" loading="lazy" width="118" alt="" class="logo3_logo"/>
-                                </div>
-                            </div>
-                            <div class="logo3_list">
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a31-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" loading="lazy" width="58" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a33-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8fa_reliance-smart-logo-kamal-solvents.svg" loading="lazy" width="154" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a35-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a37-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" loading="lazy" width="120" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a39-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a4f5ff8df59b0869a9203_PNG.webp" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3b-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3d-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" loading="lazy" alt="" class="logo3_logo"/>
-                                </div>
-                                <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3f-af307a15" class="logo3_wrapper">
-                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" loading="lazy" width="118" alt="" class="logo3_logo"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section_layout253">
-                    <div class="padding-global-13 had-padding">
-                        <div class="container-large">
-                            <div class="padding-section-medium">
-                                <div class="w-layout-grid layout253_component">
-                                    <div class="layout253_content">
-                                        <div class="margin-bottom margin-small">
-                                            <h2 class="heading-style-h3">Why Choose us?</h2>
-                                        </div>
+    </div>
+    
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            <section class="section_layout18">
+                <div class="padding-global-12">
+                    <div class="container-large">
+                        <div class="padding-section-large-2">
+                            <div class="w-layout-grid layout18_component">
+                                <div class="layout18_content">
+                                    <div class="margin-bottom margin-small">
+                                        <h3 class="heading-style-h2 left">Exports &amp; Private Labelling</h3>
                                         <div class="spacer-small"></div>
-                                        <p class="text-size-medium-16">At Kamal Solvents, we prioritize quality, reliability, and customer satisfaction. With a wide range of customization options, robust logistics, and a commitment to sustainability, we ensure your needs are met efficiently and ethically. Partner with us to experience excellence and global reach in every product.</p>
+                                    </div>
+                                    <div class="margin-bottom margin-small">
+                                        <p class="text-size-small">At Kamal Solvents, we are committed to producing the finest quality refined rice bran oil, catering to diverse packaging requirements for private labels and export markets. With a production capacity of over 100 tonnes per day, our state-of-the-art facilities and dedicated R &amp;D team ensure uncompromised purity and intact properties in every drop of oil.</p>
+                                        <div class="spacer-small"></div>
+                                    </div>
+                                    <div class="layout18_item-list">
+                                        <div id="w-node-e80e155a-cec3-8e5f-edcd-d5a37781d49f-05706059" class="layout18_item">
+                                            <div class="layout18_item-icon-wrapper">
+                                                <div class="icon-embed-xsmall w-embed">
+                                                    <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="layout18_item-text-wrapper">
+                                                <p>Variety of packaging formats (PET bottles, pouches, jerry cans, tins)</p>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-e80e155a-cec3-8e5f-edcd-d5a37781d4a5-05706059" class="layout18_item">
+                                            <div class="layout18_item-icon-wrapper">
+                                                <div class="icon-embed-xsmall w-embed">
+                                                    <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="layout18_item-text-wrapper">
+                                                <p>Labelling &amp; Exporting for top brands out of India</p>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-c7657341-9139-9905-42b5-fc2e52ac98c6-05706059" class="layout18_item">
+                                            <div class="layout18_item-icon-wrapper">
+                                                <div class="icon-embed-xsmall w-embed">
+                                                    <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="layout18_item-text-wrapper">
+                                                <p>365 days operational capability</p>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-_8f7991e1-f5bd-2564-a1cb-46ab19320d14-05706059" class="layout18_item">
+                                            <div class="layout18_item-icon-wrapper">
+                                                <div class="icon-embed-xsmall w-embed">
+                                                    <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.73 7.12L20.59 6.87C20.4094 6.56769 20.1547 6.31643 19.85 6.14L13.14 2.27C12.8362 2.09375 12.4913 2.00062 12.14 2H11.85C11.4987 2.00062 11.1538 2.09375 10.85 2.27L4.14 6.15C3.83697 6.32526 3.58526 6.57697 3.41 6.88L3.27 7.13C3.09375 7.43384 3.00062 7.77874 3 8.13V15.88C3.00062 16.2313 3.09375 16.5762 3.27 16.88L3.41 17.13C3.58979 17.4295 3.84049 17.6802 4.14 17.86L10.86 21.73C11.1623 21.9099 11.5082 22.0033 11.86 22H12.14C12.4913 21.9994 12.8362 21.9063 13.14 21.73L19.85 17.85C20.156 17.6787 20.4087 17.426 20.58 17.12L20.73 16.87C20.9041 16.5653 20.9971 16.221 21 15.87V8.12C20.9994 7.76874 20.9063 7.42384 20.73 7.12ZM11.85 4H12.14L18 7.38L12 10.84L6 7.38L11.85 4ZM13 19.5L18.85 16.12L19 15.87V9.11L13 12.58V19.5Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="layout18_item-text-wrapper">
+                                                <p>Export capability across various regions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout18_component-map" id="map">
+                                    <div class="image-zoom-container">
+                                        <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/AA.png" 
+                                             id="zoomable-image"
+                                             alt="Export regions map">
+                                        <div class="zoom-controls">
+                                            <button class="zoom-btn" onclick="zoomOut()">-</button>
+                                            <button class="zoom-btn" onclick="zoomIn()">+</button>
+                                            <button class="zoom-btn" onclick="resetZoom()">⟲</button>
+                                        </div>
+                                    </div>
+                                    <style>
+    .image-container {
+        overflow: hidden;  /* Prevents scrollbars if image is larger */
+        width: 100%;      /* Adjust as needed */
+        height: 600px;    /* Fixed height for the container */
+        border: 1px solid #ddd; /* Optional border */
+    }
+    .zoom-controls {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .zoom-controls button {
+        
+        margin: 0 5px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    let scale = 1; // Initial zoom level
+
+    function zoomIn() {
+        scale += 0.2; // Increase zoom by 20%
+        document.getElementById("zoomable-image").style.transform = `scale(${scale})`;
+    }
+
+    function zoomOut() {
+        if (scale > 0.3) { // Prevent zooming out too much
+            scale -= 0.2; // Decrease zoom by 20%
+            document.getElementById("zoomable-image").style.transform = `scale(${scale})`;
+        }
+    }
+
+    function resetZoom() {
+        scale = 1; // Reset to original size
+        document.getElementById("zoomable-image").style.transform = `scale(${scale})`;
+    }
+</script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_logo2">
+                <div class="padding-global-11">
+                    <div class="container-large">
+                        <div class="padding-section-medium-2">
+                            <div class="logo2_component">
+                                <div class="logo2_content-left">
+                                    <h3 class="heading-style-h5">Backed by prestigeous certifications:</h3>
+                                </div>
+                                <div class="logo2_logo-list">
+                                    <div class="logo2_wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" loading="lazy" width="44" alt="HACCP Certification" class="logo2_logo"/>
+                                    </div>
+                                    <div class="logo2_wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" loading="lazy" width="71" sizes="(max-width: 479px) 17vw, (max-width: 767px) 12vw, (max-width: 991px) 9vw, 71px" alt="Certification" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png 527w" class="logo2_logo"/>
+                                    </div>
+                                    <div id="w-node-_11e0467e-f9c5-2d96-7d41-6ac1901b7323-05706059" class="logo2_wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" loading="lazy" width="127" sizes="(max-width: 479px) 18vw, (max-width: 767px) 15vw, (max-width: 991px) 10vw, (max-width: 1919px) 11vw, 127px" alt="Certification" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png 520w" class="logo2_logo"/>
+                                    </div>
+                                    <div id="w-node-_11e0467e-f9c5-2d96-7d41-6ac1901b7325-05706059" class="logo2_wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" loading="lazy" width="121" sizes="(max-width: 479px) 18vw, (max-width: 767px) 15vw, (max-width: 991px) 10vw, (max-width: 1919px) 11vw, 121px" alt="Certification" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png 666w" class="logo2_logo"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-w-id="a05d0b44-6393-fb4f-7ec5-2f8eaf307a15" class="section_logo3">
+                <div class="padding-section-medium">
+                    <div class="padding-global-3">
+                        <div class="container-large">
+                            <div class="margin-bottom margin-large">
+                                <div class="text-align-center">
+                                    <div class="max-width-large align-center">
+                                        <h3 class="heading-style-h4">Our retail presence in 15+ states in India: </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo3_component">
+                        <div class="logo3_list">
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a20-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" loading="lazy" width="46" alt="Marico" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a22-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8fa_reliance-smart-logo-kamal-solvents.svg" loading="lazy" width="102" alt="Reliance Smart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a24-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" loading="lazy" width="97" alt="Dmart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a26-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" loading="lazy" width="97" alt="Flipkart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a28-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a4f5ff8df59b0869a9203_PNG.webp" loading="lazy" width="88" alt="Retail Partner" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2a-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" loading="lazy" alt="JioMart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2c-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" loading="lazy" alt="Tata Tesco" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a2e-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" loading="lazy" width="118" alt="Walmart India" class="logo3_logo"/>
+                            </div>
+                        </div>
+                        <div class="logo3_list">
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a31-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" loading="lazy" width="58" alt="Marico" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a33-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8fa_reliance-smart-logo-kamal-solvents.svg" loading="lazy" width="154" alt="Reliance Smart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a35-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" loading="lazy" alt="Dmart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a37-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" loading="lazy" width="120" alt="Flipkart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a39-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a4f5ff8df59b0869a9203_PNG.webp" loading="lazy" alt="Retail Partner" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3b-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" loading="lazy" alt="JioMart" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3d-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" loading="lazy" alt="Tata Tesco" class="logo3_logo"/>
+                            </div>
+                            <div id="w-node-a05d0b44-6393-fb4f-7ec5-2f8eaf307a3f-af307a15" class="logo3_wrapper">
+                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" loading="lazy" width="118" alt="Walmart India" class="logo3_logo"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_layout253">
+                <div class="padding-global-13 had-padding">
+                    <div class="container-large">
+                        <div class="padding-section-medium">
+                            <div class="w-layout-grid layout253_component">
+                                <div class="layout253_content">
+                                    <div class="margin-bottom margin-small">
+                                        <h2 class="heading-style-h3">Why Choose us?</h2>
+                                    </div>
+                                    <div class="spacer-small"></div>
+                                     <p class="text-size-medium-16">At Kamal Solvents, we prioritize quality, reliability, and customer satisfaction. With a wide range of customization options, robust logistics, and a commitment to sustainability, we ensure your needs are met efficiently and ethically. Partner with us to experience excellence and global reach in every product.</p>
                                         <div class="margin-top-2 margin-medium">
                                             <div class="button-group-4">
-                                                <a href="#" class="button-primary w-button">CONTACT US</a>
+                                                <a href="#" class="button-primary w-button">CONTACT US</a>
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +456,7 @@
                                     <div class="text-align-center">
                                         <div class="max-width-large align-center">
                                             <div class="margin-bottom margin-small">
-                                                <h2 class="heading-style-h2">A Galleria of Achievements</h2>
+                                                <h2 class="heading-style-h2">A Galleria of Achievements</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -450,7 +590,7 @@
                                         <p class="text-size-medium-18">We &#x27;re eager to explore new partnerships and opportunities. Whether you have questions or ideas, our team is ready to assist.</p>
                                         <div class="margin-top-2 margin-medium">
                                             <div class="button-group-4">
-                                                <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">WRITE TO US</a>
+                                                <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">WRITE TO US</a>
                                             </div>
                                         </div>
                                     </div>
@@ -510,7 +650,7 @@
                                         <a href="#" class="footer3_link">Physically Refined Rice Bran Oil</a>
                                         <a href="#" class="footer3_link">Best Suji in India</a>
                                         <a href="#" class="footer3_link">Best Atta in India</a>
-                                        <a href="#" class="footer3_link">Kamal Oils FMCG Products</a>
+                                        <a href="#" class="footer3_link">Kamal Oils FMCG Products</a>
                                     </div>
                                     <div class="footer3_link-list">
                                         <a href="#" class="footer3_link">Kamal Suji in India</a>
