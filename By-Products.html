@@ -8,6 +8,189 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            /* Custom styles for right-aligned contact button */
+            .navbar-wrapper-three {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .navbar-content {
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                justify-content: center;
+            }
+            
+            .navbar-right-button {
+                margin-left: auto;
+                padding-left: 20px;
+            }
+            
+            /* Hide the contact button in mobile menu since it will be visible in the nav */
+            @media (max-width: 991px) {
+                .navbar-right-button {
+                    display: none;
+                }
+                
+                .navbar-content {
+                    justify-content: space-between;
+                }
+            }
+            
+            /* Rest of your existing global styles */
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+            }
+            
+            *[tabindex]:focus-visible, input[type="file"]:focus-visible {
+                outline: 0.125rem solid #4d65ff;
+                outline-offset: 0.125rem;
+            }
+            
+            .inherit-color * {
+                color: inherit;
+            }
+            
+            .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+                margin-top: 0 !important;
+            }
+            
+            .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .container-medium,.container-small, .container-large {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+            
+            .text-style-3lines {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            
+            .text-style-2lines {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            
+            .display-inlineflex {
+                display: inline-flex;
+            }
+            
+            .hide {
+                display: none !important;
+            }
+            
+            @media screen and (max-width: 991px) {
+                .hide, .hide-tablet {
+                    display: none !important;
+                }
+            }
+            
+            @media screen and (max-width: 767px) {
+                .hide-mobile-landscape {
+                    display: none !important;
+                }
+            }
+            
+            @media screen and (max-width: 479px) {
+                .hide-mobile {
+                    display: none !important;
+                }
+            }
+            
+            .margin-0 {
+                margin: 0rem !important;
+            }
+            
+            .padding-0 {
+                padding: 0rem !important;
+            }
+            
+            .spacing-clean {
+                padding: 0rem !important;
+                margin: 0rem !important;
+            }
+            
+            .margin-top {
+                margin-right: 0rem !important;
+                margin-bottom: 0rem !important;
+                margin-left: 0rem !important;
+            }
+            
+            .padding-top {
+                padding-right: 0rem !important;
+                padding-bottom: 0rem !important;
+                padding-left: 0rem !important;
+            }
+            
+            .margin-right {
+                margin-top: 0rem !important;
+                margin-bottom: 0rem !important;
+                margin-left: 0rem !important;
+            }
+            
+            .padding-right {
+                padding-top: 0rem !important;
+                padding-bottom: 0rem !important;
+                padding-left: 0rem !important;
+            }
+            
+            .margin-bottom {
+                margin-top: 0rem !important;
+                margin-right: 0rem !important;
+                margin-left: 0rem !important;
+            }
+            
+            .padding-bottom {
+                padding-top: 0rem !important;
+                padding-right: 0rem !important;
+                padding-left: 0rem !important;
+            }
+            
+            .margin-left {
+                margin-top: 0rem !important;
+                margin-right: 0rem !important;
+                margin-bottom: 0rem !important;
+            }
+            
+            .padding-left {
+                padding-top: 0rem !important;
+                padding-right: 0rem !important;
+                padding-bottom: 0rem !important;
+            }
+            
+            .margin-horizontal {
+                margin-top: 0rem !important;
+                margin-bottom: 0rem !important;
+            }
+            
+            .padding-horizontal {
+                padding-top: 0rem !important;
+                padding-bottom: 0rem !important;
+            }
+            
+            .margin-vertical {
+                margin-right: 0rem !important;
+                margin-left: 0rem !important;
+            }
+            
+            .padding-vertical {
+                padding-right: 0rem !important;
+                padding-left: 0rem !important;
+            }
+        </style>
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
@@ -22,231 +205,58 @@
     <body class="body">
         <div class="page-wrapper">
             <div class="global-styles w-embed">
-                <style>
-                    /* Make text look crisper and more legible in all browsers */
-                    body {
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        font-smoothing: antialiased;
-                        text-rendering: optimizeLegibility;
-                    }
-
-                    /* Focus state style for keyboard navigation for the focusable elements */
-                    *[tabindex]:focus-visible, input[type="file"]:focus-visible {
-                        outline: 0.125rem solid #4d65ff;
-                        outline-offset: 0.125rem;
-                    }
-
-                    /* Set color style to inherit */
-                    .inherit-color * {
-                        color: inherit;
-                    }
-
-                    /* Get rid of top margin on first element in any rich text element */
-                    .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
-                        margin-top: 0 !important;
-                    }
-
-                    /* Get rid of bottom margin on last element in any rich text element */
-                    .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
-                        margin-bottom: 0 !important;
-                    }
-
-                    /* Make sure containers never lose their center alignment */
-                    .container-medium,.container-small, .container-large {
-                        margin-right: auto !important;
-                        margin-left: auto !important;
-                    }
-
-                    /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-                    /*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: inherit;
-}
-*/
-                    /* Apply "..." after 3 lines of text */
-                    .text-style-3lines {
-                        display: -webkit-box;
-                        overflow: hidden;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                    }
-
-                    /* Apply "..." after 2 lines of text */
-                    .text-style-2lines {
-                        display: -webkit-box;
-                        overflow: hidden;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                    }
-
-                    /* Adds inline flex display */
-                    .display-inlineflex {
-                        display: inline-flex;
-                    }
-
-                    /* These classes are never overwritten */
-                    .hide {
-                        display: none !important;
-                    }
-
-                    @media screen and (max-width: 991px) {
-                        .hide, .hide-tablet {
-                            display: none !important;
-                        }
-                    }
-
-                    @media screen and (max-width: 767px) {
-                        .hide-mobile-landscape {
-                            display: none !important;
-                        }
-                    }
-
-                    @media screen and (max-width: 479px) {
-                        .hide-mobile {
-                            display: none !important;
-                        }
-                    }
-
-                    .margin-0 {
-                        margin: 0rem !important;
-                    }
-
-                    .padding-0 {
-                        padding: 0rem !important;
-                    }
-
-                    .spacing-clean {
-                        padding: 0rem !important;
-                        margin: 0rem !important;
-                    }
-
-                    .margin-top {
-                        margin-right: 0rem !important;
-                        margin-bottom: 0rem !important;
-                        margin-left: 0rem !important;
-                    }
-
-                    .padding-top {
-                        padding-right: 0rem !important;
-                        padding-bottom: 0rem !important;
-                        padding-left: 0rem !important;
-                    }
-
-                    .margin-right {
-                        margin-top: 0rem !important;
-                        margin-bottom: 0rem !important;
-                        margin-left: 0rem !important;
-                    }
-
-                    .padding-right {
-                        padding-top: 0rem !important;
-                        padding-bottom: 0rem !important;
-                        padding-left: 0rem !important;
-                    }
-
-                    .margin-bottom {
-                        margin-top: 0rem !important;
-                        margin-right: 0rem !important;
-                        margin-left: 0rem !important;
-                    }
-
-                    .padding-bottom {
-                        padding-top: 0rem !important;
-                        padding-right: 0rem !important;
-                        padding-left: 0rem !important;
-                    }
-
-                    .margin-left {
-                        margin-top: 0rem !important;
-                        margin-right: 0rem !important;
-                        margin-bottom: 0rem !important;
-                    }
-
-                    .padding-left {
-                        padding-top: 0rem !important;
-                        padding-right: 0rem !important;
-                        padding-bottom: 0rem !important;
-                    }
-
-                    .margin-horizontal {
-                        margin-top: 0rem !important;
-                        margin-bottom: 0rem !important;
-                    }
-
-                    .padding-horizontal {
-                        padding-top: 0rem !important;
-                        padding-bottom: 0rem !important;
-                    }
-
-                    .margin-vertical {
-                        margin-right: 0rem !important;
-                        margin-left: 0rem !important;
-                    }
-
-                    .padding-vertical {
-                        padding-right: 0rem !important;
-                        padding-left: 0rem !important;
-                    }
-                </style>
+                <!-- Your global styles content here -->
             </div>
             <div class="navbar-logo-center">
                 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
                     <div class="container">
                         <div class="navbar-wrapper-three">
-                            <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt=""/>
-                            </a>
-                            <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-                                <div class="nav-menu-three">
-                                    <ul role="list" class="nav-menu-block w-list-unstyled">
-                                        <li>
-                                            <a href="About-Us.html" class="nav-link">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="Exports-Labelling.html" class="nav-link">Labelling &amp;Exports</a>
-                                        </li>
-                                        <li>
-                                            <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-                                                <div class="nav-dropdown-toggle w-dropdown-toggle">
-                                                    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                                                    <div class="text-block">Products</div>
+                            <div class="navbar-content">
+                                <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
+                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt="Kamal Solvents Logo"/>
+                                </a>
+                                <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                                    <div class="nav-menu-three">
+                                        <ul role="list" class="nav-menu-block w-list-unstyled">
+                                            <li>
+                                                <a href="About-Us.html" class="nav-link">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="Exports-Labelling.html" class="nav-link">Labelling &amp; Exports</a>
+                                            </li>
+                                            <li>
+                                                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                                    <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                                        <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                                        <div class="text-block">Products</div>
+                                                    </div>
+                                                    <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                                        <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
+                                                        <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
+                                                        <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
+                                                        <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                                        <a href="/By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
+                                                    </nav>
                                                 </div>
-                                                <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
-                                                    <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
-                                                    <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
-                                                    <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
-                                                    <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
-                                                </nav>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
-                                        <li>
-                                            <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
-                                        </li>
-                                        <li>
-                                            <a href="Gallery.html" class="nav-link-accent">Gallery</a>
-                                        </li>
-                                        <li class="mobile-margin-top-10">
-                                            <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
+                                            </li>
+                                        </ul>
+                                        <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
+                                            <li>
+                                                <a href="By-Products.html" class="nav-link-accent">By Products</a>
+                                            </li>
+                                             <li>
+                                                <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
+                                            </li>
+                                            <li>
+                                                <a href="Gallery.html" class="nav-link-accent">Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="navbar-right-button">
+                                <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
+                            </div>
                             <div class="menu-button w-nav-button">
                                 <div class="w-icon-nav-menu"></div>
                             </div>
