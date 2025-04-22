@@ -10,33 +10,152 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript">
-            !function(o, c) {
-                var n = c.documentElement
-                  , t = " w-mod-";
-                n.className += t + "js",
-                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
-            }(window, document);
-        </script>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66cf5a8c9680930109a22456_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
-    </head>
-    <body>
-        <div class="navbar-logo-center">
-            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
-                <div class="container">
-                    <div class="navbar-wrapper-three">
+       <style>
+        /* Custom styles for right-aligned contact button */
+        .navbar-wrapper-three {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        .navbar-right-button {
+            margin-left: auto;
+            padding-left: 20px;
+        }
+        
+        /* Hide the contact button in mobile menu since it will be visible in the nav */
+        @media (max-width: 991px) {
+            .navbar-right-button {
+                display: none;
+            }
+        }
+        
+        /* Your existing custom styles */
+        .image-zoom-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            border: 1px solid #eee;
+            margin-top: 20px;
+        }
+        
+        #zoomable-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+        
+        .zoom-controls {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .zoom-btn {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .w-layout-grid.layout18_component {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .layout18_component-map {
+                order: -1;
+                margin-bottom: 30px;
+            }
+            
+            .image-zoom-container {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .image-zoom-container {
+                height: 250px;
+            }
+            
+            .logo2_logo-list, .logo3_list {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logo2_wrapper, .logo3_wrapper {
+                margin: 10px;
+            }
+            
+            .layout253_list {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        @media (max-width: 479px) {
+            .image-zoom-container {
+                height: 200px;
+            }
+            
+            .footer3_menu-wrapper {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .gallery4_row {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        !function(o, c) {
+            var n = c.documentElement
+              , t = " w-mod-";
+            n.className += t + "js",
+            ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66cf5a8c9680930109a22456_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
+</head>
+<body>
+    <div class="navbar-logo-center">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+            <div class="container">
+                <div class="navbar-wrapper-three">
+                    <div class="navbar-content">
                         <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt=""/>
-                            </a>
-                            <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-                                <div class="nav-menu-three">
-                                    <ul role="list" class="nav-menu-block w-list-unstyled">
+                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt="Kamal Solvents Logo"/>
+                        </a>
+                        <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                            <div class="nav-menu-three">
+                                <ul role="list" class="nav-menu-block w-list-unstyled">
                                     <li>
-                                        <a href="About-Us.html" aria-current="page" class="nav-link w--current">About Us</a>
+                                        <a href="About-Us.html" class="nav-link">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="Exports-Labelling.html" class="nav-link">Labelling &amp;Exports</a>
+                                        <a href="Exports-Labelling.html" aria-current="page" class="nav-link w--current">Labelling &amp; Exports</a>
                                     </li>
                                     <li>
                                         <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
@@ -49,30 +168,35 @@
                                                 <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
                                                 <a href="Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
                                                 <a href="Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                                <a href="By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
                                             </nav>
                                         </div>
                                     </li>
                                 </ul>
                                 <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
-                                    <li>
-                                        <a href="Rice-Bran-Oil.htm" class="nav-link-accent">Rice Bran Oil</a>
+                                   <li style="padding-left: 50px;">
+    <a href="By-Products.html" class="nav-link-accent">By Products</a>
+</li>
+                                     <li>
+                                        <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
                                     </li>
                                     <li>
                                         <a href="Gallery.html" class="nav-link-accent">Gallery</a>
                                     </li>
-                                    <li class="mobile-margin-top-10">
-                                        <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
-                                    </li>
                                 </ul>
                             </div>
                         </nav>
-                        <div class="menu-button w-nav-button">
-                            <div class="w-icon-nav-menu"></div>
-                        </div>
+                    </div>
+                    <div class="navbar-right-button">
+                        <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
+                    </div>
+                    <div class="menu-button w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
         <div class="page-wrapper">
             <main class="main-wrapper">
 <section class="section_timeline18">
