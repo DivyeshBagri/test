@@ -127,6 +127,75 @@
                 grid-template-columns: 1fr !important;
             }
         }
+        /* Certification Section Styles */
+.logo2_component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo2_logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.logo2_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo2_wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.logo2_logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .logo2_logo-list {
+        gap: 20px;
+    }
+    .logo2_wrapper {
+        height: 80px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo2_logo-list {
+        gap: 15px;
+    }
+    .logo2_wrapper {
+        height: 70px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 479px) {
+    .logo2_logo-list {
+        gap: 10px;
+    }
+    .logo2_wrapper {
+        height: 60px;
+        padding: 5px;
+    }
+}
     </style>
     <script type="text/javascript">
         !function(o, c) {
@@ -438,34 +507,62 @@
                     </div>
                 </section>
                 <section class="section_logo2">
-                    <div class="padding-global-11">
-                        <div class="container-large">
-                            <div class="padding-section-medium-2">
-                                <div class="logo2_component">
-                                    <div class="logo2_content-left">
-                                        <h3 class="heading-style-h5">Backed by prestigeous certifications:</h3>
-                                    </div>
-                                    <div class="logo2_logo-list">
-                                        <div class="logo2_wrapper">
-                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" loading="lazy" width="44" alt="" class="logo2_logo"/>
-                                        </div>
-                                        <div class="logo2_wrapper">
-                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" loading="lazy" width="71" sizes="(max-width: 479px) 18vw, (max-width: 767px) 14vw, 71px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png 527w" class="logo2_logo"/>
-                                        </div>
-                                        <div id="w-node-_926fcc53-e822-6a4e-7a2c-c79053ae9409-c7bb9876" class="logo2_wrapper">
-                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" loading="lazy" width="127" sizes="(max-width: 479px) 20vw, (max-width: 767px) 17vw, (max-width: 1919px) 12vw, 127px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png 520w" class="logo2_logo"/>
-                                        </div>
-                                        <div id="w-node-_86f33f47-4ec2-ab7e-d5a1-cab05ada8332-c7bb9876" class="logo2_wrapper">
-                                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" loading="lazy" width="121" sizes="(max-width: 479px) 20vw, (max-width: 767px) 16vw, (max-width: 991px) 12vw, 121px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png 666w" class="logo2_logo"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="padding-global-11">
+        <div class="container-large">
+            <div class="padding-section-medium-2">
+                <div class="logo2_component">
+                    <div class="logo2_content-left">
+                        <h3 class="heading-style-h5">Backed by prestigious certifications:</h3>
+                    </div>
+                    <div class="logo2_logo-list">
+                        <div class="logo2_wrapper">
+                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" 
+                                 loading="lazy" 
+                                 width="44" 
+                                 alt="HACCP Certification" 
+                                 class="logo2_logo"/>
+                        </div>
+                        <div class="logo2_wrapper">
+                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" 
+                                 loading="lazy" 
+                                 width="71" 
+                                 sizes="(max-width: 479px) 18vw, (max-width: 767px) 14vw, 71px" 
+                                 alt="ISO Certification" 
+                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png 527w" 
+                                 class="logo2_logo"/>
+                        </div>
+                        <div class="logo2_wrapper">
+                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" 
+                                 loading="lazy" 
+                                 width="127" 
+                                 sizes="(max-width: 479px) 20vw, (max-width: 767px) 17vw, (max-width: 1919px) 12vw, 127px" 
+                                 alt="FSSAI Certification" 
+                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png 520w" 
+                                 class="logo2_logo"/>
+                        </div>
+                        <div class="logo2_wrapper">
+                            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" 
+                                 loading="lazy" 
+                                 width="121" 
+                                 sizes="(max-width: 479px) 20vw, (max-width: 767px) 16vw, (max-width: 991px) 12vw, 121px" 
+                                 alt="APEDA Certification" 
+                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png 666w" 
+                                 class="logo2_logo"/>
+                        </div>
+                        <!-- Additional Certification -->
+                        <div class="logo2_wrapper">
+                            <img src="https://example.com/path-to-new-certification.png" 
+                                 loading="lazy" 
+                                 width="100" 
+                                 alt="New Certification" 
+                                 class="logo2_logo"/>
                         </div>
                     </div>
-                </section>
-            </main>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
         <footer class="footer3_component">
             <div class="padding-global">
                 <div class="container-large">
