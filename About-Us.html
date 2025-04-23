@@ -127,7 +127,7 @@
                 grid-template-columns: 1fr !important;
             }
         }
-        /* Certification Section Styles */
+   /* Certification Section Styles */
 .logo2_component {
     display: flex;
     flex-direction: column;
@@ -135,12 +135,13 @@
     text-align: center;
 }
 
+/* Certification Section Styles */
 .logo2_logo-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px; /* Increased spacing between logos */
     margin-top: 20px;
 }
 
@@ -148,22 +149,98 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    padding: 15px;
+    height: 150px; /* Increased from 100px */
+    width: 200px; /* Added fixed width */
+    padding: 25px; /* Increased from 15px */
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 10 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-}
-
-.logo2_wrapper:hover {
-    transform: translateY(-5px);
 }
 
 .logo2_logo {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    width: auto;
+    height: 100px; /* Increased logo height (was ~60px) */
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo2_logo:hover {
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .logo2_logo-list {
+        gap: 40px;
+    }
+    .logo2_logo {
+        height: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo2_logo-list {
+        gap: 30px;
+    }
+    .logo2_logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 479px) {
+    .logo2_logo-list {
+        gap: 20px;
+    }
+    .logo2_logo {
+        height: 50px;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .logo2_logo-list {
+        gap: 50px;
+    }
+    .logo2_wrapper {
+        height: 140px;
+        width: 180px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .logo2_logo-list {
+        gap: 40px;
+    }
+    .logo2_wrapper {
+        height: 120px;
+        width: 160px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo2_logo-list {
+        gap: 30px;
+    }
+    .logo2_wrapper {
+        height: 100px;
+        width: 140px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 479px) {
+    .logo2_logo-list {
+        gap: 20px;
+    }
+    .logo2_wrapper {
+        height: 80px;
+        width: 120px;
+        padding: 10px;
+    }
 }
 
 /* Responsive adjustments */
@@ -506,7 +583,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section_logo2">
+             <section class="section_logo2">
     <div class="padding-global-11">
         <div class="container-large">
             <div class="padding-section-medium-2">
@@ -518,42 +595,31 @@
                         <div class="logo2_wrapper">
                             <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" 
                                  loading="lazy" 
-                                 width="44" 
                                  alt="HACCP Certification" 
                                  class="logo2_logo"/>
                         </div>
                         <div class="logo2_wrapper">
                             <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" 
                                  loading="lazy" 
-                                 width="71" 
-                                 sizes="(max-width: 479px) 18vw, (max-width: 767px) 14vw, 71px" 
                                  alt="ISO Certification" 
-                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1)-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png 527w" 
                                  class="logo2_logo"/>
                         </div>
                         <div class="logo2_wrapper">
                             <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" 
                                  loading="lazy" 
-                                 width="127" 
-                                 sizes="(max-width: 479px) 20vw, (max-width: 767px) 17vw, (max-width: 1919px) 12vw, 127px" 
                                  alt="FSSAI Certification" 
-                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png 520w" 
                                  class="logo2_logo"/>
                         </div>
                         <div class="logo2_wrapper">
                             <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" 
                                  loading="lazy" 
-                                 width="121" 
-                                 sizes="(max-width: 479px) 20vw, (max-width: 767px) 16vw, (max-width: 991px) 12vw, 121px" 
                                  alt="APEDA Certification" 
-                                 srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png 666w" 
                                  class="logo2_logo"/>
                         </div>
                         <!-- Additional Certification -->
                         <div class="logo2_wrapper">
                             <img src="https://example.com/path-to-new-certification.png" 
                                  loading="lazy" 
-                                 width="100" 
                                  alt="New Certification" 
                                  class="logo2_logo"/>
                         </div>
