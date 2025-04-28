@@ -127,186 +127,173 @@
                 grid-template-columns: 1fr !important;
             }
         }
-   /* Certification Section Styles */
-   .logo2_content-left {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
+  /* Certification Section Styles */
+.section_logo2 {
+    padding: 80px 0;
+    background-color: #fff;
 }
 
-.heading-style-h5 {
-    font-size: 28px; /* Increased from default */
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    white-space: nowrap; /* Ensures text stays in one line */
-    color: #333; /* Darker color for better visibility */
-    margin: 0;
-    padding: 0;
+.padding-global-11 {
+    padding-right: 5%;
+    padding-left: 5%;
 }
+
+.container-large {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.padding-section-medium-2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Header Styles */
 .logo2_component {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
-/* Certification Section Styles */
+.logo2_content-left {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.heading-style-h5 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+}
+
+/* Logo Grid Styles */
 .logo2_logo-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Increased spacing between logos */
+    gap: 40px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .logo2_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px; /* Increased from 100px */
-    width: 200px; /* Added fixed width */
-    padding: 25px; /* Increased from 15px */
-    background: white;
+    padding: 15px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 10 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .logo2_logo {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: 100px; /* Increased logo height (was ~60px) */
+    width: 150px;
+    height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
+/* Hover Effects */
+.logo2_wrapper:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
 .logo2_logo:hover {
-    transform: scale(1.1); /* Subtle hover effect */
+    transform: scale(1.05);
 }
 
-/* Responsive adjustments */
-@media (max-width: 991px) {
-    .heading-style-h5 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 767px) {
-    .heading-style-h5 {
-        font-size: 20px;
-        white-space: normal; /* Allow wrapping on small screens */
-    }
-}
-
-@media (max-width: 479px) {
-    .heading-style-h5 {
-        font-size: 18px;
-    }
-}
-@media (max-width: 991px) {
-    .logo2_logo-list {
-        gap: 40px;
-    }
-    .logo2_logo {
-        height: 70px;
-    }
-}
-
-@media (max-width: 767px) {
-    .logo2_logo-list {
-        gap: 30px;
-    }
-    .logo2_logo {
-        height: 60px;
-    }
-}
-
-@media (max-width: 479px) {
-    .logo2_logo-list {
-        gap: 20px;
-    }
-    .logo2_logo {
-        height: 50px;
-    }
-}
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 1200px) {
     .logo2_logo-list {
-        gap: 50px;
+        gap: 30px;
     }
-    .logo2_wrapper {
-        height: 140px;
-        width: 180px;
-        padding: 20px;
+    .logo2_logo {
+        width: 140px;
     }
 }
 
 @media (max-width: 991px) {
-    .logo2_logo-list {
-        gap: 40px;
+    .section_logo2 {
+        padding: 60px 0;
     }
-    .logo2_wrapper {
-        height: 120px;
-        width: 160px;
-        padding: 15px;
+    
+    .heading-style-h5 {
+        font-size: 28px;
+    }
+    
+    .logo2_logo-list {
+        gap: 25px;
+    }
+    
+    .logo2_logo {
+        width: 130px;
     }
 }
 
 @media (max-width: 767px) {
-    .logo2_logo-list {
-        gap: 30px;
+    .section_logo2 {
+        padding: 50px 0;
     }
+    
+    .heading-style-h5 {
+        font-size: 24px;
+        white-space: normal;
+        padding: 0 20px;
+    }
+    
+    .logo2_logo-list {
+        gap: 20px;
+    }
+    
+    .logo2_logo {
+        width: 110px;
+    }
+    
     .logo2_wrapper {
-        height: 100px;
-        width: 140px;
-        padding: 12px;
+        padding: 10px;
     }
 }
 
 @media (max-width: 479px) {
-    .logo2_logo-list {
-        gap: 20px;
+    .section_logo2 {
+        padding: 40px 0;
     }
-    .logo2_wrapper {
-        height: 80px;
-        width: 120px;
-        padding: 10px;
+    
+    .heading-style-h5 {
+        font-size: 20px;
     }
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-    .logo2_logo-list {
-        gap: 20px;
-    }
-    .logo2_wrapper {
-        height: 80px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 767px) {
+    
     .logo2_logo-list {
         gap: 15px;
     }
+    
+    .logo2_logo {
+        width: 90px;
+    }
+    
     .logo2_wrapper {
-        height: 70px;
         padding: 8px;
     }
 }
 
-@media (max-width: 479px) {
-    .logo2_logo-list {
-        gap: 10px;
-    }
-    .logo2_wrapper {
-        height: 60px;
-        padding: 5px;
-    }
-}
+
     </style>
     <script type="text/javascript">
         !function(o, c) {
@@ -387,10 +374,10 @@
                     <div class="max-width-large align-center">
                         <div class="text-align-center">
                             <div class="margin-bottom margin-xsmall">
-                                <div class="text-weight-semibold">35+ YEARS OF TRUST &amp;EXPERTISE</div>
+                                <div class="text-weight-semibold">35+ YEARS OF TRUST & EXPERTISE</div>
                             </div>
                             <div class="margin-bottom margin-small">
-                                <h2 class="heading-style-h2 about">Kamal Solvents Extraction Pvt Ltd: A brief history</h2>
+                                <h2 class="heading-style-h2 about">Kamal Solvent Extractions Pvt Ltd : A Brief History</h2>
                             </div>
                             <div>Kamal Solvent Extraction Pvt. Ltd. is a rice bran oil manufacturing unit established by entrepreneurial vision of Mr. Damodar Das Mundra and his sons Anil and Sunil Mundra in the year 1988, with more than 50 years of experience in the field of rice bran, he comes from humble roots but immense passion. Started with a capacity of just 50 MTD, Kamal now has a capacity of more than 1000 tons of food processing per day.</div>
                         </div>
@@ -460,6 +447,17 @@
                                 <p style="white-space: normal;">Current headquarters in Rajnandgaon</p>
                             </div>
                         </div>
+                        <div class="timeline-item" style="display: inline-block; width: 300px; flex-shrink: 0;">
+                            <div class="timeline-image-wrapper">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/timeline/time%20line%2C%20sept.%202023.jpg" 
+                                     loading="lazy" 
+                                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                            </div>
+                            <div class="timeline-content" style="text-align: center; padding: 15px;">
+                                <h3 style="margin: 10px 0;">November, 2023</h3>
+                                <p style="white-space: normal;">We were awarded as a Future Forward Brand by Mr. Damodar Mall, CEO of Reliance Retail and India Food Forum</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -468,162 +466,45 @@
         </div>
     </div>
 </section>
-                </section>
-                <section class="section_team10">
-                    <div class="padding-global-9">
-                        <div class="container-large">
-                            <div class="padding-section-large-2">
-                                <div class="margin-bottom margin-xxlarge">
-                                    <div class="max-width-large">
-                                        <div class="margin-bottom margin-xsmall">
-                                            <div class="text-weight-semibold">CORE LEADERSHIP</div>
-                                        </div>
-                                        <div class="margin-bottom margin-small">
-                                            <h2 class="heading-style-h2 left">Our team</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-delay="4000" data-animation="slide" class="team10_component w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="false">
-                                    <div class="team10_mask w-slider-mask">
-                                        <div class="team10_slide w-slide">
-                                            <div class="team10_item">
-                                                <div class="margin-bottom margin-small">
-                                                    <div class="team10_image-wrapper">
-                                                        <img alt="" loading="lazy" width="126.5" src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5a49779770734206f03c_WhatsApp%20July%2016%20Image%20(3).jpeg" class="team10_image"/>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="team10_title-wrapper">
-                                                        <div class="text-size-medium">Damodar Das Mundra</div>
-                                                        <div class="text-size-small">Founder</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="team10_slide w-slide">
-                                            <div class="team10_item">
-                                                <div class="margin-bottom margin-small">
-                                                    <div class="team10_image-wrapper">
-                                                        <img sizes="100vw" loading="lazy" width="500" src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5afab85cda8ed682dbb2_WhatsApp%20July%2016%20(1).jpeg" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5afab85cda8ed682dbb2_WhatsApp%20July%2016%20(1)-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5afab85cda8ed682dbb2_WhatsApp%20July%2016%20(1).jpeg 672w" class="team10_image"/>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="team10_title-wrapper">
-                                                        <div class="text-size-medium">Anil Mundra</div>
-                                                        <div class="text-size-small">Managing Director</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="team10_slide w-slide">
-                                            <div class="team10_item">
-                                                <div class="margin-bottom margin-small">
-                                                    <div class="team10_image-wrapper">
-                                                        <img sizes="100vw" loading="lazy" width="502" src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5b8cd643f47c848ccb9e_WhatsApp%20July%2016%20Image%20(2).jpeg" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5b8cd643f47c848ccb9e_WhatsApp%20July%2016%20Image%20(2)-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5b8cd643f47c848ccb9e_WhatsApp%20July%2016%20Image%20(2)-p-800.jpeg 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5b8cd643f47c848ccb9e_WhatsApp%20July%2016%20Image%20(2).jpeg 1004w" class="team10_image"/>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="team10_title-wrapper">
-                                                        <div class="text-size-medium">Sunil Mundra</div>
-                                                        <div class="text-size-small">Director</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="team10_slide w-slide">
-                                            <div class="team10_item">
-                                                <div class="margin-bottom margin-small">
-                                                    <div class="team10_image-wrapper">
-                                                        <img sizes="100vw" loading="lazy" width="477.5" src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c86f4a478103fd0a023_WhatsApp%20July%2016%20Image%20(4).jpeg" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c86f4a478103fd0a023_WhatsApp%20July%2016%20Image%20(4)-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c86f4a478103fd0a023_WhatsApp%20July%2016%20Image%20(4)-p-800.jpeg 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c86f4a478103fd0a023_WhatsApp%20July%2016%20Image%20(4).jpeg 955w" class="team10_image"/>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="team10_title-wrapper">
-                                                        <div class="text-size-medium">
-                                                            Rishi Raj Mundra<br/>
-                                                        </div>
-                                                        <div class="text-size-small">Director, Business Development</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="team10_slide w-slide">
-                                            <div class="team10_item">
-                                                <div class="margin-bottom margin-small">
-                                                    <div class="team10_image-wrapper">
-                                                        <img sizes="100vw" loading="lazy" width="427" src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c8acb3d9194c271abb8_Screenshot%202024-08-16%20at%201.21.01%E2%80%AFAM.png" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c8acb3d9194c271abb8_Screenshot%202024-08-16%20at%201.21.01%E2%80%AFAM-p-500.png 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c8acb3d9194c271abb8_Screenshot%202024-08-16%20at%201.21.01%E2%80%AFAM-p-800.png 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be5c8acb3d9194c271abb8_Screenshot%202024-08-16%20at%201.21.01%E2%80%AFAM.png 854w" class="team10_image"/>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="team10_title-wrapper">
-                                                        <div class="text-size-medium">Kamal Mundra</div>
-                                                        <div class="text-size-small">Director, Finance</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="team10_arrow left w-slider-arrow-left">
-                                        <div class="team10_arrow-icon w-embed">
-                                            <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.31066 8.75001L9.03033 14.4697L7.96967 15.5303L0.439339 8.00001L7.96967 0.469676L9.03033 1.53034L3.31066 7.25001L15.5 7.25L15.5 8.75L3.31066 8.75001Z" fill="currentColor"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="team10_arrow w-slider-arrow-right">
-                                        <div class="team10_arrow-icon w-embed">
-                                            <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12.6893 7.25L6.96967 1.53033L8.03033 0.469666L15.5607 8L8.03033 15.5303L6.96967 14.4697L12.6893 8.75H0.5V7.25H12.6893Z" fill="currentColor"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="team10_slide-nav w-slider-nav w-slider-nav-invert w-round"></div>
-                                </div>
-                                <div class="margin-top-2 margin-huge">
-                                    <div class="max-width-medium-2">
-                                        <div class="margin-bottom margin-xsmall">
-                                            <h4 class="heading-style-h3 unique">We &#x27;re hiring!</h4>
-                                        </div>
-                                        <p class="text-size-medium-14">Always looking out for fresh, driven &amp;dedicated people to join our team,</p>
-                                        <div class="margin-top-2 margin-medium">
-                                            <a href="#" class="button-primary w-button">Open positions</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section_layout66">
-                    <div class="padding-global">
-                        <div class="container-large">
-                            <div class="padding-section-large-2 about">
-                                <div class="w-layout-grid layout66_component">
-                                    <div class="layout66_content-left">
-                                        <h3>Rooted Traditions, Progressive Values:</h3>
-                                    </div>
-                                    <div class="layout66_content-right">
-                                        <div class="margin-bottom margin-small">
-                                            <p class="text-size-medium-14">
-                                                Our mission is to establish ourselves as a world-class organisation that will set a benchmark in terms of standards of excellence &amp;also to serve our consumers with the best quality of physically refined rice bran oil ensuring highest health benefits while adhering to eco-friendly practices &amp;policies.<br/>
-                                                ‍<br/>To excel in the industry by supplying best quality of edible oil &amp;creating an identity for ourselves in the field of health &amp;nutrition. We strive to look beyond the boundaries of competition by being quality centric in our manufacturing practices.
-                                            
-                                            </p>
-                                            <div class="spacer-medium"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+              <section>
+  <section class="section_layout66">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large-2 about">
+          <!-- Centered Heading -->
+          <div style="text-align: center; margin-bottom: 40px;">
+            <h3>Rooted Traditions, Progressive Values:</h3>
+          </div>
+
+          <!-- Two Columns: Mission Left, Vision Right -->
+          <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+              <p class="text-size-medium-14">
+                <strong>Mission:</strong><br/>
+                Our mission is to establish ourselves as a world-class organisation that will set a benchmark in terms of standards of excellence &amp; also to serve our consumers with the best quality of physically refined rice bran oil ensuring highest health benefits while adhering to eco-friendly practices &amp; policies.
+              </p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+              <p class="text-size-medium-14">
+                <strong>Vision:</strong><br/>
+                To excel in the industry by supplying best quality of edible oil &amp; creating an identity for ourselves in the field of health &amp; nutrition. We strive to look beyond the boundaries of competition by being quality centric in our manufacturing practices.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
              <section class="section_logo2">
     <section class="section_logo2">
     <div class="padding-global-11">
         <div class="container-large">
             <div class="padding-section-medium-2">
                 <div class="logo2_component">
-                    <div class="logo2_content-left">
+                    <div class="logo2_content-centre">
                         <h3 class="heading-style-h5">BACKED BY PRESTIGIOUS CERTIFICATIONS</h3>
                     </div>
                     <div class="logo2_logo-list">
@@ -653,7 +534,7 @@
                         </div>
                         <!-- Additional Certification -->
                         <div class="logo2_wrapper">
-                            <img src="https://example.com/path-to-new-certification.png" 
+                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/timeline/certificate.png" 
                                  loading="lazy" 
                                  alt="New Certification" 
                                  class="logo2_logo"/>
@@ -697,12 +578,7 @@
                                             <div class="text-size-small-2">
                                                 <a href="mailto:kse@kamalsol.com">kse@kamalsol.com</a>
                                             </div>
-                                            <div class="text-size-small-2">
-                                                <a href="mailto:rishimundra@kamalsol.com">rishimundra@kamalsol.com</a>
-                                            </div>
-                                            <div class="text-size-small-2">
-                                                <a href="mailto:kamalmundra@kamalsol.com">kamalmundra@kamalsol.com</a>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
