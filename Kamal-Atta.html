@@ -1,132 +1,142 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com -->
-<!-- Last Published: Wed Dec 18 2024 10:14:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6618b7de0003de3e87da3c28" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" lang="en" data-wf-locale="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Kamal Atta</title>
-        <meta content="Kamal Atta" property="og:title"/>
-        <meta content="Kamal Atta" property="twitter:title"/>
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Webflow" name="generator"/>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-<style>
-        /* Custom styles for right-aligned contact button */
-        .navbar-wrapper-three {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .navbar-content {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: center;
-        }
-        
-        .navbar-right-button {
-            margin-left: auto;
-            padding-left: 20px;
-        }
-        
-        /* Hide the contact button in mobile menu since it will be visible in the nav */
-        @media (max-width: 991px) {
-            .navbar-right-button {
-                display: none;
-            }
-        }
-        
-        /* Your existing custom styles */
-        .image-zoom-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 400px;
-            border: 1px solid #eee;
-            margin-top: 20px;
-        }
-        
-        #zoomable-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-            transform-origin: center center;
-        }
-        
-        .zoom-controls {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            z-index: 10;
-            display: flex;
-            gap: 5px;
-        }
-        
-        .zoom-btn {
-            background: rgba(0,0,0,0.7);
-            color: white;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 991px) {
-            .w-layout-grid.layout18_component {
-                grid-template-columns: 1fr !important;
-            }
-            
-            .layout18_component-map {
-                order: -1;
-                margin-bottom: 30px;
-            }
-            
-            .image-zoom-container {
-                height: 300px;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .image-zoom-container {
-                height: 250px;
-            }
-            
-            .logo2_logo-list, .logo3_list {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .logo2_wrapper, .logo3_wrapper {
-                margin: 10px;
-            }
-            
-            .layout253_list {
-                grid-template-columns: 1fr !important;
-            }
-        }
-        
-        @media (max-width: 479px) {
-            .image-zoom-container {
-                height: 200px;
-            }
-            
-            .footer3_menu-wrapper {
-                grid-template-columns: 1fr !important;
-            }
-            
-            .gallery4_row {
-                grid-template-columns: 1fr !important;
-            }
-        }
+<html lang="en" data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6618b7de0003de3e87da3c28" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" data-wf-locale="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kamal Atta</title>
+  <meta content="Kamal Atta" property="og:title"/>
+  <meta content="Kamal Atta" property="twitter:title"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+
+  <style>
+    /* Navbar styling */
+    .navbar-wrapper-three {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .navbar-content {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    
+    .navbar-right-button {
+      margin-left: auto;
+      padding-left: 20px;
+    }
+
+    /* Hide contact button on mobile */
+    @media (max-width: 991px) {
+      .navbar-right-button {
+        display: none;
+      }
+    }
+
+    /* Image zoom container styling */
+    .image-zoom-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 800px; /* Larger max size */
+      height: auto;
+      margin: 40px auto; /* Center the container */
+      border: 1px solid #eee;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #zoomable-image {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    /* Zoom buttons */
+    .zoom-controls {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      z-index: 10;
+      display: flex;
+      gap: 10px;
+    }
+
+    .zoom-btn {
+      background: rgba(0,0,0,0.7);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background 0.3s;
+    }
+
+    .zoom-btn:hover {
+      background: rgba(0,0,0,0.9);
+    }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .w-layout-grid.layout18_component {
+        grid-template-columns: 1fr !important;
+      }
+
+      .layout18_component-map {
+        order: -1;
+        margin-bottom: 30px;
+      }
+
+      .image-zoom-container {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .image-zoom-container {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .logo2_logo-list, .logo3_list {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo2_wrapper, .logo3_wrapper {
+        margin: 10px;
+      }
+
+      .layout253_list {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .image-zoom-container {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      .footer3_menu-wrapper {
+        grid-template-columns: 1fr !important;
+      }
+    }
     </style>
     <script type="text/javascript">
         !function(o, c) {
@@ -206,7 +216,7 @@
                                 <div class="w-layout-grid content1_component">
                                     <div id="w-node-_0a3a3ceb-4c9f-61ec-39ee-d04e553b853e-87da3c28" class="content1_content-wrapper">
                                         <div class="margin-bottom margin-small">
-                                            <h2 id="w-node-_0a3a3ceb-4c9f-61ec-39ee-d04e553b8540-87da3c28" class="heading-style-h2">About Kamal Shudh Atta</h2>
+                                            <h2 id="w-node-_0a3a3ceb-4c9f-61ec-39ee-d04e553b8540-87da3c28" class="heading-style-h2">Kamal Fortified Chakki Atta</h2>
                                             <div class="spacer-small"></div>
                                         </div>
                                         <div class="text-rich-text w-richtext">
@@ -216,7 +226,7 @@
                                         </div>
                                     </div>
                                     <div class="content1_image-wrapper">
-                                        <img src="https://github.com/DivyeshBagri/test/blob/main/WhatsApp%20Image%202025-03-19%20at%204.38.44%20PM.jpeg?raw=true" loading="lazy" width="120" alt="" class="content1_image"/>
+                                        <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/products/Kamal%20Atta.png" loading="lazy" width="120" alt="" class="content1_image"/>
                                     </div>
                                 </div>
                             </div>
@@ -231,24 +241,24 @@
                                     <div class="margin-bottom margin-xxlarge">
                                         <div class="max-width-large align-center">
                                             <div class="margin-bottom margin-large">
-                                                <h3 class="heading-8">Why choose Kamal Shudh Atta?</h3>
+                                                <h3 class="heading-8">Why choose Kamal Fortified Chakki Atta?</h3>
                                             </div>
                                             <div class="text-rich-text w-richtext">
                                                 <p>
                                                     <strong>Dietary Benefits:</strong>
-                                                    Beyond its nutritional composition, Shudh Chakki Atta offers a myriad of health benefits. Its high fiber content promotes digestive health, aids in weight management, and supports steady blood sugar levels. Regular consumption of this wholesome flour fosters overall well-being, contributing to enhanced vitality and immunity.
+                                                    Beyond its nutritional composition, Kamal Fortified Chakki Atta offers a myriad of health benefits. Its high fiber content promotes digestive health, aids in weight management, and supports steady blood sugar levels. Regular consumption of this wholesome flour fosters overall well-being, contributing to enhanced vitality and immunity.
                                                 </p>
                                                 <p>
                                                     <strong>Pure and Unadulterated</strong>
-                                                    : Crafted through traditional stone-grinding techniques, Shudh Chakki Atta retains the inherent goodness of wheat in its purest form. Free from additives, preservatives, or artificial enhancers, it upholds the integrity of natural flavors and nutrients. This purity ensures that every meal prepared with this flour is a testament to wholesome nutrition and authentic taste.
+                                                    : Crafted through traditional stone-grinding techniques, Kamal Fortified Chakki Atta retains the inherent goodness of wheat in its purest form. Free from additives, preservatives, or artificial enhancers, it upholds the integrity of natural flavors and nutrients. This purity ensures that every meal prepared with this flour is a testament to wholesome nutrition and authentic taste.
                                                 </p>
                                                 <p>
                                                     <strong>Culinary Versatility:</strong>
-                                                    Shudh Chakki Atta transcends its nutritional prowess to offer unparalleled versatility in culinary creations. From soft and fluffy rotis to delectable bread, pastries, and sweets, its fine texture and superior taste elevate every dish. Whether crafting traditional delicacies or innovative recipes, this flour lends itself effortlessly to culinary creativity.
+                                                    Kamal Fortified Chakki Atta transcends its nutritional prowess to offer unparalleled versatility in culinary creations. From soft and fluffy rotis to delectable bread, pastries, and sweets, its fine texture and superior taste elevate every dish. Whether crafting traditional delicacies or innovative recipes, this flour lends itself effortlessly to culinary creativity.
                                                 </p>
                                                 <p>
                                                     <strong>Quality Assurance:</strong>
-                                                    Packaged with utmost care to preserve freshness and quality, Shudh Chakki Atta guarantees a delightful culinary experience with every use. Its enduring freshness, consistent quality, and superior taste make it a trusted choice in households across the country. From kitchens to dining tables, it remains a symbol of purity and excellence in every meal.
+                                                    Packaged with utmost care to preserve freshness and quality, Kamal Fortified Chakki Atta guarantees a delightful culinary experience with every use. Its enduring freshness, consistent quality, and superior taste make it a trusted choice in households across the country. From kitchens to dining tables, it remains a symbol of purity and excellence in every meal.
                                                 </p>
                                             </div>
                                         </div>
@@ -267,7 +277,7 @@
                                     <div class="text-align-center">
                                         <div class="max-width-large align-center">
                                             <div class="margin-bottom margin-small">
-                                                <h2 class="heading-10">Kamal Shudh Chakki Atta</h2>
+                                                <h2 class="heading-10">Kamal Kamal Fortified Chakki Atta</h2>
                                             </div>
                                         </div>
                                     </div>
