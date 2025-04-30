@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Wed Dec 18 2024 10:14:43 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6618b7cc6d0a291ec1f8ea9f" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" lang="en" data-wf-locale="en">
+<html data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6607a6ef83fae9272e2140b1" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" lang="en" data-wf-locale="en">
     <head>
         <meta charset="utf-8"/>
-        <title>Rice Bran Oil</title>
-        <meta content="Rice Bran Oil" property="og:title"/>
-        <meta content="Rice Bran Oil" property="twitter:title"/>
+        <title>Kamal Solvents</title>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-<style>
-        /* Custom styles for right-aligned contact button */
-        .navbar-wrapper-three {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .navbar-content {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: center;
-        }
-        
-        .navbar-right-button {
-            margin-left: auto;
-            padding-left: 20px;
-        }
-        
-        /* Hide the contact button in mobile menu since it will be visible in the nav */
-        @media (max-width: 991px) {
-            .navbar-right-button {
-                display: none;
+        <style>
+            /* Custom styles for right-aligned contact button */
+            .navbar-logo-center-container {
+      background: #fbffd3;
+      box-shadow: 10 2px 10px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: relative;
+      z-index: 1000;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-60%);
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    
+    .nav-menu-left, .nav-menu-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+            .navbar-content {
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                justify-content: center;
             }
+            
+            .navbar-right-button {
+                margin-left: auto;
+                padding-left: 20px;
+            }
+            
+            /* Hide the contact button in mobile menu since it will be visible in the nav */
+            @media (max-width: 991px) {
+                .navbar-right-button {
+                    display: none;
+                }
+                
+                .navbar-content {
+                    justify-content: space-between;
+                }
+            }
+                   /* Rest of your existing global styles */
+     /* Mobile Optimization */
+    @media (max-width: 767px) {
+        .logo-slider-item {
+            margin: 0 25px;
         }
-        
+        .logo-slider-item img {
+            max-width: 100px;
+        }
+    }
+    /* Content section styling */
+ 
         /* Your existing custom styles */
         .image-zoom-container {
             position: relative;
@@ -140,63 +183,61 @@
     <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
 </head>
 <body>
-    <div class="navbar-logo-center">
-        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
-            <div class="container">
-                <div class="navbar-wrapper-three">
-                    <div class="navbar-content">
-                        <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt="Kamal Solvents Logo"/>
-                        </a>
-                        <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-                            <div class="nav-menu-three">
-                                <ul role="list" class="nav-menu-block w-list-unstyled">
-                                    <li>
-                                        <a href="About-Us.html" class="nav-link">About Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="Exports-Labelling.html" aria-current="page" class="nav-link w--current">Labelling &amp; Exports</a>
-                                    </li>
-                                    <li>
-                                        <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-                                            <div class="nav-dropdown-toggle w-dropdown-toggle">
-                                                <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                                                <div class="text-block">Products</div>
-                                            </div>
-                                            <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
-                                                <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
-                                                <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
-                                                <a href="Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
-                                                <a href="Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
-                                                <a href="By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
-                                            </nav>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
-                                   <li style="padding-left: 50px;">
-    <a href="By-Products.html" class="nav-link-accent">By Products</a>
-</li>
-                                     <li>
-                                        <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
-                                    </li>
-                                    <li>
-                                        <a href="Gallery.html" class="nav-link-accent">Gallery</a>
-                                    </li>
-                                </ul>
+          <div class="navbar-logo-center">
+                <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+                    <div class="container">
+                        <div class="navbar-wrapper-three">
+                            <div class="navbar-content">
+                                <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
+                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="80" alt="Kamal Solvents Logo"/>
+                                </a>
+                                <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                                    <div class="nav-menu-three">
+                                        <ul role="list" class="nav-menu-block w-list-unstyled">
+                                            <li>
+                                                <a href="About-Us.html" class="nav-link">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="Exports-Labelling.html" class="nav-link">Labelling &amp; Exports</a>
+                                            </li>
+                                            <li>
+                                                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                                    <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                                        <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                                        <div class="text-block">Products</div>
+                                                    </div>
+                                                    <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                                        <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
+                                                        <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
+                                                        <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
+                                                        <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                                        <a href="/By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
+                                                    </nav>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
+                                            <li>
+                                                <a href="By-Products.html" class="nav-link-accent">By Products</a>
+                                            </li>
+                                             <li>
+                                                <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
+                                            </li>
+                                            <li>
+                                                  <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
+                                            </li>
+                                          </ul>
+                                    </div>
+                                </nav>
                             </div>
-                        </nav>
-                    </div>
-                    <div class="navbar-right-button">
-                        <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
-                    </div>
-                    <div class="menu-button w-nav-button">
-                        <div class="w-icon-nav-menu"></div>
+                              <div class="menu-button w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
         <div class="page-wrapper">
             <main class="main-wrapper">
                 <section class="section_content1">
