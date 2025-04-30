@@ -10,13 +10,43 @@
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
         <style>
             /* Custom styles for right-aligned contact button */
-            .navbar-wrapper-three {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-            }
-            
+            .navbar-logo-center-container {
+      background: #fbffd3;
+      box-shadow: 10 2px 10px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: relative;
+      z-index: 1000;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-60%);
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    
+    .nav-menu-left, .nav-menu-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
             .navbar-content {
                 display: flex;
                 align-items: center;
@@ -39,6 +69,16 @@
                     justify-content: space-between;
                 }
             }
+                   /* Rest of your existing global styles */
+     /* Mobile Optimization */
+    @media (max-width: 767px) {
+        .logo-slider-item {
+            margin: 0 25px;
+        }
+        .logo-slider-item img {
+            max-width: 100px;
+        }
+    }
                    /* Rest of your existing global styles */
             body {
                 -webkit-font-smoothing: antialiased;
@@ -280,7 +320,7 @@
                         <div class="navbar-wrapper-three">
                             <div class="navbar-content">
                                 <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="66.5" alt="Kamal Solvents Logo"/>
+                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="80" alt="Kamal Solvents Logo"/>
                                 </a>
                                 <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
                                     <div class="nav-menu-three">
@@ -307,6 +347,7 @@
                                                 </div>
                                             </li>
                                         </ul>
+                                        
                                         <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
                                             <li>
                                                 <a href="By-Products.html" class="nav-link-accent">By Products</a>
@@ -314,15 +355,14 @@
                                              <li>
                                                 <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
                                             </li>
-                                            
-                                        </ul>
+                                            <li>
+                                                  <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
+                                            </li>
+                                          </ul>
                                     </div>
                                 </nav>
                             </div>
-                            <div class="navbar-right-button">
-                                <a href="mailto:rishimundra@kamalsol.com" class="button-primary w-button">CONTACT US</a>
-                            </div>
-                            <div class="menu-button w-nav-button">
+                              <div class="menu-button w-nav-button">
                                 <div class="w-icon-nav-menu"></div>
                             </div>
                         </div>
