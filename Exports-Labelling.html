@@ -1,88 +1,96 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. https://webflow.com -->
-<!-- Last Published: Wed Dec 18 2024 10:14:43 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="kamal-solvents-f8b61e.webflow.io" data-wf-page="6607a6ef83fae9272e2140b1" data-wf-site="6607a6ef83fae9272e214029" data-wf-status="1" lang="en" data-wf-locale="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>Kamal Solvents</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Webflow" name="generator"/>
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-        <style>
-            /* Custom styles for right-aligned contact button */
-            .navbar-logo-center-container {
-      background: #fbffd3;
-      box-shadow: 10 2px 10px rgba(0,0,0,0.1);
-      padding: 15px 0;
-      position: relative;
-      z-index: 1000;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .navbar-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      position: relative;
-    }
-
-    .navbar-brand {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-60%);
-    }
-
-    .navbar-brand img {
-      height: 50px;
-      width: auto;
-    }
+<head>
+    <meta charset="utf-8"/>
+    <title>Kamal Solvents</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Webflow" name="generator"/>
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
     
-    .nav-menu-left, .nav-menu-right {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-            .navbar-content {
-                display: flex;
-                align-items: center;
-                flex-grow: 1;
-                justify-content: center;
-            }
-            
-            .navbar-right-button {
-                margin-left: auto;
-                padding-left: 20px;
-            }
-            
-            /* Hide the contact button in mobile menu since it will be visible in the nav */
-            @media (max-width: 991px) {
-                .navbar-right-button {
-                    display: none;
-                }
-                
-                .navbar-content {
-                    justify-content: space-between;
-                }
-            }
-                   /* Rest of your existing global styles */
-     /* Mobile Optimization */
-    @media (max-width: 767px) {
-        .logo-slider-item {
-            margin: 0 25px;
+    <style>
+        /* ========== NAVBAR STYLES ========== */
+        /* Custom navbar container with yellow background */
+        .navbar-logo-center-container {
+            background: #fbffd3;
+            box-shadow: 10 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: relative;
+            z-index: 1000;
         }
-        .logo-slider-item img {
-            max-width: 100px;
-        }
-    }
         
-  
-      
-        /* Enhanced image zoom and pan container */
+        /* Main container for navbar content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Flex layout for navbar wrapper */
+        .navbar-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Centered logo positioning */
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-60%);
+        }
+
+        /* Logo image sizing */
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+        
+        /* Navigation menu sections */
+        .nav-menu-left, .nav-menu-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        /* Main navbar content alignment */
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        /* Right-aligned contact button */
+        .navbar-right-button {
+            margin-left: auto;
+            padding-left: 20px;
+        }
+        
+        /* Hide contact button on mobile */
+        @media (max-width: 991px) {
+            .navbar-right-button {
+                display: none;
+            }
+            
+            .navbar-content {
+                justify-content: space-between;
+            }
+        }
+
+        /* ========== MOBILE OPTIMIZATION ========== */
+        @media (max-width: 767px) {
+            .logo-slider-item {
+                margin: 0 25px;
+            }
+            .logo-slider-item img {
+                max-width: 100px;
+            }
+        }
+        
+        /* ========== IMAGE ZOOM CONTAINER ========== */
+        /* Container for zoomable image with pan functionality */
         .image-zoom-container {
             position: relative;
             overflow: hidden;
@@ -91,14 +99,16 @@
             margin-top: 20px;
             cursor: grab;
             touch-action: none;
-            background-color: transparent; /* Ensure no background color */
-            border: none; /* Remove the border */
+            background-color: transparent;
+            border: none;
         }
         
-       .image-zoom-container.grabbing {
+        /* Cursor change when grabbing */
+        .image-zoom-container.grabbing {
             cursor: grabbing;
         }
 
+        /* Zoomable image styles */
         #zoomable-image {
             width: 100%;
             height: 100%;
@@ -110,7 +120,8 @@
             will-change: transform;
         }
         
-       .zoom-controls {
+        /* Zoom controls positioning */
+        .zoom-controls {
             position: absolute;
             bottom: 10px;
             right: 10px;
@@ -119,6 +130,7 @@
             gap: 5px;
         }
 
+        /* Zoom button styling */
         .zoom-btn {
             background: rgba(0,0,0,0.7);
             color: white;
@@ -133,7 +145,8 @@
             font-size: 16px;
         }
         
-        /* Two column layout with headings */
+        /* ========== TWO COLUMN LAYOUT ========== */
+        /* Section with two columns */
         .two-column-section {
             display: flex;
             gap: 40px;
@@ -143,12 +156,14 @@
             padding: 40px 5%;
         }
         
+        /* Column styling */
         .column {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
         
+        /* Column heading style */
         .column-heading {
             font-size: 32px;
             font-weight: 700;
@@ -160,6 +175,7 @@
             padding-bottom: 10px;
         }
         
+        /* Heading underline effect */
         .column-heading:after {
             content: '';
             position: absolute;
@@ -170,21 +186,26 @@
             background-color: #e67e22;
         }
         
+        /* List item layout */
         .layout18_item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 15px;
         }
         
+        /* Icon wrapper for list items */
         .layout18_item-icon-wrapper {
             margin-right: 15px;
             flex-shrink: 0;
         }
         
+        /* Text wrapper for list items */
         .layout18_item-text-wrapper {
             flex-grow: 1;
         }
         
+        /* ========== RESPONSIVE ADJUSTMENTS ========== */
+        /* Tablet styles */
         @media (max-width: 991px) {
             .two-column-section {
                 flex-direction: column;
@@ -196,6 +217,7 @@
             }
         }
         
+        /* Mobile styles */
         @media (max-width: 767px) {
             .image-zoom-container {
                 height: 300px;
@@ -206,6 +228,7 @@
             }
         }
         
+        /* Small mobile styles */
         @media (max-width: 479px) {
             .image-zoom-container {
                 height: 250px;
@@ -216,7 +239,7 @@
             }
         }
         
-        /* Responsive adjustments */
+        /* Layout adjustments for smaller screens */
         @media (max-width: 991px) {
             .w-layout-grid.layout18_component {
                 grid-template-columns: 1fr !important;
@@ -265,137 +288,164 @@
             }
         }
         
-        /* Certification Section Styles */
-        .section_logo2 {
-            padding: 80px 0;
-            background-color: #fff;
-        }
+      /* ========== CERTIFICATION SECTION ========== */
+.section_logo2 {
+    padding: 10px 0;
+    background-color: #f8f8f8;
+}
 
-        .padding-global-11 {
-            padding-right: 5%;
-            padding-left: 5%;
-        }
+.padding-global-11 {
+    padding-right: 5%;
+    padding-left: 5%;
+}
 
-        .container-large {
-            width: 100%;
-            max-width: 1200px;
-            margin-right: auto;
-            margin-left: auto;
-        }
+.container-large {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .padding-section-medium-2 {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
+.padding-section-medium-2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
-        /* Header Styles */
-        .logo2_component {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-        }
+/* Header styles for certification section */
+.logo2_component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
 
-        .logo2_content-left {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 40px;
-        }
+.logo2_content-left {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
 
-        .heading-style-h5 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: #333;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-            width: 100%;
-            line-height: 1.3;
-            white-space: nowrap;
-            position: relative;
-            display: inline-block;
-        }
+/* Certification heading style */
+.heading-style-h5 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+}
 
-        /* Logo Grid Styles */
-        .logo2_logo-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 20px;
-            width: 100%;
-        }
+/* Logo grid for certifications */
+.logo2_logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+}
 
-        .logo2_wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
+/* Certification logo wrapper */
+.logo2_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 15px;
+}
 
-        .logo2_logo {
-            width: 150px;
-            height: auto;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
+/* Certification logo image */
+.logo2_logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
-        /* Hover Effects */
-        .logo2_wrapper:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
+/* Hover effects for certifications */
+.logo2_wrapper:hover {
+    box-shadow: 0 25px 15px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+}
 
-        .logo2_logo:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Style for the map heading */
-        .map-heading-wrapper {
-            margin-bottom: 30px;
-        }
+.logo2_logo:hover {
+    transform: scale(1.05);
+}
 
+/* Style for the map heading */
+.map-heading-wrapper {
+    margin-bottom: 30px;
+}
 
-        /* Adjust the layout to accommodate the new heading */
-        .layout18_component-map {
-            display: flex;
-            flex-direction: column;
-        }
+/* Map layout adjustments */
+.layout18_component-map {
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Optional: Adjust the image container height to account for heading */
-        .image-zoom-container {
-            height: calc(400px - 70px); /* Reduced height to make space for heading */
-        }
-        .certificate-name {
-            text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+/* Certification name text */
+.certificate-name {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-        /* Adjust logo wrapper for vertical alignment */
-        .logo2_wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px;
-        }
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 1024px) {
+    .heading-style-h5 {
+        font-size: 28px;
+        white-space: normal;
+    }
+    .logo2_logo {
+        width: 120px;
+    }
+}
 
-        @media (max-width: 767px) {
-            .certificate-name {
-                font-size: 12px;
-            }
-        }
+@media (max-width: 767px) {
+    .heading-style-h5 {
+        font-size: 24px;
+    }
+    .logo2_logo {
+        width: 100px;
+    }
+    .certificate-name {
+        font-size: 12px;
+    }
+    .logo2_logo-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading-style-h5 {
+        font-size: 20px;
+    }
+    .logo2_logo {
+        width: 80px;
+    }
+    .logo2_wrapper {
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
     </style>
+
     <script type="text/javascript">
         !function(o, c) {
             var n = c.documentElement
