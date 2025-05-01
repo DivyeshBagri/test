@@ -132,7 +132,7 @@
             
        
             .section_logo2 {
-            padding: 80px 0;
+            padding: 40px 0;
             background-color: #fff;
         }
 
@@ -190,25 +190,49 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
             margin-top: 20px;
             width: 100%;
         }
 
         .logo2_wrapper {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding: 15px;
             border-radius: 8px;
             transition: all 0.3s ease;
+            margin: 15px;
         }
 
+        /* Default logo size */
         .logo2_logo {
             width: 150px;
             height: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
+        }
+
+        /* Individual logo size adjustments */
+        .haccp-logo img {
+            width: 100px; /* Adjust as needed */
+        }
+        
+        .iso-logo img {
+            width: 140px; /* Adjust as needed */
+        }
+        
+        .fssai-logo img {
+            width: 160px; /* Adjust as needed */
+        }
+        
+        .apeda-logo img {
+            width: 150px; /* Adjust as needed */
+        }
+        
+        .food-safety-logo img {
+            width: 190px; /* Adjust as needed */
         }
 
         /* Hover Effects */
@@ -231,25 +255,103 @@
         }
         .certificate-name {
             text-align: center;
-            font-size: 14px;
+            font-size: 32px;
             font-weight: 600;
             color: #333;
-            margin-top: 10px;
+            /* Adjust this margin-top value to increase/decrease space between logo and name */
+            margin-top: 25px; /* Increased from 20px to 25px for more space */
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            /* Optional: Add padding if needed */
+            padding-top: 0; /* Can be increased if more space is needed */
         }
 
-        /* Adjust logo wrapper for vertical alignment */
-        .logo2_wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px;
+        /* Individual logo spacing adjustments */
+        .haccp-logo .certificate-name {
+            margin-top: 40px; /* More space for HACCP logo */
+        }
+        
+        .iso-logo .certificate-name {
+            margin-top: 20px; /* Slightly less space for ISO logo */
+        }
+        
+        .fssai-logo .certificate-name {
+            margin-top: 60px; /* Medium space for FSSAI logo */
+        }
+        
+        .apeda-logo .certificate-name {
+            margin-top: 60px; /* Less space for APEDA logo */
+        }
+        
+        .food-safety-logo .certificate-name {
+            margin-top: 25px; /* Most space for food safety logo */
+        }
+
+        @media (max-width: 991px) {
+            .certificate-name {
+                margin-top: 20px; /* Reduced spacing for tablets */
+            }
+            
+            .haccp-logo .certificate-name {
+                margin-top: 22px;
+            }
+            
+            .iso-logo .certificate-name {
+                margin-top: 0px;
+            }
+            
+            .fssai-logo .certificate-name {
+                margin-top: 21px;
+            }
+            
+            .apeda-logo .certificate-name {
+                margin-top: 18px;
+            }
+            
+            .food-safety-logo .certificate-name {
+                margin-top: 25px;
+            }
         }
 
         @media (max-width: 767px) {
             .certificate-name {
                 font-size: 12px;
+                /* Adjust mobile spacing if needed */
+                margin-top: 15px; /* Changed from default for mobile */
+            }
+            
+            /* Individual mobile spacing */
+            .haccp-logo .certificate-name {
+                margin-top: 18px;
+            }
+            
+            .iso-logo .certificate-name {
+                margin-top: 16px;
+            }
+            
+            .fssai-logo .certificate-name {
+                margin-top: 17px;
+            }
+            
+            .apeda-logo .certificate-name {
+                margin-top: 15px;
+            }
+            
+            .food-safety-logo .certificate-name {
+                margin-top: 20px;
+            }
+            
+            /* Adjust logo sizes for mobile */
+            .logo2_logo {
+                width: 120px;
+            }
+            
+            .haccp-logo img,
+            .iso-logo img,
+            .fssai-logo img,
+            .apeda-logo img,
+            .food-safety-logo img {
+                width: 100px !important; /* Uniform size for mobile */
             }
         }
            .logo-slider-container {
@@ -836,17 +938,17 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                         </div>
                     </div>
                 </section>
-               <section class="section_logo2">
+                <section class="section_logo2">
         <div class="padding-global-11">
             <div class="container-large">
                 <div class="padding-section-medium-2">
                     <div class="logo2_component">
                         <div class="margin-bottom margin-small">
-  <h1 style="font-size: 41px;">BACKED BY PRESTIGIOUS CERTIFICATIONS</h1>
+  <h1 style="font-size: 41px;">Backed by Prestigious Certifications</h1>
 </div>
                         <div class="logo2_logo-list">
                             <!-- HACCP Certification -->
-                            <div class="logo2_wrapper">
+                            <div class="logo2_wrapper haccp-logo">
                                 <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/661816c2fddfd37a084b4100_HACCP%20Certification%20logo.svg" 
                                      loading="lazy" 
                                      alt="HACCP Certification" 
@@ -855,7 +957,7 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                             </div>
                             
                             <!-- ISO Certification -->
-                            <div class="logo2_wrapper">
+                            <div class="logo2_wrapper iso-logo">
                                 <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be57543ce6784c2d018752_July%2016%20Image%20removebg-preview%20(1).png" 
                                      loading="lazy" 
                                      alt="ISO Certification" 
@@ -864,7 +966,7 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                             </div>
                             
                             <!-- FSSAI Certification -->
-                            <div class="logo2_wrapper">
+                            <div class="logo2_wrapper fssai-logo">
                                 <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575487e27d0aa3a0c7df_WhatsApp%20July%2016%20removebg%20preview.png" 
                                      loading="lazy" 
                                      alt="FSSAI Certification" 
@@ -873,20 +975,21 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                             </div>
                             
                             <!-- APEDA Certification -->
-                            <div class="logo2_wrapper">
+                            <div class="logo2_wrapper apeda-logo">
                                 <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66be575463139379a28a316b_July%2016%20Image%20removebg-preview.png" 
                                      loading="lazy" 
                                      alt="APEDA Certification" 
                                      class="logo2_logo"/>
-                                <div class="certificate-name">APEDA Certification</div>
+                                <div class="certificate-name">FSSC Certification</div>
                             </div>
                             
                             <!-- Additional Certification -->
-                            <div class="logo2_wrapper">
+                            <div class="logo2_wrapper food-safety-logo">
                                 <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/timeline/certificate.png" 
                                      loading="lazy" 
                                      alt="Food Safety Certification" 
                                      class="logo2_logo"/>
+                                    
                                 <div class="certificate-name">ISO Certification</div>
                             </div>
                         </div>
