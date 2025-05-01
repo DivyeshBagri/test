@@ -6,7 +6,34 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <style>
+            /* GLOBAL FONT STYLES */
+            body, html {
+                font-family: 'Poppins', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* All text elements */
+            body * {
+                font-family: inherit;
+            }
+            
+            /* Headings */
+            .heading-style-h5, 
+            .certificate-name,
+            .nav-link,
+            .nav-link-accent,
+            .button-primary,
+            .text-block {
+                font-family: inherit;
+            }
+
             /* NAVBAR STYLES */
             /* Main navbar container with yellow background */
             .navbar-logo-center-container {
@@ -87,7 +114,7 @@
             /* CERTIFICATES SECTION STYLES */
             /* Main section styling - SPACING CONTROLLED HERE */
             .section_logo2 {
-                padding: 60px 0; /* Vertical spacing controlled here */
+                padding: 20px 0; /* Vertical spacing controlled here */
                 background-color: #fff;
             }
 
@@ -164,24 +191,23 @@
                 padding: 10px;
                 border-radius: 8px;
                 transition: all 0.3s ease;
-                margin: 15px; /* Space around each logo */
+                margin: 5px; /* Space around each logo */
             }
 
             /* Default logo sizing */
             .logo2_logo {
-                width: 150px;
+                width: 100px;
                 height: auto;
                 object-fit: contain;
                 transition: transform 0.3s ease;
             }
-
-            /* Custom logo size adjustments */
-           .haccp-logo img {
-                width: 120px;
+             /* Custom logo size adjustments */
+            .haccp-logo img {
+                width: 80px;
             }
             
             .iso-logo img {
-                width: 140px;
+                width: 120px;
             }
             
             .fssai-logo img {
@@ -193,10 +219,10 @@
             }
             
             .food-safety-logo img {
-                width: 130px;
+                width: 170px;
             }
 
-
+           
             /* Hover effects */
             .logo2_wrapper:hover {
                 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -219,13 +245,33 @@
                 padding-top: 0;
             }
 
-       
+            /* Individual certificate name spacing */
+            .haccp-logo .certificate-name {
+                margin-top: 40px;
+            }
+            
+            .iso-logo .certificate-name {
+                margin-top: 20px;
+            }
+            
+            .fssai-logo .certificate-name {
+                margin-top: 60px;
+            }
+            
+            .apeda-logo .certificate-name {
+                margin-top: 50px;
+            }
+            
+            .food-safety-logo .certificate-name {
+                margin-top: 25px;
+            }
+
             /* LOGO SLIDER STYLES */
             /* Main slider container - SPACING CONTROLLED HERE */
             .logo-slider-container {
                 overflow: hidden;
                 position: relative;
-                padding: 60px 0; /* Vertical spacing controlled here */
+                padding: 20px 0; /* Vertical spacing controlled here */
                 background: #fff;
             }
 
@@ -300,17 +346,6 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
-
-            /* GLOBAL STYLES */
-            /* Body text rendering */
-            body {
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                font-smoothing: antialiased;
-                text-rendering: optimizeLegibility;
-                margin: 0;
-                padding: 0;
-            }
             
             /* Focus styles */
             *[tabindex]:focus-visible, input[type="file"]:focus-visible {
@@ -372,7 +407,26 @@
                     margin-top: 20px;
                 }
                 
-           
+                /* Individual tablet spacing */
+                .haccp-logo .certificate-name {
+                    margin-top: 22px;
+                }
+                
+                .iso-logo .certificate-name {
+                    margin-top: 0px;
+                }
+                
+                .fssai-logo .certificate-name {
+                    margin-top: 21px;
+                }
+                
+                .apeda-logo .certificate-name {
+                    margin-top: 18px;
+                }
+                
+                .food-safety-logo .certificate-name {
+                    margin-top: 25px;
+                }
                 
                 /* Section spacing adjustments */
                 .section_logo2,
@@ -387,7 +441,33 @@
             }
 
             /* Mobile styles */
-         
+            @media (max-width: 767px) {
+                /* Certificate name adjustments */
+                .certificate-name {
+                    font-size: 12px;
+                    margin-top: 15px;
+                }
+                
+                /* Individual mobile spacing */
+                .haccp-logo .certificate-name {
+                    margin-top: 18px;
+                }
+                
+                .iso-logo .certificate-name {
+                    margin-top: 16px;
+                }
+                
+                .fssai-logo .certificate-name {
+                    margin-top: 17px;
+                }
+                
+                .apeda-logo .certificate-name {
+                    margin-top: 15px;
+                }
+                
+                .food-safety-logo .certificate-name {
+                    margin-top: 20px;
+                }
                 
                 /* Logo size adjustments */
                 .logo2_logo {
@@ -422,6 +502,7 @@
                     margin-bottom: 30px;
                 }
             }
+        </style>
         </style>
         <script type="text/javascript">
             !function(o, c) {
