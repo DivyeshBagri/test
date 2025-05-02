@@ -236,6 +236,33 @@
             .padding-section-large.uniuqe {
     padding-top: 2rem;
     padding-bottom: 2rem;
+}@media screen and (max-width: 767px) {
+    .footer3_top-wrapper {
+        grid-row-gap: 0rem;
+        grid-auto-rows: 1fr;
+    }
+}
+            @media screen and (max-width: 991px) {
+    .footer3_top-wrapper {
+        grid-row-gap: 0rem;
+        grid-template-columns: 1fr;
+    }
+}
+            @media screen and (max-width: 479px) {
+    .padding-top.padding-medium {
+        grid-column-gap: 44px;
+        grid-row-gap: 7px;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 1fr;
+        display: grid
+;
+    }
+@media screen and (max-width: 479px) {
+    .footer3_menu-wrapper {
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+    }
 }
             
     </style>
