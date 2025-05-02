@@ -5,76 +5,77 @@
     <title>Kamal Solvents</title>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="Webflow" name="generator"/>
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Discover Kamal Fortified Chakki Atta - a premium quality flour packed with essential nutrients for healthy living. Perfect for rotis, breads and more."/>
-        
-        <!-- Stylesheets -->
-        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
-        
+    <!-- SEO Meta Tags -->
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+    
     <!-- Main CSS -->
     <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
     <style>
-  
-      body,
-        html,
-        body *,
-        .heading-style-h5, 
-        .certificate-name,
-        .nav-link,
-        .nav-link-accent,
-        .button-primary,
-        .text-block,
+        /* Consistent heading styles */
         h1, h2, h3, h4, h5, h6,
-        p, span, a, li,
-        input, textarea, select, button,
-        .navbar-brand,
-        .navbar-content * {
-            font-family: 'Poppins', sans-serif !important;
-          
+        .heading-style-h2, .heading-style-h2.about,
+        .heading-8, .heading-10 {
+            font-size: 32px !important;
+            font-weight: 700 !important;
         }
+        
+        .heading-kamal {
+            font-weight: 500 !important;
+        }
+        
+        body,
+        body *:not(script):not(style):not(link):not(meta) {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
         /* Custom styles for right-aligned contact button */
         .navbar-logo-center-container {
-          background: #fbffd3;
-          box-shadow: 10 2px 10px rgba(0,0,0,0.1);
-          padding: 15px 0;
-          position: relative;
-          z-index: 1000;
+            background: #fbffd3;
+            box-shadow: 10 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: relative;
+            z-index: 1000;
         }
+        
         .container {
-          max-width: 1000px;
-          margin: 0 auto;
-          padding: 0 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .navbar-wrapper {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
         }
 
         .navbar-brand {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-60%);
+            position: absolute;
+            left: 50%;
+            transform: translateX(60%);
         }
+        
         .navbar-brand-three {
-  display: flex;
-  align-items: center;
-  margin-right: 20px; /* Space between logo and nav items */
-}
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Space between logo and nav items */
+        }
 
         .navbar-brand img {
-          height: 50px;
-          width: auto;
+            height: 50px;
+            width: auto;
         }
         
         .nav-menu-left, .nav-menu-right {
-          display: flex;
-          align-items: center;
-          gap: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
+        
         .navbar-content {
             display: flex;
             align-items: center;
@@ -98,25 +99,17 @@
             }
         }
         
-        /* Heading styles */
-        h1, h2, h3, h4, h5, h6,
-        .heading-style-h2,
-        .heading-8,
-        .heading-10 {
-            font-size: 32px !important;
-            font-weight: 700 !important;
+        /* Rest of your existing global styles */
+        /* Mobile Optimization */
+        @media (max-width: 767px) {
+            .logo-slider-item {
+                margin: 0 25px;
+            }
+            .logo-slider-item img {
+                max-width: 100px;
+            }
         }
         
-               /* Rest of your existing global styles */
-     /* Mobile Optimization */
-    @media (max-width: 767px) {
-        .logo-slider-item {
-            margin: 0 25px;
-        }
-        .logo-slider-item img {
-            max-width: 100px;
-        }
-    }
         /* Your existing custom styles */
         .image-zoom-container {
             position: relative;
@@ -157,36 +150,37 @@
             cursor: pointer;
             font-size: 16px;
         }
-       .content1_component {
-    align-items: flex-start !important;
-    gap: 0px; /* Adjust space between text and image */
-}
+        
+        .content1_component {
+            align-items: flex-start !important;
+            gap: 50px; /* Adjust space between text and image */
+        }
 
-.content1_image-wrapper {
-    width: 100%;
-    max-width: 400px; /* Control image width */
-    margin-top: 0; /* Remove any default top margin */
-    align-self: flex-start; /* Align to top */
-}
+        .content1_image-wrapper {
+            width: 100%;
+            max-width: 380px; /* Control image width */
+            margin-top: 0; /* Remove any default top margin */
+            align-self: flex-start; /* Align to top */
+        }
 
-.content1_image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
+        .content1_image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
 
-/* For mobile responsiveness */
-@media (max-width: 767px) {
-    .content1_component {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .content1_image-wrapper {
-        max-width: 100%;
-        margin: 20px auto 0; /* Center image on mobile */
-    }
-}
+        /* For mobile responsiveness */
+        @media (max-width: 767px) {
+            .content1_component {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .content1_image-wrapper {
+                max-width: 100%;
+                margin: 20px auto 0; /* Center image on mobile */
+            }
+        }
         
         /* Responsive adjustments */
         @media (max-width: 991px) {
@@ -236,84 +230,84 @@
                 grid-template-columns: 1fr !important;
             }
         }
+        
         .social-icon-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.social-icon-wrapper svg {
-  flex-shrink: 0;
-}
+        .social-icon-wrapper svg {
+            flex-shrink: 0;
+        }
 
-.nav-dropdown-link {
-  padding: 8px 16px !important;
-}
-        @media screen and (max-width: 767px) {
-    .padding-section-large-2 {
-        padding-top: 2rem;
-        padding-bottom: 0rem;
-    }
-}
-                @media screen and (max-width: 991px) {
-    .padding-section-large-2 {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-}
-            .padding-section-large-2.less {
+        .nav-dropdown-link {
+            padding: 8px 16px !important;
+        }
+        .padding-section-large-2 {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
-         @media screen and (max-width: 767px) {
-    .padding-section-medium {
-        padding-top: 0rem;
-        padding-bottom: 3rem;
-    }
-}
-
         @media screen and (max-width: 767px) {
-    .padding-section-medium {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-    }
-}
+            .padding-section-large-2 {
+                padding-top: 2rem;
+                padding-bottom: 0rem;
+            }
+        }
+        
         @media screen and (max-width: 991px) {
-    .padding-section-medium {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-    }
-}
-@media screen and (max-width: 767px) {
-    .footer3_top-wrapper {
-        grid-row-gap: 0rem;
-        grid-auto-rows: 1fr;
-    }
-}
-@media screen and (max-width: 991px) {
-    .footer3_top-wrapper {
-        grid-row-gap: 0rem;
-        grid-template-columns: 1fr;
-    }
-}
-@media screen and (max-width: 479px) {
-    .footer3_menu-wrapper {
-        grid-row-gap: 15px;
-        grid-template-columns: 1fr;
-    }
-}
+            .padding-section-large-2 {
+                padding-top: 2rem;
+                padding-bottom: 0rem;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .padding-section-medium {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+            }
+        }
+        
+        @media screen and (max-width: 991px) {
+            .padding-section-medium {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .footer3_top-wrapper {
+                grid-row-gap: 0rem;
+                grid-auto-rows: 1fr;
+            }
+        }
+        
         @media screen and (max-width: 479px) {
-    .padding-top.padding-medium {
-        grid-column-gap: 44px;
-        grid-row-gap: 15px;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
-        grid-auto-columns: 1fr;
-        display: grid
-;
-    }
-}
-    </style>
+            .footer3_menu-wrapper {
+                grid-row-gap: 14px;
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media screen and (max-width: 991px) {
+            .footer3_top-wrapper {
+                grid-row-gap: 0rem;
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media screen and (max-width: 479px) {
+            .padding-top.padding-medium {
+                grid-column-gap: 44px;
+                grid-row-gap: 14px;
+                grid-template-rows: auto auto;
+                grid-template-columns: 1fr;
+                grid-auto-columns: 1fr;
+                display: grid;
+            }
+        }
+  </style>
     <script type="text/javascript">
         !function(o, c) {
             var n = c.documentElement
@@ -327,59 +321,50 @@
     <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
 </head>
 <body>
-        <!-- 
-        =============================================
-        NAVIGATION BAR
-        =============================================
-        -->
-        <div class="navbar-logo-center">
-            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
-                <div class="container">
-                    <div class="navbar-wrapper-three">
-                        <div class="navbar-content">
-                            <!-- Logo -->
-                            <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
-                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="90" alt="Kamal Solvents Logo"/>
-                            </a>
-                            
-                            <!-- Navigation Menu -->
-                            <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
-                                <div class="nav-menu-three">
-                                    <ul role="list" class="nav-menu-block w-list-unstyled">
-                                        <li>
-                                            <a href="About-Us.html" class="nav-link">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a href="Exports-Labelling.html" class="nav-link">Labelling &amp; Exports</a>
-                                        </li>
-                                        <li>
-                                            <!-- Products Dropdown -->
-                                            <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-                                                <div class="nav-dropdown-toggle w-dropdown-toggle">
-                                                    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-                                                    <div class="text-block">Products</div>
+  </section>
+       <div class="navbar-logo-center">
+                <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+                    <div class="container">
+                        <div class="navbar-wrapper-three">
+                            <div class="navbar-content">
+                                <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
+                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="90" alt="Kamal Solvents Logo"/>
+                                </a>
+                                <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                                    <div class="nav-menu-three">
+                                        <ul role="list" class="nav-menu-block w-list-unstyled">
+                                            <li>
+                                                <a href="About-Us.html" class="nav-link">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="Exports-Labelling.html" class="nav-link">Labelling &amp; Exports</a>
+                                            </li>
+                                            <li>
+                                                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                                    <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                                        <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                                        <div class="text-block">Products</div>
+                                                    </div>
+                                                    <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                                        <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
+                                                        <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
+                                                        <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
+                                                        <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                                        <a href="/By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
+                                                    </nav>
                                                 </div>
-                                                <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
-                                                    <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
-                                                    <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
-                                                    <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
-                                                    <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
-                                                    <a href="/By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
-                                                </nav>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    
-                                    <!-- Right Navigation Links -->
-                                    <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
-                                        <li>
-                                            <a href="By-Products.html" class="nav-link-accent">By Products</a>
-                                        </li>
-                                         <li>
-                                            <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
-                                        </li>
-                                        <li>
-                                              <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
+                                            <li>
+                                                <a href="By-Products.html" class="nav-link-accent">By Products</a>
+                                            </li>
+                                             <li>
+                                                <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
+                                            </li>
+                                            <li>
+                                                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
   <div class="nav-dropdown-toggle w-dropdown-toggle">
     <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
     <div class="text-block">Contact Us</div>
@@ -427,22 +412,21 @@
     </a>
   </nav>
 </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                        
-                        <!-- Mobile Menu Button -->
-                        <div class="menu-button w-nav-button">
-                            <div class="w-icon-nav-menu"></div>
+                                            </li>
+                                          </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                              <div class="menu-button w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- 
+     </section>
+     </section>
+          <!-- 
         =============================================
         MAIN CONTENT
         =============================================
