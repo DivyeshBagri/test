@@ -148,7 +148,7 @@
         }
        .content1_component {
     align-items: flex-start !important;
-    gap: 30px; /* Adjust space between text and image */
+    gap: 0px; /* Adjust space between text and image */
 }
 
 .content1_image-wrapper {
@@ -244,6 +244,12 @@
         padding-bottom: 0rem;
     }
 }
+                @media screen and (max-width: 991px) {
+    .padding-section-large-2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
             .padding-section-large-2.less {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -252,6 +258,19 @@
     .padding-section-medium {
         padding-top: 0rem;
         padding-bottom: 3rem;
+    }
+}
+
+        @media screen and (max-width: 767px) {
+    .padding-section-medium {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+}
+        @media screen and (max-width: 991px) {
+    .padding-section-medium {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
     }
 }
     </style>
