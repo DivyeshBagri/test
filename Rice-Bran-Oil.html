@@ -193,6 +193,182 @@
 .nav-dropdown-link {
   padding: 8px 16px !important;
 }
+
+ body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 30px 0;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: #000000;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #f8d320, #2c541d);
+            transition: height 0.3s ease;
+        }
+        
+        .benefit-card:hover:before {
+            height: 10px;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #2c541d;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1);
+        }
+        
+        .benefit-title {
+            font-size: 1.4rem;
+            color: 000000;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .benefit-title:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #f8d320;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .benefit-card:hover .benefit-title:after {
+            width: 60px;
+        }
+        
+        .benefit-description {
+            color: #000000;
+            font-size: 1rem;
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 4s ease infinite;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefit-card {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .why-choose-section {
+                padding: 50px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
          .padding-section-medium.less {
     padding-bottom: 0rem;
 }
@@ -404,48 +580,88 @@
             </section>
 
             <!-- Benefits Section -->
-            <section class="section_content13">
-                <div class="padding-global-21">
-                    <div class="container-large">
-                        <div class="padding-section-medium less">
-                            <div class="content13_component">
-                                <div class="margin-bottom margin-xxlarge">
-                                    <div class="max-width-large align-center">
-                                        <div class="margin-bottom margin-large">
-                                            <h3 class="heading-8">Why choose Energy Max Rice Bran Oil?</h3>
-                                        </div>
-                                        <div class="text-rich-text w-richtext">
-                                            <!-- Benefits List -->
-                                            <p>
-                                                <strong>The Perfect Balance:</strong>
-                                                Rice Bran oil stands out as a healthier alternative to many popular edible oils, primarily due to its ideal balance of Saturated Fatty Acids (SFA), Monounsaturated Fatty Acids (MUFA), and Polyunsaturated Fatty Acids (PUFA). Recommended by esteemed health organizations like the WHO and the AHA, it boasts a balanced ratio of 1:1.5:1, making it a preferred choice for numerous households seeking dietary wellness.
-                                            </p>
-                                            <p>
-                                                <strong>Dietary Benefits:</strong>
-                                                Enriched with Vitamin E and Squalene, Rice Bran oil is lactose-free, cholesterol-free, and refined under optimal conditions to ensure zero trans-fat content. Its consumption contributes to increased energy levels, fortified immunity, and improved skin tone, thanks to squalene's antioxidant properties. Additionally, natural Vitamin E combats free radicals, promoting overall health and vitality.
-                                            </p>
-                                            <p>
-                                                <strong>Oryzanol:</strong>
-                                                A Potent Antioxidant:Oryzanol, a key component found exclusively in Rice Bran Oil, possesses remarkable cholesterol-lowering properties. Scientific studies in both humans and animals confirm its efficacy in reducing LDL (bad cholesterol) levels while elevating HDL (good cholesterol). Furthermore, Oryzanol aids in decreasing plasma triglyceride levels, enhancing cardiovascular health significantly.
-                                            </p>
-                                            <p>
-                                                <strong>Economical & Versatile Usage:</strong>
-                                                Rice Bran oil offers an economical alternative to other healthy oil varieties, such as olive oil. Its versatility extends from everyday cooking to salad dressings and deep frying. Chefs and homemakers alike appreciate its efficiency, as its consumption is generally 15%-20% less compared to other oils, owing to its lower absorption rate during cooking.
-                                            </p>
-                                            <p>
-                                                <strong>Shelf Life & Stability:</strong>
-                                                Boasting a longer shelf life and enhanced stability at higher cooking temperatures, Rice Bran oil shines in culinary applications requiring high heat. With a high smoke point of 254 degrees Celsius, it is ideal for grilling, deep frying, and other high-temperature cooking methods, ensuring that food remains crisp, flavorful, and nutritious.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content13_image-wrapper"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header animate__animated animate__fadeIn">
+                <h2>Why Choose Energy Max Rice Bran Oil?</h2>
+                <p>Discover the superior qualities that make our rice bran oil the healthiest choice for your kitchen</p>
+            </div>
             
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                    <div class="benefit-icon floating">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Perfect Balance</h3>
+                    <p class="benefit-description">Our oil maintains an ideal 1:1.5:1 ratio of SFA, MUFA, and PUFA as recommended by WHO and AHA for optimal heart health.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="benefit-icon pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Rich in Antioxidants</h3>
+                    <p class="benefit-description">Packed with Oryzanol and Vitamin E that fight free radicals, boost immunity, and improve skin health.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <div class="benefit-icon floating" style="animation-delay: 0.5s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Cholesterol Control</h3>
+                    <p class="benefit-description">Clinically proven to reduce LDL (bad cholesterol) while increasing HDL (good cholesterol) levels.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <div class="benefit-icon pulse" style="animation-delay: 1s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 6l3 6h12l3-6"></path>
+                            <path d="M3 18l3-6h12l3 6"></path>
+                            <line x1="12" y1="3" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">High Smoke Point</h3>
+                    <p class="benefit-description">With a smoke point of 254°C, it's perfect for all cooking methods including deep frying without breaking down.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                    <div class="benefit-icon floating" style="animation-delay: 0.7s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Economical Usage</h3>
+                    <p class="benefit-description">15-20% less consumption compared to other oils due to lower absorption during cooking.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <div class="benefit-icon pulse" style="animation-delay: 1.2s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Chemical-Free Refining</h3>
+                    <p class="benefit-description">Physically refined without chemicals, preserving natural nutrients while being completely bland and odorless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
             <!-- Product Gallery Section -->
             <section class="section_gallery3">
                 <div class="padding-global-22">
@@ -605,11 +821,7 @@
                             <div class="footer3_bottom-wrapper">
                                 <div class="footer3_credit-text">© 2024 Kamal Solvents. All rights reserved. </div>
                             </div>
-                            <div class="w-layout-grid footer3_legal-list">
-                                <a href="#" class="footer3_legal-link">Privacy Policy</a>
-                                <a href="#" class="footer3_legal-link">Terms of Service</a>
-                                <a href="#" class="footer3_legal-link">Cookies Settings</a>
-                            </div>
+                      
                         </div>
                     </div>
                 </div>
