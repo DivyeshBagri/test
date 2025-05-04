@@ -253,37 +253,91 @@
     transform: scale(1.05);
 }
 
-            /* LOGO SLIDER STYLES */
+            /* IMPROVED LOGO SLIDER STYLES */
             /* Main slider container - SPACING CONTROLLED HERE */
             .logo-slider-container {
                 overflow: hidden;
                 position: relative;
-                padding: 20px 0; /* Vertical spacing controlled here */
+                padding: 40px 0;
                 background: #fff;
+                width: 100%;
             }
 
-            /* Slider track animation */
+            /* Slider track container */
             .logo-slider-track {
                 display: flex;
                 align-items: center;
                 width: max-content;
-                animation: scroll 20s linear infinite;
+                animation: scroll 30s linear infinite;
+                will-change: transform; /* Optimize for animation */
             }
 
             /* Individual slider item */
             .logo-slider-item {
                 flex-shrink: 0;
-                margin: 0 40px; /* Horizontal spacing between slider items */
+                margin: 0 40px;
                 transition: transform 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 80px;
             }
 
-            /* Slider image styling */
+            /* Slider image styling - BASE STYLE */
             .logo-slider-item img {
-                max-width: 150px;
-                height: auto;
+                max-height: 100%;
+                width: auto;
                 filter: grayscale(0%);
                 opacity: 0.8;
                 transition: all 0.3s ease;
+                object-fit: contain;
+            }
+
+            /* INDIVIDUAL LOGO SIZE CONTROL */
+            .logo-slider-item.akshaya img {
+                height: 60px;
+            }
+            .logo-slider-item.cargil img {
+                height: 67px;
+            }
+            .logo-slider-item.reliance img {
+                height: 70px;
+            }
+            .logo-slider-item.dmart img {
+                height: 55px;
+            }
+            .logo-slider-item.flipkart img {
+                height: 52px;
+            }
+            .logo-slider-item.jiomart img {
+                height: 75px;
+            }
+            .logo-slider-item.tata img {
+                height: 50px;
+            }
+            .logo-slider-item.walmart img {
+                height: 60px;
+            }
+            .logo-slider-item.marico img {
+                height: 65px;
+            }
+            .logo-slider-item.lots img {
+                height: 65px;
+            }
+            .logo-slider-item.godrej img {
+                height: 60px;
+            }
+            .logo-slider-item.solar img {
+                height: 60px;
+            }
+            .logo-slider-item.swiggy img {
+                height: 55px;
+            }
+            .logo-slider-item.pepsico img {
+                height: 70px;
+            }
+            .logo-slider-item.itc img {
+                height: 80px;
             }
 
             /* Slider hover effects */
@@ -293,10 +347,19 @@
                 transform: scale(1.05);
             }
 
-            /* Slider animation */
+            /* Improved Slider animation */
             @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); }
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* Pause animation on hover */
+            .logo-slider-container:hover .logo-slider-track {
+                animation-play-state: paused;
             }
 
             /* SWIPER SLIDER STYLES */
@@ -395,7 +458,7 @@
             /* SECTION SPACING UTILITIES */
             /* Add consistent spacing between sections */
             .section-spacing {
-                margin-bottom: 30px; /* Space between sections */
+                margin-bottom: 30px;
             }
             
             /* RESPONSIVE STYLES */
@@ -430,6 +493,11 @@
                 .section-spacing {
                     margin-bottom: 30px;
                 }
+                
+                /* Adjust logo sizes for tablet */
+                .logo-slider-item img {
+                    max-height: 50px;
+                }
             }
 
             /* Mobile styles */
@@ -455,16 +523,60 @@
                 /* Slider item adjustments */
                 .logo-slider-item {
                     margin: 0 25px;
+                    height: 60px;
                 }
                 
-                .logo-slider-item img {
-                    max-width: 100px;
+                /* Adjust individual logo sizes for mobile */
+                .logo-slider-item.akshaya img {
+                    height: 40px;
+                }
+                .logo-slider-item.cargil img {
+                    height: 45px;
+                }
+                .logo-slider-item.reliance img {
+                    height: 50px;
+                }
+                .logo-slider-item.dmart img {
+                    height: 40px;
+                }
+                .logo-slider-item.flipkart img {
+                    height: 35px;
+                }
+                .logo-slider-item.jiomart img {
+                    height: 45px;
+                }
+                .logo-slider-item.tata img {
+                    height: 40px;
+                }
+                .logo-slider-item.walmart img {
+                    height: 45px;
+                }
+                .logo-slider-item.marico img {
+                    height: 40px;
+                }
+                .logo-slider-item.lots img {
+                    height: 45px;
+                }
+                .logo-slider-item.godrej img {
+                    height: 40px;
+                }
+                .logo-slider-item.solar img {
+                    height: 45px;
+                }
+                .logo-slider-item.swiggy img {
+                    height: 40px;
+                }
+                .logo-slider-item.pepsico img {
+                    height: 50px;
+                }
+                .logo-slider-item.itc img {
+                    height: 45px;
                 }
                 
                 /* Section padding adjustments */
                 .section_logo2,
                 .logo-slider-container {
-                    padding: 30px 0; /* Reduced padding for mobile */
+                    padding: 20px 0;
                 }
                 
                 /* Reduce space between sections on mobile */
@@ -554,7 +666,8 @@
         grid-template-columns: 1fr;
     }
 }
-        </style>
+
+   </style>
         </style>
         <script type="text/javascript">
             !function(o, c) {
@@ -568,7 +681,8 @@
         <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
-    <body class="body">
+    
+     <body class="body">
         <div class="page-wrapper">
             <div class="global-styles w-embed">
                 <!-- Your global styles content here -->
@@ -709,7 +823,13 @@
                 </div>
             </div>
      </section>
-            <main class="main-wrapper">
+    <body class="body">
+        <div class="page-wrapper">
+            <div class="global-styles w-embed">
+                <!-- Your global styles content here -->
+            </div>
+        
+           <main class="main-wrapper">
                 <!-- New Slider Section -->
                 <section class="swiper-container">
                     <div class="swiper-wrapper">
@@ -859,58 +979,82 @@
                          <section class="logo-slider-container">
     <div class="logo-slider-track">
         <!-- Original Logos -->
-        <div class="logo-slider-item">
-            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/Akshaya-Patra-LOGO-510x244.jpg" alt="Akshaya Patra">
+        <div class="logo-slider-item akshaya">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Akshaya-Patra-LOGO-510x244.jpg" alt="Akshaya Patra">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/a02bff68bec2549557357aab91268aea.png" alt="Client">
+        <div class="logo-slider-item cargil">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/cargil.png" alt="Cargil">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8fa_reliance-smart-logo-kamal-solvents.svg" alt="Reliance Smart">
+        <div class="logo-slider-item reliance">
+             <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/RelianceSmart.png" alt="Reliance Smart">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" alt="D-Mart">
+        <div class="logo-slider-item dmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Dmart.png" alt="D-Mart">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" alt="Flipkart">
+        <div class="logo-slider-item flipkart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Flipkart.png" alt="Flipkart">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" alt="JioMart">
+        <div class="logo-slider-item jiomart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/JioMart.png" alt="JioMart">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" alt="Tata Tesco">
+        <div class="logo-slider-item tata">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Tata.png" alt="Tata Tesco">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" alt="Walmart">
+        <div class="logo-slider-item walmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Walmart.png" alt="Walmart">
         </div>
         
         <!-- Duplicated Logos for Seamless Loop -->
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" alt="Akshaya Patra">
+        <div class="logo-slider-item marico">
+            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" alt="Marico">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/lots%20wholesale.jpg" alt="Client">
+        <div class="logo-slider-item lots">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/lots%20wholesale.jpg" alt="Lots">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/pngwing.com.png" alt="Reliance Smart">
+        <div class="logo-slider-item godrej">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Godrej.png" alt="Godrej">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280c2d573fe1e981a8f5_dmart-logo-kamal-solvents.svg" alt="D-Mart">
+        <div class="logo-slider-item solar">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Solar.png" alt="Solar">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bf8c1cbeed026b019_flipkart-india-logo-kamal%20solvents.svg" alt="Flipkart">
+        <div class="logo-slider-item swiggy">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/SwiigyInstamart.png" alt="Swiggy Instamart">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b364ff27f21f101dc_JioMart-Logo-kamal-solvents%201.svg" alt="JioMart">
+        <div class="logo-slider-item pepsico">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Pepsico.png" alt="Pepsico">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280bd3493623696bce07_tata-tesco-star-logo-kamal-solvents.svg" alt="Tata Tesco">
+        <div class="logo-slider-item itc">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/ITC.png" alt="ITC">
         </div>
-        <div class="logo-slider-item">
-            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280b0ae49173b95fcecb_walmart-india-logo-kamal-solvents.svg" alt="Walmart">
+        
+        <!-- Duplicate the logos again to make the transition smoother -->
+        <div class="logo-slider-item akshaya">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Akshaya-Patra-LOGO-510x244.jpg" alt="Akshaya Patra">
+        </div>
+        <div class="logo-slider-item cargil">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/cargil.png" alt="Cargil">
+        </div>
+        <div class="logo-slider-item reliance">
+             <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/RelianceSmart.png" alt="Reliance Smart">
+        </div>
+        <div class="logo-slider-item dmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Dmart.png" alt="D-Mart">
+        </div>
+        <div class="logo-slider-item flipkart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Flipkart.png" alt="Flipkart">
+        </div>
+        <div class="logo-slider-item jiomart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/JioMart.png" alt="JioMart">
+        </div>
+        <div class="logo-slider-item tata">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Tata.png" alt="Tata Tesco">
+        </div>
+        <div class="logo-slider-item walmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Walmart.png" alt="Walmart">
         </div>
     </div>
 </section>
+
                 </section>
                 <header class="section_header19">
                     <div class="padding-global-4">
@@ -1468,6 +1612,7 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                         </div>
                     </div>
                 </section>
+
                 <footer class="footer3_component">
                     <div class="padding-global">
                         <div class="container-large">
@@ -1566,11 +1711,6 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                                     <div class="footer3_bottom-wrapper">
                                         <div class="footer3_credit-text">© 2024 Kamal Solvents. All rights reserved. </div>
                                     </div>
-                                    <div class="w-layout-grid footer3_legal-list">
-                                        <a href="#" class="footer3_legal-link">Privacy Policy</a>
-                                        <a href="#" class="footer3_legal-link">Terms of Service</a>
-                                        <a href="#" class="footer3_legal-link">Cookies Settings</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1580,6 +1720,32 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
         <script src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/js/webflow.58cece567a73d21bccc436ad3b36d601.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://6sugvk.csb.app/script.js"></script>
+        <script>
+        // Enhanced Logo Slider Script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the slider track element
+            const sliderTrack = document.querySelector('.logo-slider-track');
+            
+            // Clone the logos for seamless looping
+            const logos = sliderTrack.innerHTML;
+            sliderTrack.innerHTML = logos + logos;
+            
+            // Adjust animation duration based on number of logos
+            const logoCount = document.querySelectorAll('.logo-slider-item').length / 2;
+            const duration = logoCount * 3; // 3 seconds per logo
+            
+            // Apply the animation dynamically
+            sliderTrack.style.animation = `scroll ${duration}s linear infinite`;
+            
+            // Pause animation on hover
+            sliderTrack.addEventListener('mouseenter', function() {
+                this.style.animationPlayState = 'paused';
+            });
+            
+            sliderTrack.addEventListener('mouseleave', function() {
+                this.style.animationPlayState = 'running';
+            });
+        });
+        </script>
     </body>
 </html>
