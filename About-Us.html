@@ -688,9 +688,49 @@
                    <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
   <div class="nav-dropdown-toggle w-dropdown-toggle">
     <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
-    <div class="text-block">Contact Us</div>
+       <div class="text-block">Contact Us</div>
   </div>
   <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+    <!-- Contact Form Link -->
+ <a href="Home.html#section_contact2" class="nav-dropdown-link w-dropdown-link" onclick="if(window.location.href.includes('Home.html')) { event.preventDefault(); document.querySelector('.section_contact2').scrollIntoView({behavior: 'smooth'}); }">
+  <div class="social-icon-wrapper">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16ZM7 9H17V11H7V9ZM7 12H14V14H7V12Z" fill="currentColor"/>
+    </svg>
+    Contact Form
+  </div>
+</a>
+    
+    <!-- Phone Link -->
+    <a href="tel:+1234567890" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+        </svg>
+        +91-(7744) 220771
+      </div>
+    </a>
+    
+    <!-- Address Link -->
+    <a href="#" class="nav-dropdown-link w-dropdown-link" onclick="event.preventDefault(); window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">
+  <div class="social-icon-wrapper">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+    </svg>
+    Our Location
+  </div>
+</a>
+
+ <a href="mailto:rishimundra@kamalsol.com" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"/>
+        </svg>
+        Email
+      </div>
+    </a>
+    
+    <!-- Social Media Links -->
     <a href="https://www.facebook.com/KamalEnergyMaxRiceBranOil/" target="_blank" class="nav-dropdown-link w-dropdown-link">
       <div class="social-icon-wrapper">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -723,29 +763,22 @@
         YouTube
       </div>
     </a>
-    <a href="mailto:rishimundra@kamalsol.com" class="nav-dropdown-link w-dropdown-link">
-      <div class="social-icon-wrapper">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"/>
-        </svg>
-        Email
-      </div>
-    </a>
+   
   </nav>
 </div>
-                </li>
-              </ul>
+                                            </li>
+                                          </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                              <div class="menu-button w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </nav>
-        </div>
-        <div class="menu-button w-nav-button">
-          <div class="w-icon-nav-menu"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+     </section>
 </section>
 <div class="page-wrapper">
   <main class="main-wrapper">
