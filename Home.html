@@ -1747,5 +1747,20 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
             });
         });
         </script>
+
+        <script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash === '#section_contact2') {
+      const section = document.querySelector('#section_contact2');
+      if (section) {
+        // Small delay helps ensure everything is rendered
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });
+</script>
+
     </body>
 </html>
