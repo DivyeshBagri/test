@@ -249,7 +249,7 @@
 }
 
 body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -378,14 +378,7 @@ body {
                 transform: translateY(-5px);
             }
         }
-        
-          
-        .floating {
-            animation: float 3s ease infinite;
-        }
-        
-    
-        
+
         /* Pulse Animation */
         @keyframes pulse {
             0% {
@@ -397,10 +390,6 @@ body {
             100% {
                 transform: scale(1);
             }
-        }
-        
-        .pulse {
-            animation: pulse 4s ease infinite;
         }
         
         /* Responsive Adjustments */
@@ -624,86 +613,56 @@ body {
                     </section>
                 </section>
                     <section class="why-choose-section">
-        <div class="container">
-            <div class="section-header animate__animated animate__fadeIn">
-                <h2>Why Choose Energy Max Rice Bran Oil?</h2>
-                <p>Discover the superior qualities that make our rice bran oil the healthiest choice for your kitchen</p>
+    <div class="container">
+        <div class="section-header animate__animated animate__fadeIn">
+            <h2>Why Choose Kamal Shudh Maida?</h2>
+            <p>Exceptional quality refined flour that elevates all your culinary creations</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <!-- Benefit 1 -->
+            <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                <div class="benefit-icon floating">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="benefit-title">Versatile Culinary Canvas</h3>
+                <p class="benefit-description">Perfect for light pastries, crispy snacks, and silky-smooth sauces. Its fine texture and superior quality enhance the taste and texture of every dish you create.</p>
             </div>
             
-            <div class="benefits-grid">
-                <!-- Benefit 1 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                    <div class="benefit-icon floating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">Perfect Balance</h3>
-                    <p class="benefit-description">Our oil maintains an ideal 1:1.5:1 ratio of SFA, MUFA, and PUFA as recommended by WHO and AHA for optimal heart health.</p>
+            <!-- Benefit 2 -->
+            <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="benefit-icon pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
                 </div>
-                
-                <!-- Benefit 2 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                    <div class="benefit-icon pulse">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">Rich in Antioxidants</h3>
-                    <p class="benefit-description">Packed with Oryzanol and Vitamin E that fight free radicals, boost immunity, and improve skin health.</p>
+                <h3 class="benefit-title">Consistent Quality</h3>
+                <p class="benefit-description">Packaged with utmost care to guarantee consistent quality and freshness. Trusted by chefs and home cooks across India for reliable results every time.</p>
+            </div>
+            
+            <!-- Benefit 3 -->
+            <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <div class="benefit-icon floating" style="animation-delay: 0.5s;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path>
+                        <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path>
+                    </svg>
                 </div>
-                
-                <!-- Benefit 3 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                    <div class="benefit-icon floating" style="animation-delay: 0.5s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">Cholesterol Control</h3>
-                    <p class="benefit-description">Clinically proven to reduce LDL (bad cholesterol) while increasing HDL (good cholesterol) levels.</p>
-                </div>
-                
-                <!-- Benefit 4 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                    <div class="benefit-icon pulse" style="animation-delay: 1s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 6l3 6h12l3-6"></path>
-                            <path d="M3 18l3-6h12l3 6"></path>
-                            <line x1="12" y1="3" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">High Smoke Point</h3>
-                    <p class="benefit-description">With a smoke point of 254°C, it's perfect for all cooking methods including deep frying without breaking down.</p>
-                </div>
-                
-                <!-- Benefit 5 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.5s">
-                    <div class="benefit-icon floating" style="animation-delay: 0.7s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">Economical Usage</h3>
-                    <p class="benefit-description">15-20% less consumption compared to other oils due to lower absorption during cooking.</p>
-                </div>
-                
-                <!-- Benefit 6 -->
-                <div class="benefit-card animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-                    <div class="benefit-icon pulse" style="animation-delay: 1.2s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
-                        </svg>
-                    </div>
-                    <h3 class="benefit-title">Chemical-Free Refining</h3>
-                    <p class="benefit-description">Physically refined without chemicals, preserving natural nutrients while being completely bland and odorless.</p>
-                </div>
+                <h3 class="benefit-title">Nutritional Balance</h3>
+                <p class="benefit-description">Provides essential carbohydrates and proteins for a balanced diet. Perfect for occasional treats and everyday cooking when consumed in moderation.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     </section>
     
                 <section class="section_gallery3">
