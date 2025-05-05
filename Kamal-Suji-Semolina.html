@@ -572,7 +572,7 @@
   </div>
   <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
     <!-- Contact Form Link -->
- <a href="Home.html#section_contact2" class="nav-dropdown-link w-dropdown-link" onclick="if(window.location.href.includes('Home.html')) { event.preventDefault(); document.querySelector('.section_contact2').scrollIntoView({behavior: 'smooth'}); }">
+  <a href="Home.html#contact-section" class="nav-dropdown-link w-dropdown-link">
   <div class="social-icon-wrapper">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16ZM7 9H17V11H7V9ZM7 12H14V14H7V12Z" fill="currentColor"/>
@@ -580,6 +580,34 @@
     Contact Form
   </div>
 </a>
+
+<script>
+  function handleScrollToContact(event) {
+    if (window.location.pathname.includes('Home.html')) {
+      event.preventDefault();
+      const section = document.querySelector('#contact-section');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Else: let the link go to Home.html#section_contact2
+  }
+
+  // Smooth scroll after page loads with #section_contact2 in URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash === '#contact-section') {
+      const section = document.querySelector(hash);
+      if (section) {
+        // Use setTimeout to wait for layout/rendering
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });
+</script>
+
     
     <!-- Phone Link -->
     <a href="tel:+1234567890" class="nav-dropdown-link w-dropdown-link">
