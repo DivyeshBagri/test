@@ -703,11 +703,29 @@
 
 <script>
   function handleScrollToContact(event) {
-    if (window.location.href.includes('Home.html')) {
+    if (window.location.pathname.includes('Home.html')) {
       event.preventDefault();
-      document.querySelector('#section_contact2').scrollIntoView({ behavior: 'smooth' });
+      const section = document.querySelector('#section_contact2');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    // Else: let the link go to Home.html#section_contact2
   }
+
+  // Smooth scroll after page loads with #section_contact2 in URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash === '#section_contact2') {
+      const section = document.querySelector(hash);
+      if (section) {
+        // Use setTimeout to wait for layout/rendering
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });
 </script>
 
       
