@@ -1769,6 +1769,25 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
         </script>
 
         <script>
+  window.addEventListener('load', function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const scrollToAnchor = () => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Retry if not found yet (in case of dynamic content)
+          setTimeout(scrollToAnchor, 100);
+        }
+      };
+      // Delay slightly after full load
+      setTimeout(scrollToAnchor, 300);
+    }
+  });
+</script>
+
+       
   window.addEventListener('DOMContentLoaded', function () {
     if (window.location.hash === '#section_contact2') {
       const section = document.querySelector('#section_contact2');
