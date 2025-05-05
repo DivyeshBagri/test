@@ -33,6 +33,7 @@
                 text-rendering: optimizeLegibility;
                 margin: 0;
                 padding: 0;
+                overflow-x: hidden;
             }
             
             /* All text elements */
@@ -362,12 +363,15 @@
                 animation-play-state: paused;
             }
 
-            /* SWIPER SLIDER STYLES */
+            /* SWIPER SLIDER STYLES - UPDATED FOR VIDEO */
             /* Main swiper container */
             .swiper-container {
                 width: 100%;
-                height: 100%;
+                height: auto; /* Changed to auto for better responsiveness */
+                min-height: 300px; /* Minimum height */
+                aspect-ratio: 16/9; /* Maintain aspect ratio */
                 overflow: hidden;
+                position: relative;
             }
             
             /* Slide styling */
@@ -377,14 +381,40 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                height: 100%;
+                width: 100%;
             }
             
             /* Slide image */
             .swiper-slide img {
                 display: block;
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            /* Video container styling - UPDATED */
+            .video-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                pointer-events: none;
+                background: #000; /* Fallback background */
+            }
+            
+            .video-container video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
                 height: auto;
                 object-fit: cover;
+                pointer-events: none;
             }
             
             /* Hide scrollbar */
@@ -498,6 +528,11 @@
                 .logo-slider-item img {
                     max-height: 50px;
                 }
+                
+                /* Adjust slider height for tablet */
+                .swiper-container {
+                    min-height: 250px;
+                }
             }
 
             /* Mobile styles */
@@ -577,6 +612,11 @@
                 .section_logo2,
                 .logo-slider-container {
                     padding: 20px 0;
+                }
+                
+                /* Adjust slider height for mobile */
+                .swiper-container {
+                    min-height: 200px;
                 }
                 
                 /* Reduce space between sections on mobile */
@@ -682,12 +722,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
     
-     <body class="body">
+    <body class="body">
         <div class="page-wrapper">
             <div class="global-styles w-embed">
                 <!-- Your global styles content here -->
             </div>
-            <div class="navbar-logo-center">
+            
+             <div class="navbar-logo-center">
                 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
                     <div class="container">
                         <div class="navbar-wrapper-three">
@@ -829,21 +870,29 @@
                 <!-- Your global styles content here -->
             </div>
         
+           
            <main class="main-wrapper">
                 <!-- New Slider Section -->
                 <section class="swiper-container">
                     <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid1.jpg" alt="Slide 1">
+                        <!-- Slide 1 - Video (now first slide) -->
+                        <div class="swiper-slide" data-swiper-autoplay="37500">
+                            <div class="video-container">
+                                <video autoplay muted playsinline loop style="width: 100%; height: 100%;">
+                                    <source src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/slider%20video%20kamal%20oil%20%26%20food%2002%20(1)%20(1).mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
+                        
+                        <!-- Slide 2 - Image (3000ms duration) -->
+                        <div class="swiper-slide" data-swiper-autoplay="3000">
                             <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid2.jpg" alt="Slide 2">
                         </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid1.jpg" alt="Slide 3">
+                        
+                        <!-- Slide 3 - Image (3000ms duration) -->
+                        <div class="swiper-slide" data-swiper-autoplay="3000">
+                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid1.jpg" alt="Slide 1">
                         </div>
                     </div>
                 </section>
@@ -890,13 +939,13 @@
         <script src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/js/webflow.58cece567a73d21bccc436ad3b36d601.js" type="text/javascript"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            // Initialize Swiper
+            // Initialize Swiper with per-slide autoplay durations
             document.addEventListener('DOMContentLoaded', function() {
                 var mySwiper = new Swiper('.swiper-container', {
                     // Optional parameters
                     loop: true,
                     autoplay: {
-                        delay: 6000, // Auto-slide every 6 seconds
+                        delay: 3000, // Default delay (will be overridden by data-swiper-autoplay)
                         disableOnInteraction: false,
                     },
                     
@@ -911,19 +960,74 @@
                         // when window width is >= 320px
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 20
+                            spaceBetween: 0
                         },
                         // when window width is >= 480px
                         480: {
                             slidesPerView: 1,
-                            spaceBetween: 30
+                            spaceBetween: 0
                         },
                         // when window width is >= 768px
                         768: {
                             slidesPerView: 1,
-                            spaceBetween: 40
+                            spaceBetween: 0
+                        },
+                        // when window width is >= 992px
+                        992: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        }
+                    },
+                    
+                    // Custom autoplay control
+                    on: {
+                        init: function() {
+                            this.autoplay.stop();
+                            this.autoplay.start();
+                            
+                            // Set video playback speed to 1.5x
+                            const video = document.querySelector('.video-container video');
+                            if (video) {
+                                video.playbackRate = 1.5;
+                                // Wait for video metadata to be loaded
+                                video.addEventListener('loadedmetadata', function() {
+                                    // Set the autoplay duration to match video length
+                                    const videoDuration = video.duration * 1000; // Convert to milliseconds
+                                    const videoSlide = document.querySelector('.swiper-slide[data-swiper-autoplay]');
+                                    if (videoSlide) {
+                                        videoSlide.setAttribute('data-swiper-autoplay', videoDuration);
+                                    }
+                                });
+                            }
+                        },
+                        slideChange: function() {
+                            // Get the autoplay delay for the current slide
+                            const currentSlide = this.slides[this.activeIndex];
+                            const delay = currentSlide.getAttribute('data-swiper-autoplay');
+                            
+                            // Update autoplay delay
+                            if (delay) {
+                                this.params.autoplay.delay = parseInt(delay);
+                                this.autoplay.stop();
+                                this.autoplay.start();
+                            }
+                            
+                            // If this is the video slide, ensure playback speed
+                            if (currentSlide.querySelector('.video-container video')) {
+                                const video = currentSlide.querySelector('.video-container video');
+                                video.playbackRate = 1.5;
+                                video.currentTime = 0;
+                                video.play();
+                            }
                         }
                     }
+                });
+                
+                // Disable all interaction with video elements
+                document.querySelectorAll('video').forEach(video => {
+                    video.controls = false;
+                    video.addEventListener('click', e => e.preventDefault());
+                    video.addEventListener('contextmenu', e => e.preventDefault());
                 });
             });
         </script>
@@ -963,6 +1067,7 @@
                 </div>
             </div>
         </section>
+        
          <section data-w-id="a05d0b44-6393-fb4f-7ec5-2f8eaf307a15" class="section_logo3">
                     <div class="padding-section-medium">
                         <div class="padding-global-3">
@@ -1716,13 +1821,15 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
                         </div>
                     </div>
                 </footer>
+
+              
        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6607a6ef83fae9272e214029" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/js/webflow.58cece567a73d21bccc436ad3b36d601.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
      
-        
+         
         <script>
         // Enhanced Logo Slider Script
         document.addEventListener('DOMContentLoaded', function() {
@@ -1764,6 +1871,7 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
     }
   });
 </script>
+
 
 
     </body>
