@@ -1720,6 +1720,26 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
         <script src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/js/webflow.58cece567a73d21bccc436ad3b36d601.js" type="text/javascript"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+  // Scroll smoothly to anchor after page load
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash === '#section_contact2') {
+      const scrollToTarget = () => {
+        const section = document.querySelector(hash);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Retry until the element is found (for dynamic content)
+          setTimeout(scrollToTarget, 100);
+        }
+      };
+      scrollToTarget();
+    }
+  });
+</script>
+        
         <script>
         // Enhanced Logo Slider Script
         document.addEventListener('DOMContentLoaded', function() {
