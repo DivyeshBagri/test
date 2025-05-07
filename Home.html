@@ -362,22 +362,22 @@
             .logo-slider-container:hover .logo-slider-track {
                 animation-play-state: paused;
             }
-
-            /* SWIPER SLIDER STYLES - UPDATED FOR VIDEO */
+ /* SWIPER SLIDER STYLES - UPDATED FOR VIDEO AND IMAGES */
             /* Main swiper container */
             .swiper-container {
                 width: 100%;
                 height: auto; /* Changed to auto for better responsiveness */
-                min-height: 300px; /* Minimum height */
                 aspect-ratio: 16/9; /* Maintain aspect ratio */
+                max-height: 700px; /* Maximum height for large screens */
                 overflow: hidden;
                 position: relative;
+                background: #fff; /* White background instead of black */
             }
             
             /* Slide styling */
             .swiper-slide {
                 text-align: center;
-                background: #fff;
+                background: #fff; /* White background for slides */
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -386,35 +386,30 @@
                 width: 100%;
             }
             
-            /* Slide image */
+            /* Slide image - UPDATED FOR BETTER MOBILE DISPLAY */
             .swiper-slide img {
                 display: block;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: fill; /* Changed to contain to show full image */
+                background: #fff; /* White background for images */
             }
             
-            /* Video container styling - UPDATED */
+            /* Video container styling */
             .video-container {
                 width: 100%;
                 height: 100%;
                 position: relative;
                 overflow: hidden;
                 pointer-events: none;
-                background: #000; /* Fallback background */
+                background: #fff; /* White background instead of black */
             }
             
             .video-container video {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                min-width: 100%;
-                min-height: 100%;
-                width: auto;
-                height: auto;
-                object-fit: cover;
-                pointer-events: none;
+                width: 100%;
+                height: 100%;
+                object-fit: fill; /* Show full video */
+                background: #fff; /* White background for video */
             }
             
             /* Hide scrollbar */
@@ -426,6 +421,109 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
+            
+            /* Focus styles */
+            *[tabindex]:focus-visible, input[type="file"]:focus-visible {
+                outline: 0.125rem solid #4d65ff;
+                outline-offset: 0.125rem;
+            }
+            
+            /* Color inheritance */
+            .inherit-color * {
+                color: inherit;
+            }
+            
+            /* Rich text formatting */
+            .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+                margin-top: 0 !important;
+            }
+            
+            .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            /* Container styles */
+            .container-medium,.container-small, .container-large {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+
+            /* SECTION SPACING UTILITIES */
+            /* Add consistent spacing between sections */
+            .section-spacing {
+                margin-bottom: 30px;
+            }
+            
+            /* Custom pagination styles */
+            .swiper-pagination {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                z-index: 10;
+            }
+            
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                background-color: rgba(0, 0, 0, 0.5); /* Black dots for better visibility */
+                border-radius: 50%;
+                opacity: 0.7;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            
+            .swiper-pagination-bullet-active {
+                background-color: #000;
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            
+            @media (max-width: 991px) {
+                /* Adjust slider for tablet */
+                .swiper-container {
+                    max-height: 500px;
+                }
+                
+                /* Adjust pagination for tablet */
+                .swiper-pagination {
+                    bottom: 15px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            
+            @media (max-width: 767px) {
+                /* Adjust slider for mobile - full width, no black bars */
+                .swiper-container {
+                    aspect-ratio: 4/3; /* More square aspect ratio for mobile */
+                    max-height: none;
+                    height: auto;
+                }
+                
+                /* Make sure content fits perfectly */
+                .swiper-slide img,
+                .video-container video {
+                    object-fit: fill; /* Changed to cover for mobile to fill container */
+                }
+                
+                /* Adjust pagination for mobile */
+                .swiper-pagination {
+                    bottom: 10px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+
             
             /* Focus styles */
             *[tabindex]:focus-visible, input[type="file"]:focus-visible {
@@ -557,10 +655,7 @@
                     max-height: 50px;
                 }
                 
-                /* Adjust slider height for tablet */
-                .swiper-container {
-                    min-height: 250px;
-                }
+              
                 
                 /* Adjust pagination for tablet */
                 .swiper-pagination {
@@ -653,10 +748,7 @@
                 }
                 
                 /* Adjust slider height for mobile */
-                .swiper-container {
-                    min-height: 200px;
-                }
-                
+               
                 /* Reduce space between sections on mobile */
                 .section-spacing {
                     margin-bottom: 30px;
@@ -925,14 +1017,9 @@
                 <section class="swiper-container">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 - Video (now first slide) -->
-                        <div class="swiper-slide" data-swiper-autoplay="37500">
-                            <div class="video-container">
-                                <video autoplay muted playsinline loop style="width: 100%; height: 100%;">
-                                    <source src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/slider%20video%20kamal%20oil%20%26%20food%2002%20(1)%20(1).mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
+                        <div class="swiper-slide" data-swiper-autoplay="3000">
+                          <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid1.jpg" alt="Slide 1">
+                      </div>
                         
                         <!-- Slide 2 - Image (3000ms duration) -->
                         <div class="swiper-slide" data-swiper-autoplay="3000">
@@ -940,9 +1027,15 @@
                         </div>
                         
                         <!-- Slide 3 - Image (3000ms duration) -->
-                        <div class="swiper-slide" data-swiper-autoplay="3000">
-                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid1.jpg" alt="Slide 1">
-                        </div>
+                        
+                        <div class="swiper-slide" data-swiper-autoplay="37000">
+                          <div class="video-container">
+                              <video autoplay muted playsinline loop>
+                                  <source src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/slider%20video%20kamal%20oil%20%26%20food%2002%20(1)%20(1).mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                              </video>
+                          </div>
+                      </div>
                     </div>
                     <!-- Pagination dots -->
                     <div class="swiper-pagination"></div>
