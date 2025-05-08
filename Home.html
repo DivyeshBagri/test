@@ -481,6 +481,8 @@
                 transform: scale(1.2);
             }
             
+        
+            
             @media (max-width: 991px) {
                 /* Adjust slider for tablet */
                 .swiper-container {
@@ -495,6 +497,19 @@
                 .swiper-pagination-bullet {
                     width: 8px;
                     height: 8px;
+                }
+            }
+                 /* Desktop specific styles */
+            @media (min-width: 992px) {
+                .swiper-container {
+                    width: 90%; /* Smaller width for desktop */
+                    margin: 0 auto; /* Center align */
+                    max-height: 800px; /* Reduced height for desktop */
+                }
+                
+                .swiper-slide img,
+                .video-container video {
+                    object-fit: fill; /* Fill the container */
                 }
             }
             
@@ -1917,8 +1932,8 @@ Bran Oil"  style="width: 180.5px; height: 245.91px;" />
     </div>
 </section>
 
-                  <!-- Footer Section -->
-  <footer class="footer3_component">
+     <!-- Footer Section -->
+    <footer class="footer3_component">
         <div class="padding-global">
             <div class="container-large">
                 <div class="padding-vertical padding-section-medium">
