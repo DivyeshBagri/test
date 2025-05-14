@@ -1,13 +1,2314 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=Home.html"> <!-- Redirect to home.html -->
-    <title></title>
-</head>
-<body>
-    <p><a href="/Home.html"></a>.</p> <!-- Optional fallback link -->
-</body>
-</html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Kamal Solvents</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Webflow" name="generator"/>
+        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/css/kamal-solvents-f8b61e.webflow.166346515.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Add SweetAlert CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+        <style>
+         body,
+    html,
+    body *,
+    .heading-style-h5, 
+    .certificate-name,
+    .nav-link,
+    .nav-link-accent,
+    .button-primary,
+    .text-block,
+    h1, h2, h3, h4, h5, h6,
+    p, span, a, li,
+    input, textarea, select, button {
+        font-family: 'Poppins', sans-serif !important;
+        
+    }
 
+            /* GLOBAL FONT STYLES */
+            body, html {
+                font-family: 'Poppins', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            
+            /* All text elements */
+            body * {
+                font-family: inherit;
+            }
+            
+            /* Headings */
+            .heading-style-h5, 
+            .certificate-name,
+            .nav-link,
+            .nav-link-accent,
+            .button-primary,
+            .text-block {
+                font-family: inherit;
+            }
+
+            /* NAVBAR STYLES */
+            /* Main navbar container with yellow background */
+            .navbar-logo-center-container {
+                background: #fbffd3;
+                box-shadow: 10 2px 10px rgba(0,0,0,0.1);
+                padding: 15px 0;
+                position: relative;
+                z-index: 1000;
+            }
+            
+            /* Container for navbar content with max-width */
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Flex wrapper for navbar elements */
+            .navbar-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                position: relative;
+            }
+
+            /* Centered logo positioning */
+            .navbar-brand {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-60%);
+            }
+            
+            /* Logo container styling */
+            .navbar-brand-three {
+                display: flex;
+                align-items: center;
+                margin-right: 20px; /* Space between logo and nav items */
+            }
+
+            /* Logo image sizing */
+            .navbar-brand img {
+                height: 50px;
+                width: auto;
+            }
+            
+            /* Navigation menu sections (left and right) */
+            .nav-menu-left, .nav-menu-right {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            /* Main navbar content area */
+            .navbar-content {
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                justify-content: center;
+            }
+            
+            /* Contact button positioning */
+            .navbar-right-button {
+                margin-left: auto;
+                padding-left: 20px;
+            }
+            
+            /* Hide contact button on mobile */
+            @media (max-width: 991px) {
+                .navbar-right-button {
+                    display: none;
+                }
+                
+                .navbar-content {
+                    justify-content: space-between;
+                }
+            }
+
+            .nav-menu-three {               
+                border-radius: 50px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                padding: 7px;
+                display: flex;
+                box-shadow: 10 8px 50px #0000000d;
+            }
+            .navbar-logo-center-container.shadow-three {
+    background-color: #fbffd3;
+    width: 100%;
+    max-width: 1140px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+               
+
+            /* CERTIFICATES SECTION STYLES */
+            /* Main section styling - SPACING CONTROLLED HERE */
+       .section_logo2 {
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.padding-global-11 {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.container-large {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .padding-section-medium {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+}
+            @media screen and (max-width: 991px) {
+    .padding-section-medium {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Header styles for certification section */
+.logo2_component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.logo2_content-left {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Certification heading style */
+.heading-style-h5 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+}
+
+/* Logo grid for certifications */
+.logo2_logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    margin-top: -26px;
+    width: 100%;
+}
+
+/* Certification logo wrapper */
+.logo2_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 15px;
+}
+
+/* Certification logo image */
+.logo2_logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+ /* Custom logo size adjustments */
+            .haccp-logo img {
+                width: 170px;
+            }
+            
+            .iso-logo img {
+                width: 120px;
+            }
+            
+            .fssai-logo img {
+                width: 160px;
+            }
+            
+            .apeda-logo img {
+                width: 150px;
+            }
+            
+            .food-safety-logo img {
+                width: 170px;
+            }
+
+           
+
+/* Hover effects for certifications */
+.logo2_wrapper:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(--5px);
+}
+
+.logo2_logo:hover {
+    transform: scale(1.05);
+}
+
+            /* IMPROVED LOGO SLIDER STYLES */
+            /* Main slider container - SPACING CONTROLLED HERE */
+            .logo-slider-container {
+                overflow: hidden;
+                position: relative;
+                padding: 40px 0;
+                background: #fff;
+                width: 100%;
+            }
+
+            /* Slider track container */
+            .logo-slider-track {
+                display: flex;
+                align-items: center;
+                width: max-content;
+                animation: scroll 30s linear infinite;
+                will-change: transform; /* Optimize for animation */
+            }
+
+            /* Individual slider item */
+            .logo-slider-item {
+                flex-shrink: 0;
+                margin: 0 40px;
+                transition: transform 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 80px;
+            }
+
+            /* Slider image styling - BASE STYLE */
+            .logo-slider-item img {
+                max-height: 100%;
+                width: auto;
+                filter: grayscale(0%);
+                opacity: 0.8;
+                transition: all 0.3s ease;
+                object-fit: contain;
+            }
+
+            /* INDIVIDUAL LOGO SIZE CONTROL */
+            .logo-slider-item.akshaya img {
+                height: 60px;
+            }
+            .logo-slider-item.cargil img {
+                height: 67px;
+            }
+            .logo-slider-item.reliance img {
+                height: 70px;
+            }
+            .logo-slider-item.dmart img {
+                height: 55px;
+            }
+            .logo-slider-item.flipkart img {
+                height: 52px;
+            }
+            .logo-slider-item.jiomart img {
+                height: 75px;
+            }
+            .logo-slider-item.tata img {
+                height: 50px;
+            }
+            .logo-slider-item.walmart img {
+                height: 60px;
+            }
+            .logo-slider-item.marico img {
+                height: 65px;
+            }
+            .logo-slider-item.lots img {
+                height: 65px;
+            }
+            .logo-slider-item.godrej img {
+                height: 60px;
+            }
+            .logo-slider-item.solar img {
+                height: 60px;
+            }
+            .logo-slider-item.swiggy img {
+                height: 55px;
+            }
+            .logo-slider-item.pepsico img {
+                height: 70px;
+            }
+            .logo-slider-item.itc img {
+                height: 80px;
+            }
+
+            /* Slider hover effects */
+            .logo-slider-item:hover img {
+                filter: grayscale(0);
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            /* Improved Slider animation */
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* Pause animation on hover */
+            .logo-slider-container:hover .logo-slider-track {
+                animation-play-state: paused;
+            }
+ /* SWIPER SLIDER STYLES - UPDATED FOR VIDEO AND IMAGES */
+            /* Main swiper container */
+            .swiper-container {
+                width: 100%;
+                height: auto; /* Changed to auto for better responsiveness */
+                aspect-ratio: 16/9; /* Maintain aspect ratio */
+                max-height: 700px; /* Maximum height for large screens */
+                overflow: hidden;
+                position: relative;
+                background: #fff; /* White background instead of black */
+            }
+            
+            /* Slide styling */
+            .swiper-slide {
+                text-align: center;
+                background: #fff; /* White background for slides */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+            
+            /* Slide image - UPDATED FOR BETTER MOBILE DISPLAY */
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: fill; /* Changed to contain to show full image */
+                background: #fff; /* White background for images */
+            }
+            
+            /* Video container styling */
+            .video-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                pointer-events: none;
+                background: #fff; /* White background instead of black */
+            }
+            
+            .video-container video {
+                width: 100%;
+                height: 100%;
+                object-fit: fill; /* Show full video */
+                background: #fff; /* White background for video */
+            }
+            
+            /* Hide scrollbar */
+            .swiper-container::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .swiper-container {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            
+            /* Focus styles */
+            *[tabindex]:focus-visible, input[type="file"]:focus-visible {
+                outline: 0.125rem solid #4d65ff;
+                outline-offset: 0.125rem;
+            }
+            
+            /* Color inheritance */
+            .inherit-color * {
+                color: inherit;
+            }
+            
+            /* Rich text formatting */
+            .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+                margin-top: 0 !important;
+            }
+            
+            .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            /* Container styles */
+            .container-medium,.container-small, .container-large {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+
+            /* SECTION SPACING UTILITIES */
+            /* Add consistent spacing between sections */
+            .section-spacing {
+                margin-bottom: 30px;
+            }
+            
+            /* Custom pagination styles */
+            .swiper-pagination {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                z-index: 10;
+            }
+            
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                background-color: rgba(0, 0, 0, 0.5); /* Black dots for better visibility */
+                border-radius: 50%;
+                opacity: 0.7;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            
+            .swiper-pagination-bullet-active {
+                background-color: #000;
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            
+        
+            
+            @media (max-width: 991px) {
+                /* Adjust slider for tablet */
+                .swiper-container {
+                    max-height: 500px;
+                }
+                
+                /* Adjust pagination for tablet */
+                .swiper-pagination {
+                    bottom: 15px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+                 /* Desktop specific styles */
+            @media (min-width: 992px) {
+                .swiper-container {
+                    width: 70%; /* Smaller width for desktop */
+                    margin: 0 auto; /* Center align */
+                    max-height: 800px; /* Reduced height for desktop */
+                }
+                
+                .swiper-slide img,
+                .video-container video {
+                    object-fit: fill; /* Fill the container */
+                }
+            }
+            
+            @media (max-width: 767px) {
+                /* Adjust slider for mobile - full width, no black bars */
+                .swiper-container {
+                    aspect-ratio: 5/3; /* More square aspect ratio for mobile */
+                    max-height: none;
+                    height: auto;
+                }
+                
+                /* Make sure content fits perfectly */
+                .swiper-slide img,
+                .video-container video {
+                    object-fit: fill; /* Changed to cover for mobile to fill container */
+                }
+                
+                /* Adjust pagination for mobile */
+                .swiper-pagination {
+                    bottom: 10px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+
+            
+            /* Focus styles */
+            *[tabindex]:focus-visible, input[type="file"]:focus-visible {
+                outline: 0.125rem solid #4d65ff;
+                outline-offset: 0.125rem;
+            }
+            
+            /* Color inheritance */
+            .inherit-color * {
+                color: inherit;
+            }
+            
+            /* Rich text formatting */
+            .w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+                margin-top: 0 !important;
+            }
+            
+            .w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            /* Container styles */
+            .container-medium,.container-small, .container-large {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+            @media screen and (max-width: 767px) {
+    .padding-section-large-2 {
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+    }
+}
+            @media screen and (max-width: 991px) {
+    .padding-section-large-2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+            
+            /* Text line clamping */
+            .text-style-3lines {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            
+            .text-style-2lines {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            
+            /* Flex display */
+            .display-inlineflex {
+                display: inline-flex;
+            }
+
+            /* SECTION SPACING UTILITIES */
+            /* Add consistent spacing between sections */
+            .section-spacing {
+                margin-bottom: 30px;
+            }
+            
+            /* Custom pagination styles */
+            .swiper-pagination {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                z-index: 10;
+            }
+            
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                opacity: 0.7;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            
+            .swiper-pagination-bullet-active {
+                background-color: #000;
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            
+            /* RESPONSIVE STYLES */
+            /* Tablet styles */
+            @media (max-width: 991px) {
+                /* Certificate name adjustments */
+                .certificate-name {
+                    margin-top: 20px;
+                }
+                
+                /* Individual tablet spacing */
+                .haccp-logo .certificate-name {
+                    margin-top: 22px;
+                }
+                
+                .iso-logo .certificate-name {
+                    margin-top: 0px;
+                }
+                
+                .fssai-logo .certificate-name {
+                    margin-top: 21px;
+                }
+                
+                .apeda-logo .certificate-name {
+                    margin-top: 18px;
+                }
+                
+                .food-safety-logo .certificate-name {
+                    margin-top: 25px;
+                }            
+                /* Reduce space between sections on tablet */
+                .section-spacing {
+                    margin-bottom: 30px;
+                }
+                
+                /* Adjust logo sizes for tablet */
+                .logo-slider-item img {
+                    max-height: 50px;
+                }
+                
+              
+                
+                /* Adjust pagination for tablet */
+                .swiper-pagination {
+                    bottom: 15px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+
+            /* Mobile styles */
+            @media (max-width: 767px) {
+                /* Certificate name adjustments */
+                .certificate-name {
+                    font-size: 12px;
+                    margin-top: 15px;
+                }
+                /* Logo size adjustments */
+                .logo2_logo {
+                    width: 120px;
+                }
+                
+                .haccp-logo img,
+                .iso-logo img,
+                .fssai-logo img,
+                .apeda-logo img,
+                .food-safety-logo img {
+                    width: 100px !important;
+                }
+                
+                /* Slider item adjustments */
+                .logo-slider-item {
+                    margin: 0 25px;
+                    height: 60px;
+                }
+                
+                /* Adjust individual logo sizes for mobile */
+                .logo-slider-item.akshaya img {
+                    height: 40px;
+                }
+                .logo-slider-item.cargil img {
+                    height: 45px;
+                }
+                .logo-slider-item.reliance img {
+                    height: 50px;
+                }
+                .logo-slider-item.dmart img {
+                    height: 40px;
+                }
+                .logo-slider-item.flipkart img {
+                    height: 35px;
+                }
+                .logo-slider-item.jiomart img {
+                    height: 45px;
+                }
+                .logo-slider-item.tata img {
+                    height: 40px;
+                }
+                .logo-slider-item.walmart img {
+                    height: 45px;
+                }
+                .logo-slider-item.marico img {
+                    height: 40px;
+                }
+                .logo-slider-item.lots img {
+                    height: 45px;
+                }
+                .logo-slider-item.godrej img {
+                    height: 40px;
+                }
+                .logo-slider-item.solar img {
+                    height: 45px;
+                }
+                .logo-slider-item.swiggy img {
+                    height: 40px;
+                }
+                .logo-slider-item.pepsico img {
+                    height: 50px;
+                }
+                .logo-slider-item.itc img {
+                    height: 45px;
+                }
+                
+                /* Section padding adjustments */
+                .section_logo2,
+                .logo-slider-container {
+                    padding: 20px 0;
+                }
+                
+                /* Adjust slider height for mobile */
+               
+                /* Reduce space between sections on mobile */
+                .section-spacing {
+                    margin-bottom: 30px;
+                }
+                
+                /* Adjust pagination for mobile */
+                .swiper-pagination {
+                    bottom: 10px;
+                }
+                
+                .swiper-pagination-bullet {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+            social-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Radio Button Styles */
+.form_radio-2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.w-form-formradioinput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.w-form-formradioinput:checked {
+    border-color: #4d65ff;
+}
+
+.w-form-formradioinput:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background: #4d65ff;
+    border-radius: 50%;
+}
+
+.form_radio-label-3 {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.w-layout-grid.form_radio-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 767px) {
+    .w-layout-grid.form_radio-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-icon-wrapper svg {
+  flex-shrink: 0;
+}
+            .padding-global-6.unique-2 {
+    margin-top: 0rem;
+}
+
+.nav-dropdown-link {
+  padding: 8px 16px !important;
+}
+.padding-section-large-2.small-padding {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+@media (max-width: 767px) {
+    .section_logo2, .logo-slider-container {
+        padding: 0px 0;
+    }
+}
+.padding-section-large.uniuqe {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+}
+
+.padding-section-medium-2 {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+            @media screen and (max-width: 767px) {
+    .padding-section-medium-2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .padding-section-medium-2 {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+}
+            
+            h1, h2, h3, h4, h5, h6,
+.heading-style-h1, 
+.heading-style-h2, 
+.heading-style-h3, 
+.heading-style-h4, 
+.heading-style-h5, 
+.heading-style-h6,
+.heading-6, 
+.heading-8 {
+    font-weight: 600 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .footer3_top-wrapper {
+        grid-row-gap: 0rem;
+        grid-auto-rows: 1fr;
+    }
+}
+@media screen and (max-width: 479px) {
+    .footer3_menu-wrapper {
+        grid-row-gap: 15px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 479px) {
+    .padding-top.padding-medium {
+        grid-column-gap: 44px;
+        grid-row-gap: 15px;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 1fr;
+        display: grid;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footer3_top-wrapper {
+        grid-row-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Styles */
+.simple-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.simple-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.simple-form-container input[type="text"],
+.simple-form-container input[type="email"],
+.simple-form-container input[type="tel"],
+.simple-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.simple-form-container input[type="text"]:focus,
+.simple-form-container input[type="email"]:focus,
+.simple-form-container input[type="tel"]:focus,
+.simple-form-container textarea:focus {
+    border-color: #4d65ff;
+    outline: none;
+}
+
+.simple-form-container textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit button styles - Centered and red */
+.simple-form-container button[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+}
+
+.simple-form-container button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Error state for inputs */
+.simple-form-container .error {
+    border-color: #e74c3c !important;
+}
+
+.simple-form-container .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .simple-form-container {
+        padding: 20px;
+    }
+    
+    .simple-form-container button[type="submit"] {
+        width: 100%;
+    }
+}
+   </style>
+        </style>
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " w-mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
+        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66cf5a8c9680930109a22456_favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+        <link href="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6607a6ef83fae9272e2140dd_web-clip.png" rel="apple-touch-icon"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
+    
+    <body class="body">
+        <div class="page-wrapper">
+            <div class="global-styles w-embed">
+                <!-- Your global styles content here -->
+            </div>  
+            
+            <div class="navbar-logo-center">
+                <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-center-container shadow-three w-nav">
+                    <div class="container">
+                        <div class="navbar-wrapper-three">
+                            <div class="navbar-content">
+                                <a href="/" aria-current="page" class="navbar-brand-three w-nav-brand w--current">
+                                    <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="90" alt="Kamal Solvents Logo"/>
+                                </a>
+                                <nav role="navigation" class="nav-menu-wrapper-three w-nav-menu">
+                                    <div class="nav-menu-three">
+                                        <ul role="list" class="nav-menu-block w-list-unstyled">
+                                            <li>
+                                                <a href="About-Us.html" class="nav-link">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="Exports-Labelling.html" class="nav-link">Labelling &amp; Exports</a>
+                                            </li>
+                                            <li>
+                                                <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+                                                    <div class="nav-dropdown-toggle w-dropdown-toggle">
+                                                        <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                                        <div class="text-block">Products</div>
+                                                    </div>
+                                                    <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+                                                        <a href="Rice-Bran-Oil.html" class="nav-dropdown-link w-dropdown-link">Rice Bran Oil</a>
+                                                        <a href="Kamal-Atta.html" class="nav-dropdown-link w-dropdown-link">Shudh Atta</a>
+                                                        <a href="/Kamal-Suji-Semolina.html" class="nav-dropdown-link w-dropdown-link">Suji (Semolina)</a>
+                                                        <a href="/Kamal-Shudh-Maida.html" class="nav-dropdown-link w-dropdown-link">Kamal Maida</a>
+                                                        <a href="/By-Products.html" class="nav-dropdown-link w-dropdown-link">By Products</a>
+                                                    </nav>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul role="list" class="nav-menu-block without-margin w-list-unstyled">
+                                            <li>
+                                                <a href="By-Products.html" class="nav-link-accent">By Products</a>
+                                            </li>
+                                             <li>
+                                                <a href="Rice-Bran-Oil.html" class="nav-link-accent">Rice Bran Oil</a>
+                                            </li>
+                                            <li>
+                                           <div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
+  <div class="nav-dropdown-toggle w-dropdown-toggle">
+    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+     <div class="text-block">Contact Us</div>
+  </div>
+  <nav class="nav-dropdown-list shadow-three mobile-shadow-hide w-dropdown-list">
+    <!-- Contact Form Link -->
+ <a href="Home.html#section_contact2" class="nav-dropdown-link w-dropdown-link" onclick="if(window.location.href.includes('Home.html')) { event.preventDefault(); document.querySelector('.section_contact2').scrollIntoView({behavior: 'smooth'}); }">
+  <div class="social-icon-wrapper">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H5.17L4 17.17V4H20V16ZM7 9H17V11H7V9ZM7 12H14V14H7V12Z" fill="currentColor"/>
+    </svg>
+    Contact Form
+  </div>
+</a>
+    
+    <!-- Phone Link -->
+    <a href="tel:+1234567890" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" fill="currentColor"/>
+        </svg>
+        +91-(7744) 220771
+      </div>
+    </a>
+    
+    <!-- Address Link -->
+    <a href="#" class="nav-dropdown-link w-dropdown-link" onclick="event.preventDefault(); window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});">
+  <div class="social-icon-wrapper">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+    </svg>
+    Our Location
+  </div>
+</a>
+
+ <a href="https://mail.google.com/mail/?view=cm&to=rishimundra@kamalsol.com" target="_blank" class="nav-dropdown-link w-dropdown-link">
+  <div class="social-icon-wrapper">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"/>
+    </svg>
+    Email Us
+  </div>
+</a>
+
+    
+    <!-- Social Media Links -->
+    <a href="https://www.facebook.com/KamalEnergyMaxRiceBranOil/" target="_blank" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="currentColor"/>
+        </svg>
+        Facebook
+      </div>
+    </a>
+    <a href="https://www.instagram.com/kamaloilsandfoods/" target="_blank" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="currentColor"/>
+        </svg>
+        Instagram
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/company/kamal-solvent-extractions-pvt--ltd-/" target="_blank" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 3C3.67157 3 3 3.67157 3 4.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V4.5C21 3.67157 20.3284 3 19.5 3H4.5ZM8.52076 7.00272C8.52639 7.95897 7.81061 8.54819 6.96123 8.54397C6.16107 8.53975 5.46357 7.90272 5.46779 7.00413C5.47201 6.15897 6.13998 5.47975 7.00764 5.49944C7.88795 5.51913 8.52639 6.1646 8.52076 7.00272ZM12.2797 9.76176H9.75971H9.7583V18.3216H12.4217V18.1219C12.4217 17.742 12.4214 17.362 12.4211 16.9819V16.9818V16.9816V16.9815V16.9812C12.4203 15.9674 12.4194 14.9532 12.4246 13.9397C12.426 13.6936 12.4372 13.4377 12.5005 13.2028C12.7381 12.3253 13.5271 11.7586 14.4074 11.8979C14.9727 11.9864 15.3467 12.3141 15.5042 12.8471C15.6013 13.1803 15.6449 13.5389 15.6491 13.8863C15.6605 14.9339 15.6589 15.9815 15.6573 17.0292V17.0294C15.6567 17.3992 15.6561 17.769 15.6561 18.1388V18.3202H18.328V18.1149C18.328 17.6629 18.3278 17.211 18.3275 16.7591V16.759V16.7588C18.327 15.6293 18.3264 14.5001 18.3294 13.3702C18.3308 12.8597 18.276 12.3563 18.1508 11.8627C17.9638 11.1286 17.5771 10.5211 16.9485 10.0824C16.5027 9.77019 16.0133 9.5691 15.4663 9.5466C15.404 9.54401 15.3412 9.54062 15.2781 9.53721L15.2781 9.53721L15.2781 9.53721C14.9984 9.52209 14.7141 9.50673 14.4467 9.56066C13.6817 9.71394 13.0096 10.0641 12.5019 10.6814C12.4429 10.7522 12.3852 10.8241 12.2991 10.9314L12.2991 10.9315L12.2797 10.9557V9.76176ZM5.68164 18.3244H8.33242V9.76733H5.68164V18.3244Z" fill="currentColor"/>
+        </svg>
+        LinkedIn
+      </div>
+    </a>
+    <a href="https://www.youtube.com/@EnergyMaxRiceBranOil" target="_blank" class="nav-dropdown-link w-dropdown-link">
+      <div class="social-icon-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5686 4.77345C21.5163 5.02692 22.2555 5.76903 22.5118 6.71673C23.1821 9.42042 23.1385 14.5321 22.5259 17.278C22.2724 18.2257 21.5303 18.965 20.5826 19.2213C17.9071 19.8831 5.92356 19.8015 3.40294 19.2213C2.45524 18.9678 1.71595 18.2257 1.45966 17.278C0.827391 14.7011 0.871044 9.25144 1.44558 6.73081C1.69905 5.78311 2.44116 5.04382 3.38886 4.78753C6.96561 4.0412 19.2956 4.282 20.5686 4.77345ZM9.86682 8.70227L15.6122 11.9974L9.86682 15.2925V8.70227Z" fill="currentColor"/>
+        </svg>
+        YouTube
+      </div>
+    </a>
+   
+  </nav>
+</div>
+                                            </li>
+                                          </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                              <div class="menu-button w-nav-button">
+                                <div class="w-icon-nav-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     </section>
+     </section>
+   
+    <body class="body">
+        <div class="page-wrapper">
+            <div class="global-styles w-embed">
+                <!-- Your global styles content here -->
+            </div>           
+           <main class="main-wrapper">
+                <!-- New Slider Section -->
+                <section class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 - Video (now first slide) -->
+                        <div class="swiper-slide" data-swiper-autoplay="3000">
+                          <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/2.jpg" alt="Slide 1">
+                      </div>
+                        
+                        <!-- Slide 2 - Image (3000ms duration) -->
+                        <div class="swiper-slide" data-swiper-autoplay="3000">
+                            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/Slid2.jpg" alt="Slide 2">
+                        </div>
+                        
+                        <!-- Slide 3 - Image (3000ms duration) -->
+                        
+                        <div class="swiper-slide" data-swiper-autoplay="37000">
+                          <div class="video-container">
+                              <video autoplay muted playsinline loop>
+                                  <source src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Slider/slider%20video%20kamal%20oil%20%26%20food%2002%20(1)%20(1).mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                              </video>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- Pagination dots -->
+                    <div class="swiper-pagination"></div>
+                </section>
+                
+                <section class="swiper-dnd">
+                    <div class="container-4 is-slider">
+                        <div class="slider_wrap">
+                            <div class="slider_left">
+                                <div class="swiper is-content w-dyn-list">
+                                    <div class="w-dyn-empty">
+                                        <div>No items found.</div>
+                                    </div>
+                                </div>
+                                <div class="arrows">
+                                    <a href="#" class="arrow is-left w-inline-block">
+                                        <div class="arrow_svg w-embed">
+                                            <svg width="100%" height="100%" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 0.977539L2 8.97754L10 16.9775" stroke="currentColor" stroke-width="1.5"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="arrow is-right w-inline-block">
+                                        <div class="arrow_svg is-alt w-embed">
+                                            <svg width="100%" height="100%" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 0.977539L2 8.97754L10 16.9775" stroke="currentColor" stroke-width="1.5"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider_right">
+                                <div class="swiper is-photos w-dyn-list">
+                                    <div class="w-dyn-empty">
+                                        <div>No items found.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6607a6ef83fae9272e214029" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/js/webflow.58cece567a73d21bccc436ad3b36d601.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            // Initialize Swiper with per-slide autoplay durations
+            document.addEventListener('DOMContentLoaded', function() {
+                var mySwiper = new Swiper('.swiper-container', {
+                    // Optional parameters
+                    loop: true,
+                    autoplay: {
+                        delay: 3000, // Default delay (will be overridden by data-swiper-autoplay)
+                        disableOnInteraction: false,
+                    },
+                    
+                    // Pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        bulletClass: 'swiper-pagination-bullet',
+                        bulletActiveClass: 'swiper-pagination-bullet-active',
+                    },
+                    
+                    // Disable scrollbar
+                    scrollbar: {
+                        el: null,
+                        hide: true,
+                    },
+                    
+                    // Responsive breakpoints
+                    breakpoints: {
+                        // when window width is >= 320px
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        // when window width is >= 480px
+                        480: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        // when window width is >= 768px
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        },
+                        // when window width is >= 992px
+                        992: {
+                            slidesPerView: 1,
+                            spaceBetween: 0
+                        }
+                    },
+                    
+                    // Custom autoplay control
+                    on: {
+                        init: function() {
+                            this.autoplay.stop();
+                            this.autoplay.start();
+                            
+                            // Set video playback speed to 1.5x
+                            const video = document.querySelector('.video-container video');
+                            if (video) {
+                                video.playbackRate = 1.5;
+                                // Wait for video metadata to be loaded
+                                video.addEventListener('loadedmetadata', function() {
+                                    // Set the autoplay duration to match video length
+                                    const videoDuration = video.duration * 1000; // Convert to milliseconds
+                                    const videoSlide = document.querySelector('.swiper-slide[data-swiper-autoplay]');
+                                    if (videoSlide) {
+                                        videoSlide.setAttribute('data-swiper-autoplay', videoDuration);
+                                    }
+                                });
+                            }
+                        },
+                        slideChange: function() {
+                            // Get the autoplay delay for the current slide
+                            const currentSlide = this.slides[this.activeIndex];
+                            const delay = currentSlide.getAttribute('data-swiper-autoplay');
+                            
+                            // Update autoplay delay
+                            if (delay) {
+                                this.params.autoplay.delay = parseInt(delay);
+                                this.autoplay.stop();
+                                this.autoplay.start();
+                            }
+                            
+                            // If this is the video slide, ensure playback speed
+                            if (currentSlide.querySelector('.video-container video')) {
+                                const video = currentSlide.querySelector('.video-container video');
+                                video.playbackRate = 1.5;
+                                video.currentTime = 0;
+                                video.play();
+                            }
+                        }
+                    }
+                });
+                
+                // Disable all interaction with video elements
+                document.querySelectorAll('video').forEach(video => {
+                    video.controls = false;
+                    video.addEventListener('click', e => e.preventDefault());
+                    video.addEventListener('contextmenu', e => e.preventDefault());
+                });
+            });
+        </script>
+        <section class="swiper-dnd">
+            <div class="container-4 is-slider">
+                <div class="slider_wrap">
+                    <div class="slider_left">
+                        <div class="swiper is-content w-dyn-list">
+                            <div class="w-dyn-empty">
+                                <div>No items found.</div>
+                            </div>
+                        </div>
+                        <div class="arrows">
+                            <a href="#" class="arrow is-left w-inline-block">
+                                <div class="arrow_svg w-embed">
+                                    <svg width="100%" height="100%" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0.977539L2 8.97754L10 16.9775" stroke="currentColor" stroke-width="1.5"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="#" class="arrow is-right w-inline-block">
+                                <div class="arrow_svg is-alt w-embed">
+                                    <svg width="100%" height="100%" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0.977539L2 8.97754L10 16.9775" stroke="currentColor" stroke-width="1.5"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider_right">
+                        <div class="swiper is-photos w-dyn-list">
+                            <div class="w-dyn-empty">
+                                <div>No items found.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+          <section data-w-id="a05d0b44-6393-fb4f-7ec5-2f8eaf307a15" class="section_logo3">
+                    <div class="padding-section-medium">
+                        <div class="padding-global-3">
+                            <div class="container-large">
+                                <div class="margin-bottom margin-large">
+                                    <div class="text-align-center">
+                                        <div class="max-width-large align-center">
+                                            <h3 class="heading-style-h4"> Retail & B2B: A Dual Market Presence </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <section class="logo-slider-container">
+    <div class="logo-slider-track">
+        <!-- Original Logos -->
+        <div class="logo-slider-item akshaya">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Akshaya-Patra-LOGO-510x244.jpg" alt="Akshaya Patra">
+        </div>
+        <div class="logo-slider-item cargil">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/cargil.png" alt="Cargil">
+        </div>
+        <div class="logo-slider-item reliance">
+             <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/RelianceSmart.png" alt="Reliance Smart">
+        </div>
+        <div class="logo-slider-item dmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Dmart.png" alt="D-Mart">
+        </div>
+        <div class="logo-slider-item flipkart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Flipkart.png" alt="Flipkart">
+        </div>
+        <div class="logo-slider-item jiomart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/JioMart.png" alt="JioMart">
+        </div>
+        <div class="logo-slider-item tata">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Tata.png" alt="Tata Tesco">
+        </div>
+        <div class="logo-slider-item walmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Walmart.png" alt="Walmart">
+        </div>
+        
+        <!-- Duplicated Logos for Seamless Loop -->
+        <div class="logo-slider-item marico">
+            <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/6618280cd3493623696bce34_Marico_Logo-kamal-solvents.svg" alt="Marico">
+        </div>
+        <div class="logo-slider-item lots">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/client/lots%20wholesale.jpg" alt="Lots">
+        </div>
+        <div class="logo-slider-item godrej">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Godrej.png" alt="Godrej">
+        </div>
+        <div class="logo-slider-item solar">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Solar.png" alt="Solar">
+        </div>
+        <div class="logo-slider-item swiggy">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/SwiigyInstamart.png" alt="Swiggy Instamart">
+        </div>
+        <div class="logo-slider-item pepsico">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Pepsico.png" alt="Pepsico">
+        </div>
+        <div class="logo-slider-item itc">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/ITC.png" alt="ITC">
+        </div>
+        
+        <!-- Duplicate the logos again to make the transition smoother -->
+        <div class="logo-slider-item akshaya">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Akshaya-Patra-LOGO-510x244.jpg" alt="Akshaya Patra">
+        </div>
+        <div class="logo-slider-item cargil">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/cargil.png" alt="Cargil">
+        </div>
+        <div class="logo-slider-item reliance">
+             <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/RelianceSmart.png" alt="Reliance Smart">
+        </div>
+        <div class="logo-slider-item dmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Dmart.png" alt="D-Mart">
+        </div>
+        <div class="logo-slider-item flipkart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Flipkart.png" alt="Flipkart">
+        </div>
+        <div class="logo-slider-item jiomart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/JioMart.png" alt="JioMart">
+        </div>
+        <div class="logo-slider-item tata">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Tata.png" alt="Tata Tesco">
+        </div>
+        <div class="logo-slider-item walmart">
+            <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Retail/Walmart.png" alt="Walmart">
+        </div>
+    </div>
+</section>
+
+                </section>
+                <header class="section_header19">
+                    <div class="padding-global-4">
+                        <div class="container-large">
+                            <div class="padding-section-large-2 small-padding">
+                                <div class="w-layout-grid header19_component">
+                                    <div id="w-node-_8fc36d43-0ed3-1822-7af8-8aef5b0c74b3-2e2140b1" class="header19_image-wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cb105365e0139ac2dde47__DSC1682%20Large.jpeg" loading="eager" width="700" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cb105365e0139ac2dde47__DSC1682%20Large-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cb105365e0139ac2dde47__DSC1682%20Large-p-800.jpeg 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cb105365e0139ac2dde47__DSC1682%20Large-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cb105365e0139ac2dde47__DSC1682%20Large.jpeg 1280w" sizes="(max-width: 991px) 90vw, (max-width: 1919px) 42vw, 600px" class="header19_image"/>
+                                    </div>
+                                    <div id="w-node-_8fc36d43-0ed3-1822-7af8-8aef5b0c74b5-2e2140b1" class="header19_content">
+                                        <div class="margin-bottom margin-small">
+  <h1 class="heading-style-h2 left" style="font-size: 41px;">About Our Company</h1>
+</div>
+                                        <div class="spacer-small"></div>
+                                        <p class="text-size-medium">
+                                            With vertically integrated facilities enabling granular quality control at every stage - from grain sourcing to milling and extraction - <strong>Kamal</strong>
+                                            takes immense pride in its manufacturing prowess honed over 35+ years as Central India &#x27;s largest rice bran oil experts.<br/>
+                                            <br/>
+                                           Experience the authentic taste of uncompromising purity and flavor in our <strong>Rice Bran Oil</strong>, 
+                                           <strong>Atta</strong>, <strong>Maida</strong>, <strong>Suji</strong>, and <strong>Oil</strong> 
+                                           – crafted with passion, pioneering spirit, and a commitment to uplift local communities.
+                                        </p>
+                                        <div class="margin-top margin-medium">
+    <div class="button-group-3">
+        <a href="About-Us.html" class="button-primary w-button">READ MORE</a>
+    </div>
+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section class="section_stats28">
+    <div class="padding-global-15">
+        <div class="container-large">
+            <div class="padding-section-large-2">
+                <div class="stats28_component">
+                    <div class="margin-bottom margin-xxlarge">
+                      <div class="margin-bottom margin-small">
+  <h1 class="heading-style-h2 left" style="font-size: 41px;">A Few Statistics of Our Own</h1>
+</div>
+                        
+                    </div>
+                    <div class="w-layout-grid stats28_list">
+                        <div class="stats28_item">
+                            <div class="stats28_content-wrapper">
+                                <div class="margin-bottom margin-large">
+                                    <div class="stats28_number">800</div>
+                                    <div class="subtext">tonnes per day (TPD)</div>
+                                </div>
+                                <div class="stats28_item-content">
+                                    <h3 class="heading-style-h6">Rice Bran Oil Unit</h3>
+                                    <div class="margin-top-2 margin-xxsmall">
+                                        <p>Extracts valuable oil and nutrients from Rice Bran.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats28_item">
+                            <div class="stats28_content-wrapper">
+                                <div class="margin-bottom margin-large">
+                                    <div class="stats28_number">200</div>
+                                    <div class="subtext">tonnes per day (TPD)</div>
+                                </div>
+                                <div class="stats28_item-content">
+                                    <h3 class="heading-style-h6">Refining Unit</h3>
+                                    <div class="margin-top-2 margin-xxsmall">
+                                        <p>Advanced physical refining setup to keep our products top quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats28_item">
+                            <div class="stats28_content-wrapper">
+                                <div class="margin-bottom margin-large">
+                                    <div class="stats28_number">200</div>
+                                    <div class="subtext">tonnes per day (TPD)</div>
+                                </div>
+                                <div class="stats28_item-content">
+                                    <h3 class="heading-style-h6">Flour Processing Unit</h3>
+                                    <div class="margin-top-2 margin-xxsmall">
+                                        <p>Utilizes advanced swiss technology for milling, blending, and packaging.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats28_item">
+                            <div class="stats28_content-wrapper">
+                                <div class="margin-bottom margin-large">
+                                    <div class="stats28_number">20+</div>
+                                    <div class="subtext">states in India consume our products</div>
+                                </div>
+                                <div class="stats28_item-content">
+                                    <h3 class="heading-style-h6">Strong retail relationships</h3>
+                                    <div class="margin-top-2 margin-xxsmall">
+                                        <p>Present across DMart, Amazon, Flipkart, Reliance Smart Bazaar &amp; Jio Mart</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end grid -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  </section>
+                <section class="section_career19">
+                    <div class="padding-global-5">
+                        <div class="container-large">
+                            <div class="padding-section-large uniuqe">
+                                <div class="margin-bottom margin-xxlarge">
+                                    <div class="max-width-full text-align-center">
+                                        <div class="margin-bottom margin-xsmall">
+                                            <div class="text-weight-semibold">CENTRAL INDIA &#x27;S FINEST</div>
+                                        </div>
+                                        <div class="margin-bottom margin-small">
+  <h1 style="font-size: 41px;">Our Brand Portfolio</h1>
+</div>
+                                        
+                                        <p class="text-size-medium">Uncompromising purity and flavor in our atta, maida, suji, and rice bran oil - crafted with quality-focussed manufacturing.</p>
+                                    </div>
+                                </div>
+                                <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="career19_component w-tabs">
+                                    <div class="career19_tabs-menu no-scrollbar w-tab-menu">
+                                    </div>
+                                    <div class="w-tab-content">
+                                        <div data-w-tab="Tab 1" class="career19_tab-pane w-tab-pane w--tab-active">
+                                            <div class="career19_list-wrapper">
+                                                <div class="career19_list">
+                                                    <div id="w-node-_2aaa814a-6d87-3289-affd-3a7795f92f19-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                                 <img src="https://github.com/DivyeshBagri/test/raw/main/products/Kamal%20Rice%20Bran%20Oil.png"  loading="lazy" width="203" alt="Kamal Rice Bran Oil" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">Kamal Rice Bran Oil</h4>
+                                                                <div class="text-size-regular">Bestselling, nutritious, rich in antioxidants rice bran oil for more than 30 years in Central India.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-c3276503-d505-3757-4c9f-0e269300afc0-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                               <img src="https://github.com/DivyeshBagri/test/raw/main/products/Energy%20Max%20Rice%20Bran%20Oil.png"  loading="lazy" width="203" alt="Energy Max Rice
+Bran Oil"  style="width: 180.5px; height: 245.91px;" />    
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">
+                                                                    Energy Max Rice <br/>Bran Oil
+                                                                
+                                                                </h4>
+                                                                <div class="text-size-regular">Heart-healthy, light oil ideal for high-temperature cooking and frying for a modern family.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-_45fe4499-a768-531b-722e-6de219ad6cca-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                                <img src="https://github.com/DivyeshBagri/test/raw/main/products/Kamal%20Atta.png"  loading="lazy" width="203" alt="Kamal Chakki Atta" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">Kamal Chakki Atta</h4>
+                                                                <div class="text-size-regular">Whole wheat flour, stone-ground for authentic, nutritious, and flavorful baking.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-aa2fb649-9735-ed46-a2dd-f642a9392cda-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                                  <img src="https://github.com/DivyeshBagri/test/raw/main/products/Kamal%20Suji.png"  loading="lazy" width="203" alt="Kamal Suji" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">Kamal Suji</h4>
+                                                                <div class="text-size-regular">High-quality, fine semolina flour for cooking and baking.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-df69f919-263c-17e3-4f0b-acb02be064ff-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                                  <img src="https://github.com/DivyeshBagri/test/raw/main/products/Maida.png"  loading="lazy" width="203" alt="Kamal Maida" />
+                                                                 
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">Kamal Maida</h4>
+                                                                <div class="text-size-regular">Premium, finely milled wheat flour for versatile baking and cooking.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-a2697fea-b71b-57ff-08e7-a4b233c52d33-2e2140b1" class="career19_item">
+                                                        <div class="margin-bottom margin-medium">
+                                                            <div class="item-image-wrapper">
+                                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66186f34931d0c6dc053491a_Untitled%20design-2.jpg" loading="lazy" width="203"  height="228"  sizes="(max-width: 767px) 38vw, (max-width: 991px) 26vw, (max-width: 1919px) 18vw, 202.99673461914062px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66186f34931d0c6dc053491a_Untitled%20design-2-p-500.jpg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66186f34931d0c6dc053491a_Untitled%20design-2.jpg 540w"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-bottom margin-small">
+                                                            <div class="item-text-wrapper">
+                                                                <h4 class="heading-style-h4">By-products of rice bran oil production</h4>
+                                                                <div class="text-size-regular">These can be utilized in various industries, contributing to sustainability.</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section_logo2">
+        <div class="padding-global-11">
+            <div class="container-large">
+                <div class="padding-section-medium-2">
+                    <div class="logo2_component">
+                        <div class="margin-bottom margin-small">
+  <h1 style="font-size: 41px;">Backed by Prestigious Certifications</h1>
+</div>
+                        <div class="logo2_logo-list">
+                            <!-- HACCP Certification -->
+                            <div class="logo2_wrapper haccp-logo">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/products/HACCP%20CERTIFICATE.png" 
+                                     loading="lazy" 
+                                     alt="HACCP Certification" 
+                                     class="logo2_logo"/>
+                               
+                            </div>
+                            
+                            <!-- ISO Certification -->
+                            <div class="logo2_wrapper iso-logo">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/products/Kosher.png" 
+                                     loading="lazy" 
+                                     alt="ISO Certification" 
+                                     class="logo2_logo"/>
+                                
+                            </div>
+                            
+                            <!-- FSSAI Certification -->
+                            <div class="logo2_wrapper fssai-logo">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/products/FSSAI%20CERTIFICATE.png" 
+                                     loading="lazy" 
+                                     alt="FSSAI Certification" 
+                                     class="logo2_logo"/>
+                                
+                            </div>
+                            
+                            <!-- APEDA Certification -->
+                            <div class="logo2_wrapper apeda-logo">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/products/FSSC%20CERTIFICATE.png" 
+                                     loading="lazy" 
+                                     alt="APEDA Certification" 
+                                     class="logo2_logo"/>
+                                
+                            </div>
+                            
+                            <!-- Additional Certification -->
+                            <div class="logo2_wrapper food-safety-logo">
+                                <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/timeline/certificate.png" 
+                                     loading="lazy" 
+                                     alt="Food Safety Certification" 
+                                     class="logo2_logo"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                <section class="section_layout32">
+                    <div class="padding-global-5">
+                        <div class="container-large">
+                            <div class="padding-section-large-2 small-padding">
+                                <div class="heading-h2-wrapper-hero">
+                                    <h2 class="heading-style-h1 coloured">
+                                        <span class="text-span">Our Flagship Product:</span>
+                                        Physically Refined <br/>Rice Bran Oil
+                                    
+                                    </h2>
+                                </div>
+                                <div class="w-layout-grid layout32_component">
+                                    <div class="layout32_content">
+                                        <div class="w-layout-grid layout32_item-list">
+                                            <div id="w-node-_9d7c81e7-3b25-cda1-c2b7-1b0c505be76b-2e2140b1" class="layout32_item">
+                                                <div class="layout32_item-icon-wrapper">
+                                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66182d18377d244eb780fe5b_oil-icon.svg" loading="lazy" alt="" class="icon-1x1-medium-2"/>
+                                                </div>
+                                                <div class="layout32_item-text-wrapper">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h3 class="heading-style-h5-2">
+                                                            <strong class="feature-heading">High Smoke Point</strong>
+                                                        </h3>
+                                                    </div>
+                                                    <p class="feature-text">Retains the anti-oxidants &amp;rich nutrients of the food while enhancing the taste.</p>
+                                                </div>
+                                            </div>
+                                            <div id="w-node-_3c736cfb-3598-99f8-25af-e1ca33110d10-2e2140b1" class="layout32_item">
+                                                <div class="layout32_item-icon-wrapper">
+                                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66182d18377d244eb780fe5b_oil-icon.svg" loading="lazy" alt="" class="icon-1x1-medium-2"/>
+                                                </div>
+                                                <div class="layout32_item-text-wrapper">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h3 class="heading-style-h5-2">
+                                                            <strong class="feature-heading">Balanced Fat Profile</strong>
+                                                        </h3>
+                                                    </div>
+                                                    <p class="feature-text">Rice Bran comes close to recommended fat ratio of 1:1.5:1 between SAFA:MUFA:PUFA.</p>
+                                                </div>
+                                            </div>
+                                            <div id="w-node-_90842022-f2a4-b9f1-4f0b-adfb3c27625e-2e2140b1" class="layout32_item">
+                                                <div class="layout32_item-icon-wrapper">
+                                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66182d18377d244eb780fe5b_oil-icon.svg" loading="lazy" alt="" class="icon-1x1-medium-2"/>
+                                                </div>
+                                                <div class="layout32_item-text-wrapper">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h3 class="heading-style-h5-2">
+                                                            <strong class="feature-heading">Potent Nutrition</strong>
+                                                            :
+                                                        
+                                                        </h3>
+                                                    </div>
+<p class="feature-text"><strong>13000 ppm</strong> of oryzanol and natural Vitamin E, a wonder nutrient found only in rice bran oil which promotes heart health.</p>
+</div>
+                                            </div>
+                                            <div id="w-node-_9d7c81e7-3b25-cda1-c2b7-1b0c505be774-2e2140b1" class="layout32_item">
+                                                <div class="layout32_item-icon-wrapper">
+                                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66182d18377d244eb780fe5b_oil-icon.svg" loading="lazy" width="73" alt="" class="icon-1x1-medium-2"/>
+                                                </div>
+                                                <div class="layout32_item-text-wrapper">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h3 class="heading-style-h5-2">
+                                                            <strong class="feature-heading">Enriched Vitamins:</strong>
+                                                        </h3>
+                                                    </div>
+                                                    <p>Infused with added Vitamins A and D, our oil supports a heart-healthy lifestyle.</p>
+                                                </div>
+                                            </div>
+                                            <div id="w-node-_9d7c81e7-3b25-cda1-c2b7-1b0c505be77d-2e2140b1" class="layout32_item">
+                                                <div class="layout32_item-icon-wrapper">
+                                                    <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/66182d18377d244eb780fe5b_oil-icon.svg" loading="lazy" width="73" alt="" class="icon-1x1-medium-2"/>
+                                                </div>
+                                                <div class="layout32_item-text-wrapper">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h3 class="heading-style-h5-2">
+                                                            <strong class="feature-heading">Purity Perfected</strong>
+                                                            :
+                                                        
+                                                        </h3>
+                                                    </div>
+                                                    <p>Our double filtration and physical refining process ensures a clean, superior quality oil with every pour.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layout32_image-wrapper">
+                                        <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a5846df64a66894d7d8ba_HAR00071%20Large.jpeg" loading="lazy" width="512" sizes="(max-width: 767px) 90vw, (max-width: 1919px) 42vw, 600px" alt="" srcset="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a5846df64a66894d7d8ba_HAR00071%20Large-p-500.jpeg 500w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a5846df64a66894d7d8ba_HAR00071%20Large-p-800.jpeg 800w, https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/660a5846df64a66894d7d8ba_HAR00071%20Large.jpeg 1024w" class="layout32_image"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                  <section class="section_gallery5">
+                    <div class="padding-global-5">
+                        <div class="container-large">
+                            <div class="padding-section-large-2">
+                                <div class="margin-bottom margin-xxlarge">
+                                    <div class="text-align-center">
+                                        <div class="max-width-large align-center">
+                                            <div class="margin-bottom margin-small">
+                                                <h2 class="heading-6 heading-style-h2">Image Gallery</h2>
+                                            </div>
+                                            <p class="text-size-medium-5">A LOOK AT 35 YEARS JOURNEY </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-layout-grid gallery5_component">
+                                    <div class="w-layout-grid gallery5_row">
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f3d-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6df035d10f1f8e418b_5.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    "group": ""
+                                                }</script>
+                                        </a>
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f40-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6eaba108a5da52fd58_6.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    "group": ""
+                                                }</script>
+                                        </a>
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f43-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6db19454f4d3402555_3.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    "group": ""
+                                                }</script>
+                                        </a>
+                                    </div>
+                                    <div class="w-layout-grid gallery5_row">
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f47-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6eef4691d21778d9cf_4.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    "group": ""
+                                                }</script>
+                                        </a>
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f4a-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6d16c72fb277ff51cf_7.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    z "group": ""
+                                                }</script>
+                                        </a>
+                                        <a href="#" id="w-node-_64c32ca7-306a-3acd-192b-f78c4bd55f4d-2e2140b1" class="gallery5_lightbox-link w-inline-block w-lightbox">
+                                            <div class="gallery5_image-wrapper">
+                                                <img src="https://cdn.prod.website-files.com/6607a6ef83fae9272e214029/667cbf6ebcc6cdbad9fcf75c_2.jpg" loading="lazy" width="250" alt="" class="gallery5_image"/>
+                                            </div>
+                                            <script type="application/json" class="w-json">
+                                                {
+                                                    "items": [
+                                                    ],
+                                                    "group": ""
+                                                }</script>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+                
+        
+        <!-- Simple Form Section -->
+<section class="section_contact2" id="contact-section">
+    <div class="padding-global-6 unique-2">
+        <div class="container-small">
+            <div class="padding-section-medium">
+                <div class="margin-bottom margin-large">
+                    <div class="text-align-center">
+                        <div class="max-width-large align-center">
+                            <div class="margin-bottom margin-small">
+                                <h2 class="heading-style-h2">Contact us</h2>
+                            </div>
+                            <p class="text-size-medium">Fill in your query and we will try getting back to you within 48 working hours.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="simple-form-container">
+                    <form id="contactForm">
+        <!-- Your existing form fields (keep all classes and styling) -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="item" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="item" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" class="item" pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+        <span class="error-message" id="phoneError" style="display:none;">Please enter a valid 10-digit phone number</span>
+        
+        <!-- Radio Button Section -->
+        <div class="padding-vertical padding-xsmall">
+            <div class="form_field-wrapper-3">
+                <div class="margin-bottom margin-xsmall">
+                    <label class="form_field-label">Query Type:</label>
+                </div>
+                <div class="w-layout-grid form_radio-2col">
+                    <label class="form_radio-2 w-radio">
+                        <input type="radio" name="query-type" value="Buyer Enquiry" required>
+                        <span class="form_radio-label-3 w-form-label">Buyer Enquiry</span>
+                    </label>
+                    <label class="form_radio-2 w-radio">
+                        <input type="radio" name="query-type" value="Become a supplier">
+                        <span class="form_radio-label-3 w-form-label">Become a supplier</span>
+                    </label>
+                    <label class="form_radio-2 w-radio">
+                        <input type="radio" name="query-type" value="Work with us">
+                        <span class="form_radio-label-3 w-form-label">Work with us</span>
+                    </label>
+                    <label class="form_radio-2 w-radio">
+                        <input type="radio" name="query-type" value="Other">
+                        <span class="form_radio-label-3 w-form-label">Other</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" class="item">
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" class="item" required></textarea>
+        
+        <button type="submit" id="submitBtn">Send</button>
+    </form>
+    
+    <div id="formSuccessMessage" class="success-message" style="display:none;">
+        Thank you! Your message has been sent successfully.
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Footer Section -->
+    <footer class="footer3_component">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="padding-vertical padding-section-medium">
+                    <div class="padding-bottom padding-xxlarge">
+                        <div class="w-layout-grid footer3_top-wrapper">
+                            <!-- Company Info -->
+                            <div class="footer3_left-wrapper">
+                                <div class="margin-bottom margin-medium">
+                                    <a href="#" class="footer3_logo-link w-nav-brand">
+                                        <img src="https://raw.githubusercontent.com/DivyeshBagri/test/main/Kamal%20English_PNG.png" loading="lazy" width="91" alt="Kamal Solvents Logo"/>
+                                    </a>
+                                </div>
+                                <div class="margin-bottom margin-medium">
+                                    <div class="footer3_details-wrapper">
+                                        <div class="margin-bottom margin-small">
+                                            <div class="text-size-small-2">
+                                                <strong>
+                                                    Kamal Solvent Extractions Pvt. Ltd.<br/>Office Address: 
+                                                </strong>
+                                                Mundra Niwas, Ramadhin Marg, Rajnandgaon, Chhattisgarh (India) - 491 441<br/>
+                                                 <strong>Factory Address: </strong>
+                G.E. Road, Village: Khuteri (Somni), Rajnandgaon, Chhattisgarh (India) - 491 441<br/>
+                 <p>📍 Location: <a href="https://maps.app.goo.gl/CpphSgj9XYpcSHERA?g_st=iw" target="_blank">View on Google Maps</a></p>
+                <strong>Phone: </strong>
+                +91-77442-20771, 77442-20811<br/>
+               
+
+                                                <strong>Office Timings: </strong>
+                                                9.30 AM to 6 PM (Monday to Saturday)
+                                            </div>
+                                        </div>
+                                        <div class="text-size-small-2">
+                                             <a href="https://mail.google.com/mail/?view=cm&to=kse@kamalsol.com" target="_blank" class="nav-dropdown-link">kse@kamalsol.com</a>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Footer Links -->
+                            <div class="w-layout-grid footer3_menu-wrapper">
+                                <div class="footer3_link-list">
+                                    <a href="#" class="footer3_link">Best Rice Bran Oil in India</a>
+                                    <a href="#" class="footer3_link">Best Chakki Atta in India</a>
+                                    <a href="#" class="footer3_link">Physically Refined Rice Bran Oil</a>
+                                    <a href="#" class="footer3_link">Best Suji in India</a>
+                                    <a href="#" class="footer3_link">Best Atta in India</a>
+                                    <a href="#" class="footer3_link">Kamal Oils FMCG Products</a>
+                                </div>
+                                <div class="footer3_link-list">
+                                    <a href="#" class="footer3_link">Kamal Suji in India</a>
+                                    <a href="#" class="footer3_link">Energy Max Rice Bran Oil</a>
+                                    <a href="#" class="footer3_link">Kamal Shudh Chakki Atta</a>
+                                    <a href="#" class="footer3_link">Kamal Shudh Maida</a>
+                                    <a href="#" class="footer3_link">Kamal Solvents India</a>
+                                </div>
+                                <div class="footer3_link-list">
+                                    <a href="#" class="footer3_link">Exporters of Rice Bran Oil</a>
+                                    <a href="#" class="footer3_link">Healthiest Cooking Oil</a>
+                                    <a href="#" class="footer3_link">Kamal Oils Rice Bran Oil</a>
+                                    <a href="#" class="footer3_link">Rice Bran Oil Manufacturers</a>
+                                    <a href="#" class="footer3_link">Rice Bran Oil Chhattisgarh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="line-divider"></div>
+                        <div class="padding-top padding-medium">
+                            <div class="w-layout-grid footer3_social-list">
+                                <a href="https://www.facebook.com/KamalEnergyMaxRiceBranOil/" target="_blank" class="footer3_social-link w-inline-block">
+                                    <div class="icon-embed-xsmall w-embed">
+                                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22 12.0611C22 6.50451 17.5229 2 12 2C6.47715 2 2 6.50451 2 12.0611C2 17.0828 5.65684 21.2452 10.4375 22V14.9694H7.89844V12.0611H10.4375V9.84452C10.4375 7.32296 11.9305 5.93012 14.2146 5.93012C15.3088 5.93012 16.4531 6.12663 16.4531 6.12663V8.60261H15.1922C13.95 8.60261 13.5625 9.37822 13.5625 10.1739V12.0611H16.3359L15.8926 14.9694H13.5625V22C18.3432 21.2452 22 17.083 22 12.0611Z" fill="CurrentColor"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/kamaloilsandfoods/" class="footer3_social-link w-inline-block">
+                                    <div class="icon-embed-xsmall w-embed">
+                                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3H8C5.23858 3 3 5.23858 3 8V16C3 18.7614 5.23858 21 8 21H16C18.7614 21 21 18.7614 21 16V8C21 5.23858 18.7614 3 16 3ZM19.25 16C19.2445 17.7926 17.7926 19.2445 16 19.25H8C6.20735 19.2445 4.75549 17.7926 4.75 16V8C4.75549 6.20735 6.20735 4.75549 8 4.75H16C17.7926 4.75549 19.2445 6.20735 19.25 8V16ZM16.75 8.25C17.3023 8.25 17.75 7.80228 17.75 7.25C17.75 6.69772 17.3023 6.25 16.75 6.25C16.1977 6.25 15.75 6.69772 15.75 7.25C15.75 7.80228 16.1977 8.25 16.75 8.25ZM12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5027 10.8057 16.0294 9.65957 15.1849 8.81508C14.3404 7.97059 13.1943 7.49734 12 7.5ZM9.25 12C9.25 13.5188 10.4812 14.75 12 14.75C13.5188 14.75 14.75 13.5188 14.75 12C14.75 10.4812 13.5188 9.25 12 9.25C10.4812 9.25 9.25 10.4812 9.25 12Z" fill="CurrentColor"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/company/kamal-solvent-extractions-pvt--ltd-/" target="_blank" class="footer3_social-link w-inline-block">
+                                    <div class="icon-embed-xsmall w-embed">
+                                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 3C3.67157 3 3 3.67157 3 4.5V19.5C3 20.3284 3.67157 21 4.5 21H19.5C20.3284 21 21 20.3284 21 19.5V4.5C21 3.67157 20.3284 3 19.5 3H4.5ZM8.52076 7.00272C8.52639 7.95897 7.81061 8.54819 6.96123 8.54397C6.16107 8.53975 5.46357 7.90272 5.46779 7.00413C5.47201 6.15897 6.13998 5.47975 7.00764 5.49944C7.88795 5.51913 8.52639 6.1646 8.52076 7.00272ZM12.2797 9.76176H9.75971H9.7583V18.3216H12.4217V18.1219C12.4217 17.742 12.4214 17.362 12.4211 16.9819V16.9818V16.9816V16.9815V16.9812C12.4203 15.9674 12.4194 14.9532 12.4246 13.9397C12.426 13.6936 12.4372 13.4377 12.5005 13.2028C12.7381 12.3253 13.5271 11.7586 14.4074 11.8979C14.9727 11.9864 15.3467 12.3141 15.5042 12.8471C15.6013 13.1803 15.6449 13.5389 15.6491 13.8863C15.6605 14.9339 15.6589 15.9815 15.6573 17.0292V17.0294C15.6567 17.3992 15.6561 17.769 15.6561 18.1388V18.3202H18.328V18.1149C18.328 17.6629 18.3278 17.211 18.3275 16.7591V16.759V16.7588C18.327 15.6293 18.3264 14.5001 18.3294 13.3702C18.3308 12.8597 18.276 12.3563 18.1508 11.8627C17.9638 11.1286 17.5771 10.5211 16.9485 10.0824C16.5027 9.77019 16.0133 9.5691 15.4663 9.5466C15.404 9.54401 15.3412 9.54062 15.2781 9.53721L15.2781 9.53721L15.2781 9.53721C14.9984 9.52209 14.7141 9.50673 14.4467 9.56066C13.6817 9.71394 13.0096 10.0641 12.5019 10.6814C12.4429 10.7522 12.3852 10.8241 12.2991 10.9314L12.2991 10.9315L12.2797 10.9557V9.76176ZM5.68164 18.3244H8.33242V9.76733H5.68164V18.3244Z" fill="CurrentColor"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/@EnergyMaxRiceBranOil" target="_blank" class="footer3_social-link w-inline-block">
+                                    <div class="icon-embed-xsmall w-embed">
+                                        <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5686 4.77345C21.5163 5.02692 22.2555 5.76903 22.5118 6.71673C23.1821 9.42042 23.1385 14.5321 22.5259 17.278C22.2724 18.2257 21.5303 18.965 20.5826 19.2213C17.9071 19.8831 5.92356 19.8015 3.40294 19.2213C2.45524 18.9678 1.71595 18.2257 1.45966 17.278C0.827391 14.7011 0.871044 9.25144 1.44558 6.73081C1.69905 5.78311 2.44116 5.04382 3.38886 4.78753C6.96561 4.0412 19.2956 4.282 20.5686 4.77345ZM9.86682 8.70227L15.6122 11.9974L9.86682 15.2925V8.70227Z" fill="CurrentColor"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="footer3_bottom-wrapper">
+                                <div class="footer3_credit-text">© 2024 Kamal Solvents. All rights reserved. </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6607a6ef83fae9272e214029" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      
+
+ <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6607a6ef83fae9272e214029" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!-- Add SweetAlert JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Add EmailJS library -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>            
+       <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Email sending functionality
+    const form = document.getElementById("contactForm"); 
+    const fullName = document.getElementById("name"); 
+    const email = document.getElementById("email"); 
+    const phone = document.getElementById("phone"); 
+    const subject = document.getElementById("subject"); 
+    const mess = document.getElementById("message"); 
+    const submitBtn = document.getElementById("submitBtn");
+
+    function sendEmail() {
+        // Disable button to prevent multiple submissions
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+        
+        const bodyMessage = `Full Name: ${fullName.value}<br> 
+                            Email: ${email.value}<br> 
+                            Phone Number: ${phone.value}<br> 
+                            Subject: ${subject.value}<br>
+                            Message: ${mess.value}`;
+
+        Email.send({ 
+            SecureToken: "YOUR_SECURE_TOKEN", // Recommended instead of username/password
+            Host: "smtp.elasticemail.com", 
+            Username: "dbagri@accelerize360.com", 
+            Password: "B77A46911048233C1C36D708C793959B5512", 
+            To: 'dbagri@accelerize360.com', 
+            From: "dbagri@accelerize360.com", 
+            Subject: subject.value || "New Contact Form Submission", 
+            Body: bodyMessage 
+        }).then(message => { 
+            if (message === "OK") { 
+                Swal.fire({ 
+                    title: "Success!", 
+                    text: "Message sent successfully!", 
+                    icon: "success" 
+                });
+                form.reset();
+            } else {
+                Swal.fire({ 
+                    title: "Error!", 
+                    text: "Something went wrong: " + message, 
+                    icon: "error" 
+                });
+                console.error("Email sending failed:", message);
+            }
+        }).catch(error => {
+            Swal.fire({ 
+                title: "Error!", 
+                text: "Failed to send message: " + error.message, 
+                icon: "error" 
+            });
+            console.error("Email sending error:", error);
+        }).finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send";
+        });
+    }
+
+    function checkInputs() {
+        const items = document.querySelectorAll(".item[required]");
+        let isValid = true;
+        
+        for (const item of items) {
+            if (!item.value.trim()) {
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+                isValid = false;
+            } else {
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            }
+        }
+        return isValid;
+    }
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        if (checkInputs()) {
+            sendEmail();
+        } else {
+            Swal.fire({ 
+                title: "Oops!", 
+                text: "Please fill in all required fields.", 
+                icon: "warning" 
+            });
+        }
+    });
+
+    // Remove error class when user starts typing
+    document.querySelectorAll('.item').forEach(item => {
+        item.addEventListener('input', function() {
+            if (this.value.trim()) {
+                this.classList.remove("error");
+                this.parentElement.classList.remove("error");
+            }
+        });
+    });
+});
+</script>
+        
+        <script>
+        // Enhanced Logo Slider Script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the slider track element
+            const sliderTrack = document.querySelector('.logo-slider-track');
+            
+            if (sliderTrack) {
+                // Clone the logos for seamless looping
+                const logos = sliderTrack.innerHTML;
+                sliderTrack.innerHTML = logos + logos;
+                
+                // Adjust animation duration based on number of logos
+                const logoCount = document.querySelectorAll('.logo-slider-item').length / 2;
+                const duration = logoCount * 3; // 3 seconds per logo
+                
+                // Apply the animation dynamically
+                sliderTrack.style.animation = `scroll ${duration}s linear infinite`;
+                
+                // Pause animation on hover
+                sliderTrack.addEventListener('mouseenter', function() {
+                    this.style.animationPlayState = 'paused';
+                });
+                
+                sliderTrack.addEventListener('mouseleave', function() {
+                    this.style.animationPlayState = 'running';
+                });
+            }
+        });
+        </script>
+
+    </body>
+</html>
